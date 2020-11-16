@@ -1,0 +1,177 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<script>
+    function statusChangeCallback(response) { // Called with the results from FB.getLoginStatus().
+
+        if (response.status === 'connected') { // Logged into your webpage and Facebook
+
+        }
+    }
+
+    function checkLoginState() { // Called when a person is finished with the Login Button.
+        FB.getLoginStatus(function(response) { // See the onlogin handler
+            statusChangeCallback(response);
+            sign_in_User(response.authResponse.accessToken)
+        });
+    }
+
+    window.fbAsyncInit = function() {
+
+        FB.init({
+            appId: '365318304781355',
+            xfbml: true,
+            version: 'v8.0'
+        });
+        FB.AppEvents.logPageView();
+
+        FB.getLoginStatus(function(response) { // Called after the JS SDK has been initialized.
+            statusChangeCallback(response); // Returns the login status.
+        });
+    };
+
+    function sign_in_User(token) {
+        var token = token
+        console.log(token)
+        $.ajax({
+            url: "{% url 'facebook' %}",
+            type: "POST", // or "get"
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}'
+            }, // for csrf token
+
+            data: {
+                'token': token,
+            },
+            success: function(data) {
+                console.log(data.url)
+                window.location.href = data.url
+            },
+            error: function(data) { 
+                console.log(alert(data["responseJSON"]["error"]));
+            }
+        })
+    }
+</script>
+
+{% block meta %} 
+<meta name="google-signin-scope" content="profile email" />
+<meta
+    name="google-signin-client_id"
+    content="143995818697-boll52eto3n390qe2v2t6g2klakldo24.apps.googleusercontent.com"
+/>
+<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+ 
+{% endblock meta %}
+
+<div id="login-background">
+    <img src={% static 'img/STOCK3.jpg' %} alt="Login Full Background" class="full-bg animation-pulseSlow">
+</div>
+<div id="login-container" class="animation-fadeIn">
+    <!-- Login Title -->
+    <div class="login-title text-center">
+        <h1> Zaloguj się</h1>
+    </div>
+    <div class="block push-bit">
+        <form method="POST" action='.' id="form-login" class="form-horizontal form-bordered form-control-borderless">
+            {% csrf_token %}
+            <div class="container" style="margin-left: 2%;margin-top: 3%">
+                {{form.non_field_errors}}
+            </div>
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="gi gi-envelope"></i></span> {{form.query}} {{form.query.errors}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <div class="input-group">
+
+                        <span class="input-group-addon"><i class="gi gi-lock"></i></span> {{form.password}} {{form.password.errors}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-12" >
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="gi gi-lock"></i></span> {{form.otp_token}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group form-actions" style="padding:15px;">
+
+                <div class="col-xs-12 text-center">
+                    <button id="login_b" type="submit"  class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Zaloguj się</button>
+                </div>
+            </div>
+
+            <div class="col-xs-12 text-center">
+                <a href="{% url 'register' %}" id="link-register-login"><small>Zarejestruj się</small></a>
+            </div>
+
+            <!-- The JS SDK Login Button -->
+
+        </form>
+        <div class="form-group form-actions" style="padding:15px;padding-bottom: 5px;margin-bottom: 0px;">
+            <div class="col-xs-12 text-center">
+                <div class="fb-login-button" onlogin="checkLoginState();" data-size="medium" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+            </div>
+        </div>
+        <div class="form-group form-actions" style="padding:15px;">
+            <div class="col-xs-12 text-center">
+                <div id="glogin" class="g-signin2"  style="margin-left:24%;" data-theme="dark" data-width="228" data-height="30" data-longtitle="true"></div>
+            </div>
+        </div>
+        <div class="col-xs-12 text-center">
+            <a href="{% url 'password_reset' %}" id="link-register-login"><small>Zapomniałem Hasła</small></a>
+        </div>
+
+        <!-- Load the JS SDK asynchronously -->
+       <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v9.0" nonce="2cTenOv3"></script>
+    </div>
+    <div>
+        <footer class="text-muted text-center">
+            <small><span id="year-copy">2020-05</span> © <a href="" target="_blank">SIMPLY Edyta Strzelczyk</a></small>
+        </footer>
+    </div>
+</div>
+<script>
+    function init() {
+        gapi.load('auth2', function() {
+            auth2 = gapi.auth2.init({
+                client_id: '143995818697-boll52eto3n390qe2v2t6g2klakldo24.apps.googleusercontent.com',
+                cookiepolicy: 'single_host_origin',
+                scope: 'profile email'
+            });
+            element = document.getElementById('glogin');
+            auth2.attachClickHandler(element, {}, onSignIn );
+        });
+    }
+    function onSignIn(googleUser) {
+    // Useful data for your client-side scripts:
+    var profile = googleUser.getBasicProfile();
+    var id_token = googleUser.getAuthResponse().id_token;
+    $.ajax({
+        url: "{% url 'google' %}",
+        type: "POST", // or "get"
+        headers: {
+            'X-CSRFToken': '{{ csrf_token }}'
+        }, // for csrf token
+
+        data: {
+            'token': id_token,
+        },
+        success: function(data) {
+            console.log(data.url)
+            window.location.href = data.url
+        },
+        error: function(data) { 
+            console.log(alert(data["responseJSON"]["error"]));
+        }
+    })
+    }
+</script>
+
+{% endblock %}

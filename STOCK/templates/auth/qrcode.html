@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div id="login-background">
+    <img src={% static 'img/STOCK3.jpg' %} alt="Login Full Background" class="full-bg animation-pulseSlow">
+</div>
+<div id="login-container" class="animation-fadeIn">
+    <!-- Login Title -->
+    <div class="login-title text-center">
+        <h1> Zeskanuj QR-CODE</h1>
+
+    </div>
+    <div class="block push-bit">
+        <div class="col-xs-12 text-center">
+                <img style="text-align: center" src="data:image/svg+xml;utf8;base64,{{image}}" alt="">
+        </div>
+ 
+         <div class="col-xs-12 text-center">
+                <a href="javascript:window.history.back()">Login</a>
+        </div>
+    </div>
+</div>
+    
+{% endblock content %}
