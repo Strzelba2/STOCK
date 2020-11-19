@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import json
 from decouple import config
+from WIG.WIG_scrap import WIG_STOOP
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'MyUser.apps.MyuserConfig',
     'wallet',
+    'WIG',
 
     'django_otp',
     'django_otp.plugins.otp_totp',
@@ -137,7 +140,7 @@ STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static/'),
 )
 
-
+DATA_ROOT = os.path.join(BASE_DIR , 'data/')
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media/')
 MEDIA_URL = '/media/'
 
@@ -164,3 +167,15 @@ LOGIN_URL ='/login/'
 #auto logout
 SESSION_COOKIE_AGE = 3600
 SESSION_SAVE_EVERY_REQUEST = True
+
+
+data = WIG_STOOP()
+WIG=data.get_link()
+
+link =next(iter(WIG.values()))
+name = next(iter(WIG.keys()))
+
+
+
+
+WIG_STOOP.down_company_data(link,name)
