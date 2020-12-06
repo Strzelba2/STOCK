@@ -14,11 +14,12 @@ from pathlib import Path
 import os
 import json
 from decouple import config
-from WIG.WIG_scrap import WIG_STOOP
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 
@@ -28,6 +29,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -169,13 +171,7 @@ SESSION_COOKIE_AGE = 3600
 SESSION_SAVE_EVERY_REQUEST = True
 
 
-data = WIG_STOOP()
-WIG=data.get_link()
+QUOTE = config('QUOTE')
+FINANCIAL = config('FINANCIAL')
+RAPORTY = config('RAPORTY')
 
-link =next(iter(WIG.values()))
-name = next(iter(WIG.keys()))
-
-
-
-
-WIG_STOOP.down_company_data(link,name)

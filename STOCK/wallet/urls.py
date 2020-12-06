@@ -1,9 +1,9 @@
 from django.urls import path
-from . import views
+from .views import wallet
 
 
 
 urlpatterns = [
-    path('wallet/',views.wallet,name='wallet'),
+    path('wallet/', wallet ,name='wallet'),
 
 ]
