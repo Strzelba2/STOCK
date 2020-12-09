@@ -174,4 +174,5 @@ SESSION_SAVE_EVERY_REQUEST = True
 QUOTE = config('QUOTE')
 FINANCIAL = config('FINANCIAL')
 RAPORTY = config('RAPORTY')
+PROXY = config('PROXY')
 

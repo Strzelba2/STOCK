@@ -5,6 +5,7 @@ from .models import CompanyData , Quotes ,IndexData , Index
 from .WIG_scrap import SCRAP
 from .WIG_udate import UPDATE_SCRAP
 from pathlib import Path
+from .Random_proxy import Random
 import os
 import json
 
@@ -54,11 +55,12 @@ def update_data(request):
 
     print("działa")
 
-
-    UPDATE_SCRAP.update_Company()
-    UPDATE_SCRAP.update_Currency()
-    UPDATE_SCRAP.update_Index()
-    UPDATE_SCRAP.update_Wares()
+    driver = Random().get_Driver()
+    UPDATE_SCRAP.update_Company(driver)
+    UPDATE_SCRAP.update_Currency(driver)
+    UPDATE_SCRAP.update_Index(driver)
+    UPDATE_SCRAP.update_Wares(driver)
+    driver.quit()
 
     return HttpResponse(status=200)
 

@@ -1,0 +1,4563 @@
+1607370917161	geckodriver	INFO	Listening on 127.0.0.1:50553
+1607370917520	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofile5rA7P7"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607370920663	Marionette	INFO	Listening on port 50558
+1607370920767	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607371114459	Marionette	INFO	Stopped listening on port 50558
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofilemrGLYV"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607370960895	Marionette	INFO	Listening on port 50635
+1607370961076	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607371113369	Marionette	INFO	Stopped listening on port 50635
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607371227451	geckodriver	INFO	Listening on 127.0.0.1:50729
+1607371227971	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileRlphH3"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607371230402	Marionette	INFO	Listening on port 50734
+1607371230696	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607371371041	Marionette	INFO	Stopped listening on port 50734
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofilemckf3R"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607371273003	Marionette	INFO	Listening on port 50809
+1607371273313	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607371369834	Marionette	INFO	Stopped listening on port 50809
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607372112292	geckodriver	INFO	Listening on 127.0.0.1:50947
+1607372112804	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofile5j6KwE"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607372115166	Marionette	INFO	Listening on port 50952
+1607372115523	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607372324608	Marionette	INFO	Stopped listening on port 50952
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofilehk91Mt"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607372129670	Marionette	INFO	Listening on port 51018
+1607372129913	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607372316781	Marionette	INFO	Stopped listening on port 51018
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607372340857	geckodriver	INFO	Listening on 127.0.0.1:51125
+1607372341387	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileZljqpV"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607372343730	Marionette	INFO	Listening on port 51130
+1607372344115	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607372426685	Marionette	INFO	Stopped listening on port 51130
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofileeOqbFQ"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607372357300	Marionette	INFO	Listening on port 51196
+1607372357616	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607372425633	Marionette	INFO	Stopped listening on port 51196
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607373183695	geckodriver	INFO	Listening on 127.0.0.1:51834
+1607373184212	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileurQOwT"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607373186632	Marionette	INFO	Listening on port 51839
+1607373186929	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607373651336	Marionette	INFO	Stopped listening on port 51839
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofileGeg109"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607373280946	Marionette	INFO	Listening on port 52000
+1607373281190	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+1607373522437	Marionette	INFO	Stopped listening on port 52000
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607373828963	geckodriver	INFO	Listening on 127.0.0.1:52610
+1607373829492	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileCs6EX9"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607373831889	Marionette	INFO	Listening on port 52616
+1607373832214	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607374644203	Marionette	INFO	Stopped listening on port 52616
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofileE3rbE7"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find1607374414416	mozrunner::runner	INJavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607374416576	Marionette	INFO	Listening on port 53306
+1607374417085	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607374644202	Marionette	INFO	Stopped listening on port 53306
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+be ignored for this session
+1607374644206	Marionette	INFO	Stopped listening on port 53316
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofileiGDBO9"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607374435928	Marionette	INFO	Listening on port 53461
+1607374436334	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607374644209	Marionette	INFO	Stopped listening on port 53461
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607377188698	geckodriver	INFO	Listening on 127.0.0.1:56428
+1607377189208	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileLEexlv"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607377191446	Marionette	INFO	Listening on port 56433
+1607377191936	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607377207744	Marionette	INFO	Stopped listening on port 56433
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607377209645	geckodriver	INFO	Listening on 127.0.0.1:56523
+1607377210149	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileaMi91R"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607377212371	Marionette	INFO	Listening on port 56528
+1607377212875	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607377231854	Marionette	INFO	Stopped listening on port 56528
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607378132237	geckodriver	INFO	Listening on 127.0.0.1:57610
+1607378132747	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileuFpxga"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607378135002	Marionette	INFO	Listening on port 57616
+1607378135476	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607378185254	Marionette	INFO	Stopped listening on port 57616
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607378187569	geckodriver	INFO	Listening on 127.0.0.1:57744
+1607378188078	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileyvwAWW"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607378190431	Marionette	INFO	Listening on port 57750
+1607378190806	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607378254192	Marionette	INFO	Stopped listening on port 57750
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607378256504	geckodriver	INFO	Listening on 127.0.0.1:57888
+1607378257023	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileCNY07q"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607378259287	Marionette	INFO	Listening on port 57894
+1607378259740	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607378351859	Marionette	INFO	Stopped listening on port 57894
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607378354545	geckodriver	INFO	Listening on 127.0.0.1:58060
+1607378355046	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileJ1LMkI"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607378357278	Marionette	INFO	Listening on port 58066
+1607378357768	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607378416142	Marionette	INFO	Stopped listening on port 58066
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607378418359	geckodriver	INFO	Listening on 127.0.0.1:58199
+1607378418862	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofiled4eX3D"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607378421115	Marionette	INFO	Listening on port 58204
+1607378421591	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607378496627	Marionette	INFO	Stopped listening on port 58204
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607378498767	geckodriver	INFO	Listening on 127.0.0.1:58362
+1607378499266	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileQzOLBZ"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607378501611	Marionette	INFO	Listening on port 58367
+1607378502002	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607378552693	Marionette	INFO	Stopped listening on port 58367
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607378555357	geckodriver	INFO	Listening on 127.0.0.1:58493
+1607378555878	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofilelUe47r"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607378558163	Marionette	INFO	Listening on port 58498
+1607378558605	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607378581271	Marionette	INFO	Stopped listening on port 58498
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607378583174	geckodriver	INFO	Listening on 127.0.0.1:58593
+1607378583705	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileukvNun"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607378585975	Marionette	INFO	Listening on port 58598
+1607378586435	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607378629893	Marionette	INFO	Stopped listening on port 58598
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607379700594	geckodriver	INFO	Listening on 127.0.0.1:59748
+1607379701102	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofile9zfbzK"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607379703405	Marionette	INFO	Listening on port 59753
+1607379703828	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607379710894	Marionette	INFO	Stopped listening on port 59753
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607379712858	geckodriver	INFO	Listening on 127.0.0.1:59840
+1607379713385	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileWM8U5t"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607379715602	Marionette	INFO	Listening on port 59845
+1607379716109	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607379820613	Marionette	INFO	Stopped listening on port 59845
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607379992316	geckodriver	INFO	Listening on 127.0.0.1:60210
+1607379992829	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofiletKtErb"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607379995115	Marionette	INFO	Listening on port 60216
+1607379995563	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+1607384854973	Marionette	INFO	Stopped listening on port 60216
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofilefm9Qbd"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607382323166	Marionette	INFO	Listening on port 63397
+1607382323291	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607384854885	Marionette	INFO	Stopped listening on port 63397
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofilel5ksIV"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607382414932	Marionette	INFO	Listening on port 63567
+1607382415422	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: [GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+1607384433159	Marionette	INFO	Stopped listening on port 63673
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383097073	Marionette	INFO	Stopped listening on port 64725
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 fail1607383246421	mozrunner::runner	INFO	Running command: [GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383301928	Marionette	INFO	Stopped listening on port 64974
+[Parent 31792, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:166
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 426: Error: OS.File has been shut down. Rejecting post to stat
+a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 fail1607383310707	mozrunner::runner	INFO	Running command: [GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383345552	Marionette	INFO	Stopped listening on port 65139
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383505747	Marionette	INFO	Stopped listening on port 65373
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383539577	Marionette	INFO	Stopped listening on port 49162
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383573512	Marionette	INFO	Stopped listening on port 49284
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 fail1607383577708	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foregroun[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: PresenCan't find symbol 'eglS[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0JavaS[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383607243	Marionette	INFO	Stopped listening on port 49395
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383729111	Marionette	INFO	Stopped listening on port 49504
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383762788	Marionette	INFO	Stopped listening on port 49755
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607383797218	Marionette	INFO[GFX1-]: Present1 failed: 0x887a00
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, mess[GFX1-]: Present1 fai
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: [GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+1607383983714	Marionette	INFO	Stopped listening on port 49980
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 fail1607384212152	mozrunner::runner	INFO	Running command: [GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: 1607384248657	Marionette	INFO	Stopped listening on port 50901
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 fai
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 fail1607384298473	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\f[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: PresenCan't find symbol 'eglS[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 fai
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: [GFX1-]: Present1 failed: 0x8[GFX1-]: [GFX1-]: Present1 failed: 0x8[GFX1-]: Present1 failed: 0failed: 0x8[GFX1-]: [GFX1-]: Present1 failed: 0x8[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: [GFX1-]: Present1 failed: 0x8[GFX1-]: [GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x8[GFX1-]: [GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x8[GFX1-]: [GFX1-]: Present1 failed: 0x8[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: [GFX1-]: Present1 failed: 0x8[GFX1-]: [GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1607384854902	Marionette	INFO	Stopped listening on port 51840
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+esent1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+1607384854934	Marionette	INFO	Stopped listening on port 51669
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+[GFX1-]: Present1 failed: 0x887a0001
+1607384854923	Marionette	INFO	Stopped listening on port 63567
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385079792	geckodriver	INFO	Listening on 127.0.0.1:52315
+1607385080323	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileJuockA"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385082730	Marionette	INFO	Listening on port 52320
+1607385083039	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385115634	Marionette	INFO	Stopped listening on port 52320
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385121483	geckodriver	INFO	Listening on 127.0.0.1:52432
+1607385122004	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileanC3f9"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385124227	Marionette	INFO	Listening on port 52438
+1607385124725	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385463028	Marionette	INFO	Stopped listening on port 52438
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofile2Mi0rk"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385373572	Marionette	INFO	Listening on port 52819
+1607385373829	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385463016	Marionette	INFO	Stopped listening on port 52819
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385467857	geckodriver	INFO	Listening on 127.0.0.1:52991
+1607385468379	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileCyQafP"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385470651	Marionette	INFO	Listening on port 52997
+1607385471107	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385514258	Marionette	INFO	Stopped listening on port 52997
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385518285	geckodriver	INFO	Listening on 127.0.0.1:53128
+1607385518817	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileScB8bZ"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385521067	Marionette	INFO	Listening on port 53134
+1607385521534	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385527430	Marionette	INFO	Stopped listening on port 53134
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385529402	geckodriver	INFO	Listening on 127.0.0.1:53217
+1607385529913	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofile2Pb8rp"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385532582	Marionette	INFO	Listening on port 53222
+1607385532640	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385538212	Marionette	INFO	Stopped listening on port 53222
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385540172	geckodriver	INFO	Listening on 127.0.0.1:53324
+1607385540674	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileWs9Yqg"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385543012	Marionette	INFO	Listening on port 53329
+1607385543397	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385550893	Marionette	INFO	Stopped listening on port 53329
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385552959	geckodriver	INFO	Listening on 127.0.0.1:53415
+1607385553489	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileFw6Vfu"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385555743	Marionette	INFO	Listening on port 53421
+1607385556203	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385563138	Marionette	INFO	Stopped listening on port 53421
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385565040	geckodriver	INFO	Listening on 127.0.0.1:53505
+1607385565551	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileHQfcPH"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385567819	Marionette	INFO	Listening on port 53510
+1607385568274	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385575480	Marionette	INFO	Stopped listening on port 53510
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385577410	geckodriver	INFO	Listening on 127.0.0.1:53596
+1607385577945	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileptW1eP"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385580225	Marionette	INFO	Listening on port 53601
+1607385580664	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385589072	Marionette	INFO	Stopped listening on port 53601
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385591100	geckodriver	INFO	Listening on 127.0.0.1:53685
+1607385591628	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofilezah2T3"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385593877	Marionette	INFO	Listening on port 53691
+1607385594347	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385754900	Marionette	INFO	Stopped listening on port 53691
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofilemVphO3"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385636661	Marionette	INFO	Listening on port 53856
+1607385636900	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385679129	Marionette	INFO	Stopped listening on port 53856
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607385681163	geckodriver	INFO	Listening on 127.0.0.1:54008
+1607385681682	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofile3emaPe"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607385684153	Marionette	INFO	Listening on port 54014
+1607385684406	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607385760515	Marionette	INFO	Stopped listening on port 54014
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607465064985	geckodriver	INFO	Listening on 127.0.0.1:54164
+1607465065482	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileFqz9IS"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607465067850	Marionette	INFO	Listening on port 54169
+1607465068196	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607465468567	Marionette	INFO	Stopped listening on port 54169
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofilebaGNqP"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607465399919	Marionette	INFO	Listening on port 54446
+1607465400017	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607465468583	Marionette	INFO	Stopped listening on port 54446
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607465472035	geckodriver	INFO	Listening on 127.0.0.1:54569
+1607465472532	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofile3NcUqs"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607465474905	Marionette	INFO	Listening on port 54574
+1607465475252	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607465586064	Marionette	INFO	Stopped listening on port 54574
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofilekdTv2W"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607465584812	Marionette	INFO	Listening on port 54719
+1607465585045	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607465776366	Marionette	INFO	Stopped listening on port 54719
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607465779162	geckodriver	INFO	Listening on 127.0.0.1:54906
+1607465779658	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofilesQWZyQ"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607465782152	Marionette	INFO	Listening on port 54911
+1607465782378	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607466667340	Marionette	INFO	Stopped listening on port 54911
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607466693164	geckodriver	INFO	Listening on 127.0.0.1:55475
+1607466693661	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileLzugpL"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607466696111	Marionette	INFO	Listening on port 55480
+1607466696377	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607466825034	Marionette	INFO	Stopped listening on port 55480
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607466995695	geckodriver	INFO	Listening on 127.0.0.1:55637
+1607466996223	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileQ62wq4"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607466998532	Marionette	INFO	Listening on port 55642
+1607466998958	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607467293515	Marionette	INFO	Stopped listening on port 55642
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607467366356	geckodriver	INFO	Listening on 127.0.0.1:55872
+1607467366856	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileUH8Il4"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607467369343	Marionette	INFO	Listening on port 55877
+1607467369588	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607467405384	Marionette	INFO	Stopped listening on port 55877
+[Parent 41016, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:166
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607467723165	geckodriver	INFO	Listening on 127.0.0.1:56242
+1607467723674	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileQGOPNX"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607467726172	Marionette	INFO	Listening on port 56247
+1607467726401	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+JavaScript error: resource://devtools/client/inspector/markup/views/element-editor.js, line 508: TypeError: this.node.walkerFront is null
+1607468390022	Marionette	INFO	Stopped listening on port 56247
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607542158571	geckodriver	INFO	Listening on 127.0.0.1:59716
+1607542159066	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileZBvEtj"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607542161566	Marionette	INFO	Listening on port 59722
+1607542161831	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607542879567	Marionette	INFO	Stopped listening on port 59722
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1607542883844	geckodriver	INFO	Listening on 127.0.0.1:60555
+1607542884371	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Artur\\AppData\\Local\\Temp\\rust_mozprofileZnHQvI"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607542886881	Marionette	INFO	Listening on port 60560
+1607542887108	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607543659897	Marionette	INFO	Stopped listening on port 60560
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
