@@ -1,0 +1,7 @@
+
+.vscode
+env
+key.json
+.env
+STOCK/data
+static

@@ -1,13 +1,16 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.generic import ListView 
-from .models import CompanyData , Quotes ,IndexData , Index
+from .models import CompanyData , Quotes ,IndexData , Index,Quotes_last
 from .WIG_scrap import SCRAP
 from .WIG_udate import UPDATE_SCRAP
 from pathlib import Path
 from .Random_proxy import Random
 import os
 import json
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from django.core import serializers
 
 # Create your views here.
 
@@ -21,10 +24,12 @@ def init_data(request):
     data_init = my_lis.get("quote_init")
 
     if data_init is False:
-        SCRAP.down_index()
-        SCRAP.down_wares()
-        SCRAP.down_currency()
-        SCRAP.down_company_quote()
+        driver = Random().get_Driver()
+        #SCRAP.down_index(driver)
+        #SCRAP.down_wares(driver)
+        #SCRAP.down_currency(driver)
+        SCRAP.down_company_quote(driver)
+        driver.quit()
 
         my_lis["quote_init"] = True
 
@@ -41,7 +46,7 @@ def init_data(request):
 
     if financial_data is False:
         print("if")
-        SCRAP.down_company_financial()
+        #SCRAP.down_company_financial()
 
         my_lis["financial_data"] = True
 
@@ -53,14 +58,15 @@ def init_data(request):
 
 def update_data(request):
 
-    print("działa")
-
     driver = Random().get_Driver()
+
     UPDATE_SCRAP.update_Company(driver)
     UPDATE_SCRAP.update_Currency(driver)
     UPDATE_SCRAP.update_Index(driver)
     UPDATE_SCRAP.update_Wares(driver)
     driver.quit()
+ 
+
 
     return HttpResponse(status=200)
 
@@ -70,17 +76,58 @@ class Home (ListView):
     model = CompanyData
     template_name = "WIG/home.html"
 
-    def get_queryset(self):
-        Index_obj = IndexData.objects.get(pk=1)
-        data = Index.objects.filter(Name_Index=Index_obj)
-        return data
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        Index_obj = IndexData.objects.get(pk=1)
-        context["list"] = list(Index.objects.filter(Name_Index=Index_obj))
+        Index_obj = Quotes_last.objects.all()
+        context["list"] = Index_obj
 
         return context
+
+class Chart_data(APIView):
+    """
+    View to list all users in the system.
+
+    * Requires token authentication.
+    * Only admin users are able to access this view.
+    """
+    #authentication_classes = [authentication.TokenAuthentication]
+    #permission_classes = [permissions.IsAdminUser]
+
+    def get(self, request,name, format=None):
+        print("działa")
+
+        print(name)
+        Company = CompanyData.objects.get(Symbol = name)
+        print(Company)
+        
+        """
+        Return a list of all users.
+        """
+        Quotes_company = list(Quotes.objects.filter(Name_company = Company))
+        data = serializers.serialize('json', Quotes_company)
+        print(data)
+        return Response(data)
+
+class Analysis (ListView): 
+    model = Quotes
+    fields = []
+    template_name = "WIG/analiza.html"
+    context_object_name = "data"
+ 
+   
+    
+    def get_queryset(self):
+        print("działa")
+ 
+        name = self.request.GET.get('name')
+        print(name)
+        Company = CompanyData.objects.get(Symbol = name)
+        print(Company)
+        
+        Quotes_company =list(Quotes.objects.filter(Name_company = Company))
+        data = serializers.serialize('json', Quotes_company)
+        
+        return data
 
 
 

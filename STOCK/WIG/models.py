@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 from django.db import models
 import datetime
 
+
 # Create your models here.
 
 
@@ -13,7 +14,7 @@ class CompanyData(models.Model):
 
 
     def __str__(self):
-        return "Company "+ self.Name_company 
+        return  self.Name_company 
 
 
 class Quotes (models.Model):

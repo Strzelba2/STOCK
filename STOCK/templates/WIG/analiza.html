@@ -1,0 +1,31 @@
+{% extends 'basePanel.html' %} {% load static %}
+
+{% block meta %}
+<script src="https://d3js.org/d3.v5.js" defer></script>
+<script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
+<script src="{% static 'js/STOCK.js'%}" defer></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+{% endblock meta %}
+{% block nav %}
+	{% if request.user.is_authenticated %}
+		<a class="right-topbar-item " href="">Panel</a>
+	{% endif %}
+{% endblock nav %}
+
+
+{% block content %}
+
+<div class="training-container"  >
+
+	<div id="chart">
+
+	</div>
+
+</div>
+{% endblock content%} 
+{% block extra_js %}
+<script>
+    const data = {{data|safe}}
+    
+</script>
+{% endblock extra_js %}
