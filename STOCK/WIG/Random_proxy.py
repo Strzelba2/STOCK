@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 from selenium.common.exceptions import NoSuchElementException
 import time
+import datetime
 
 
 class Random ():
@@ -119,6 +120,73 @@ class Random ():
         with open(filename, 'w') as outfile:
                 outfile.write(json.dumps(my_lis))
                 outfile.close()
+    def check_wrong_proxy(self,proxy):
+        print("chec wrong")
+        check = False
+        path = Path(__file__).parent
+        filename = os.path.join(path,'Wrong_Proxy.json')
+        with open(filename) as file:
+            my_lis=json.load(file)
+        today = datetime.date.today()
+        print(today.strftime('%m/%d/%Y'))
+        if today.strftime('%m/%d/%Y') in my_lis:
+            print("if")
+            list_todey = my_lis[today.strftime('%m/%d/%Y')]
+            if proxy in list_todey:
+                check = True
+
+        print(check)
+        return check
+    def check_all_proxy(self,all_proxy):
+        print("check all")
+        check = False
+        list_proxy = all_proxy
+        path = Path(__file__).parent
+        filename = os.path.join(path,'Wrong_Proxy.json')
+        with open(filename) as file:
+            my_lis=json.load(file)
+        today = datetime.date.today()
+        print(today.strftime('%m/%d/%Y'))
+        if today.strftime('%m/%d/%Y') in my_lis:
+            print("if")
+            list_todey = my_lis[today.strftime('%m/%d/%Y')]
+            proxy_list = []
+            for row in list_proxy.itertuples(index=False):
+                    proxy = f'{row[0]}:{int(row[1])}'
+                    print(proxy)
+                    proxy_list.append(proxy)
+            check = all(item in list_todey for item in proxy_list )
+            print(check)
+            return check
+
+
+    def add_wrong_proxy(self,proxy):
+        print("wrong proxy")
+        path = Path(__file__).parent
+        filename = os.path.join(path,'Wrong_Proxy.json')
+        with open(filename) as file:
+            my_lis=json.load(file)
+        today = datetime.date.today()
+        print(today.strftime('%m/%d/%Y'))
+        if today.strftime('%m/%d/%Y') in my_lis:
+            print("if")
+            list_todey = my_lis[today.strftime('%m/%d/%Y')]
+            if not proxy in list_todey:
+                print(list_todey)
+                list_todey.append(proxy)
+                with open(filename, 'w') as outfile:
+                    outfile.write(json.dumps(my_lis))
+                    outfile.close()
+        else:
+            print("else")
+            my_lis = {}
+            my_lis[today.strftime('%m/%d/%Y')] = [proxy]
+            with open(filename, 'w') as outfile:
+                outfile.write(json.dumps(my_lis))
+                outfile.close()
+
+
+            
 
 
 
@@ -171,6 +239,62 @@ class Random ():
                     print("for loop")
 
                     proxy = f'{row[0]}:{int(row[1])}'
+                    if self.check_wrong_proxy(proxy):
+                        if self.check_all_proxy(select):
+                            if genre == "WIG":
+                                print("if wig")
+                                header_WIG = self.headers['WIG']
+                                print("time slep")
+                                try:
+                                    r_WIG = requests.get(link, headers=header_WIG, cookies=cj)
+
+                                    if r_WIG.ok :
+                                        return r_WIG
+
+                                    break
+                                except requests.ConnectionError as e:
+                                    print("OOPS!! Connection Error. Make sure you are connected to Internet. Technical Details given below.\n")
+                                    print(str(e))           
+                                    continue
+                                except requests.Timeout as e:
+                                    print("OOPS!! Timeout Error") 
+                                    print(str(e))
+                                    continue
+                                except requests.RequestException as e:
+                                    print("OOPS!! General Error") 
+                                    print(str(e))
+                                    continue
+                            elif genre == "Index":
+                                print("if index")
+                                header_Index =  self.headers['Index']
+                                print(header_Index)
+                        
+                                try:
+                                    r_Index = requests.get(link, headers=header_Index, cookies=cj)
+
+                                    
+                                    if r_Index.ok :
+                                        self.save_browser(proxy,header_Index,"Index")
+                                        print(r_Index.status_code)
+                                        print("proxy sucesses", proxy)
+                                        return r_Index
+                                        
+                                    break
+                                except requests.ConnectionError as e:
+                                    print("OOPS!! Connection Error. Make sure you are connected to Internet. Technical Details given below.\n")
+                                    print(str(e))            
+                                    continue
+                                except requests.Timeout as e:
+                                    print("OOPS!! Timeout Error")
+                                    print(str(e))
+                                    continue
+                                except requests.RequestException as e:
+                                    print("OOPS!! General Error")
+                                    print(str(e))
+                                    continue
+
+                        else:
+                            continue
 
                     if genre == "WIG":
                         print("if wig")
@@ -188,14 +312,17 @@ class Random ():
                             break
                         except requests.ConnectionError as e:
                             print("OOPS!! Connection Error. Make sure you are connected to Internet. Technical Details given below.\n")
-                            print(str(e))            
+                            print(str(e))
+                            self.add_wrong_proxy(proxy)            
                             continue
                         except requests.Timeout as e:
                             print("OOPS!! Timeout Error")
+                            self.add_wrong_proxy(proxy)  
                             print(str(e))
                             continue
                         except requests.RequestException as e:
                             print("OOPS!! General Error")
+                            self.add_wrong_proxy(proxy)  
                             print(str(e))
                             continue
 
@@ -217,14 +344,17 @@ class Random ():
                             break
                         except requests.ConnectionError as e:
                             print("OOPS!! Connection Error. Make sure you are connected to Internet. Technical Details given below.\n")
+                            self.add_wrong_proxy(proxy)  
                             print(str(e))            
                             continue
                         except requests.Timeout as e:
                             print("OOPS!! Timeout Error")
+                            self.add_wrong_proxy(proxy)  
                             print(str(e))
                             continue
                         except requests.RequestException as e:
                             print("OOPS!! General Error")
+                            self.add_wrong_proxy(proxy)  
                             print(str(e))
                             continue
 

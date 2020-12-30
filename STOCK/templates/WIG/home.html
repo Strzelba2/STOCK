@@ -1,11 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {{list}}
-</body>
-</html>
+{% extends 'basePanel.html' %} {% load static %}
+{% block nav %}
+	{% if request.user.is_authenticated %}
+		<a class="right-topbar-item " href="">Panel</a>
+	{% endif %}
+{% endblock nav %}
+
+
+{% block content %}
+
+
+
+<div class="training-container" >
+
+<form action="Analysis" method="GET" >
+    {% csrf_token %}
+    <span>Nazwa szkolenia</span> 
+    
+    <input type="text" name="name" value="06N"  style="display:None;">
+    <button type="submit" class="orderlist_title"  >06N  </button>
+
+</form>
+
+</div>
+
+{% endblock content%} 

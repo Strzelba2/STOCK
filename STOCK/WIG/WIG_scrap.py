@@ -4,6 +4,7 @@ import sys
 from django.conf import settings  
 import pandas as pd
 from .models import CompanyData , Quotes , Index,IndexData,Wares,WaresData,Currency,CurrencyData
+from .Random_proxy import Random
 
 
 
@@ -11,8 +12,8 @@ class SCRAP:
     def __init__(self, *args, **kwargs):
         self.WIG = {}
 
-    def get_link_financial(self):
-        page = requests.get(f"https://{settings.FINANCIAL}/gielda/akcje_gpw")
+    def get_link_financial(self,driver):
+        page = Random().soup_proxy(f"https://{settings.FINANCIAL}/gielda/akcje_gpw","WIG",driver)
         encoding = page.encoding if "charset" in page.headers.get("content-type", "").lower() else None
         soup = BeautifulSoup(page.content, from_encoding=encoding, features="lxml")
 
@@ -34,8 +35,8 @@ class SCRAP:
 
         return self.WIG
 
-    def get_link_quote(self,link):
-        page = requests.get(f"https://{settings.QUOTE}/t/{link}")
+    def get_link_quote(self,link,driver):
+        page = Random().soup_proxy(f"https://{settings.QUOTE}/t/{link}","Index",driver)
 
         encoding = page.encoding if "charset" in page.headers.get("content-type", "").lower() else None
         soup = BeautifulSoup(page.content, from_encoding=encoding, features="lxml")
@@ -65,8 +66,8 @@ class SCRAP:
         return z
 
     @classmethod
-    def down_index(cls):
-        WIG = SCRAP().get_link_quote('?i=510')
+    def down_index(cls,driver):
+        WIG = SCRAP().get_link_quote('?i=510',driver)
         for name ,link in WIG.items():
             print(name)
             Index_obj = IndexData.objects.filter(Name_Index=name)
@@ -75,7 +76,7 @@ class SCRAP:
                 Index_obj = IndexData(Name_Index=name, Symbol =link.upper())
                 Index_obj.save()
                 href=f"q/d/l/?s={link}&i=d&o=1111111"
-                page = requests.get(f"https://{settings.QUOTE}/{href}")
+                page = Random().soup_proxy(f"https://{settings.QUOTE}/{href}",'Index',driver)
                 url_data = settings.DATA_ROOT 
                 with open(f'{url_data}{link}.csv', 'wb') as f:
                     f.write(page.content)
@@ -87,7 +88,7 @@ class SCRAP:
                     quotes = Index.objects.create(Name_Index=Index_obj,Day_trading = row[0],Opening_price = row[1],Highest_price = row[2],
                     Lowest_price = row[3],Closing_price = row[4])
                     try:
-                        if row[5] is int:
+                        if type(row[5]) is int:
                             quotes.Volume = row[5]
                             quotes.save()
                     except:
@@ -100,8 +101,8 @@ class SCRAP:
 
             
     @classmethod
-    def down_wares(cls):
-        WIG = SCRAP().get_link_quote('?i=512')
+    def down_wares(cls,driver):
+        WIG = SCRAP().get_link_quote('?i=512',driver)
         print(WIG)
         for name ,link in WIG.items():
             Wares_obj = WaresData.objects.filter(Name_ware=name)
@@ -109,7 +110,7 @@ class SCRAP:
                 Index_obj = WaresData(Name_ware=name, Symbol =link.upper())
                 Index_obj.save()
                 href=f"q/d/l/?s={link}&i=d&o=1111111"
-                page = requests.get(f"https://{settings.QUOTE}/{href}")
+                page = Random().soup_proxy(f"https://{settings.QUOTE}/{href}","Index",driver)
                 url_data = settings.DATA_ROOT 
                 with open(f'{url_data}{link}.csv', 'wb') as f:
                     f.write(page.content)
@@ -122,7 +123,7 @@ class SCRAP:
                     quotes = Wares.objects.create(Name_ware=Index_obj,Day_trading = row[0],Opening_price = row[1],Highest_price = row[2],
                     Lowest_price = row[3],Closing_price = row[4])
                     try:
-                        if row[5] is int:
+                        if type(row[5]) is int:
                             quotes.Volume = row[5]
                             quotes.save()
 
@@ -134,8 +135,8 @@ class SCRAP:
             break
 
     @classmethod
-    def down_currency(cls):
-        WIG = SCRAP().get_link_quote('?i=60')
+    def down_currency(cls,driver):
+        WIG = SCRAP().get_link_quote('?i=60',driver)
         print(WIG)
         for name ,link in WIG.items():
             Currency_obj = CurrencyData.objects.filter(Name_Currency=name)
@@ -143,7 +144,7 @@ class SCRAP:
                 Index_obj = CurrencyData(Name_Currency=name, Symbol =link.upper())
                 Index_obj.save()
                 href=f"q/d/l/?s={link}&i=d&o=1111111"
-                page = requests.get(f"https://{settings.QUOTE}/{href}")
+                page = Random().soup_proxy(f"https://{settings.QUOTE}/{href}","Index",driver)
                 url_data = settings.DATA_ROOT 
                 with open(f'{url_data}{link}.csv', 'wb') as f:
                     f.write(page.content)
@@ -162,13 +163,13 @@ class SCRAP:
 
   
     @classmethod
-    def down_company_quote(cls):
+    def down_company_quote(cls,driver):
 
-        WIG_0=SCRAP().get_link_quote('?i=513')
-        WIG_1=SCRAP().get_link_quote('?i=513&v=0&l=2')
-        WIG_2=SCRAP().get_link_quote('?i=513&v=0&l=3')
-        WIG_3=SCRAP().get_link_quote('?i=513&v=0&l=4')
-        WIG_4=SCRAP().get_link_quote('?i=513&v=0&l=5')
+        WIG_0=SCRAP().get_link_quote('?i=513',driver)
+        WIG_1=SCRAP().get_link_quote('?i=513&v=0&l=2',driver)
+        WIG_2=SCRAP().get_link_quote('?i=513&v=0&l=3',driver)
+        WIG_3=SCRAP().get_link_quote('?i=513&v=0&l=4',driver)
+        WIG_4=SCRAP().get_link_quote('?i=513&v=0&l=5',driver)
 
         WIG = SCRAP().merge_dicts(WIG_0,WIG_1,WIG_2,WIG_3,WIG_4)
 
@@ -181,7 +182,7 @@ class SCRAP:
         
 
                 href=f"q/d/l/?s={link}&i=d"
-                page = requests.get(f"https://{settings.QUOTE}/{href}")
+                page = Random().soup_proxy(f"https://{settings.QUOTE}/{href}","Index",driver)
                 url_data = settings.DATA_ROOT 
 
                 with open(f'{url_data}{link}.csv', 'wb') as f:
@@ -193,9 +194,11 @@ class SCRAP:
 
                     quotes = Quotes.objects.create(Name_company=Company,Day_trading = row[0],Opening_price = row[1],Highest_price = row[2],
                     Lowest_price = row[3],Closing_price = row[4])
+
                     try:
-                        if row[5] is int:
-                            quotes.Volume = row[5]
+                        if type(row[5]) is int:
+                            print("volumen",row[5])
+                            quotes.Volume = int(row[5])
                             quotes.save()
                     except:
                         continue
@@ -205,12 +208,12 @@ class SCRAP:
             break
 
         
-
+'''
     @classmethod
     def down_company_financial(cls):
 
 
-        WIG=SCRAP().get_link_financial()
+        WIG=SCRAP().get_link_financial(driver)
 
 
         for name ,link in WIG.items():
@@ -231,7 +234,7 @@ class SCRAP:
             print(incom_net)
             print(EBITDA)
 
-            '''
+            
             for tr in rows:
                 for col in tr:
                     
@@ -248,9 +251,9 @@ class SCRAP:
                     print(data_fields)
 
                 break
-                '''
                 
-
+                
+'''
 
             
 
