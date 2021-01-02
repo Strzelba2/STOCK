@@ -14,7 +14,7 @@ import datetime
 from .Random_proxy import Random
 
 
-class UPDATE_SCRAP():
+class UPDATE_SCRAP:
 
     def __init__(self, **kwargs):
 

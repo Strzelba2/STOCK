@@ -14,7 +14,7 @@ import time
 import datetime
 
 
-class Random ():
+class Random :
 
     def __init__(self):
         self.headers = {"WIG":{

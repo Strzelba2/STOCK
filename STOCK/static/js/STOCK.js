@@ -272,8 +272,9 @@ function chart_zoom(range_data, selection) {
         .attr("y1", d => yScale(d.high))
         .attr("y2", d => yScale(d.low))
         .attr("stroke", d => (d.open === d.close) ? "black" : (d.open > d.close) ? "red" : "green")
-
-    Volume_box.attr("viewBox", [0, 0, width, 100])
+    const Volume_height = 100
+    Volume_box.attr("viewBox", [0, 0, width, Volume_height])
+        .attr("class", "VolumeView")
 
     var Volume = Volume_box.selectAll(".volume")
         .data(filtered_data)
@@ -309,6 +310,16 @@ function chart_zoom(range_data, selection) {
     let drag = d3.drag()
         .on('start', dragstarted)
         .on('drag', dragged)
+        .on('end', dragended);
+
+    let dragP = d3.drag()
+        .subject(function() {
+            var t = d3.select(this);
+
+            return { cx: t.attr("cx"), cy: t.attr("cy") };
+        })
+        .on('start', dragstarted)
+        .on('drag', draggedP)
         .on('end', dragended);
 
 
@@ -384,6 +395,8 @@ function chart_zoom(range_data, selection) {
 
     chart.call(zoom)
 
+
+
     var divButton = d3.select("#chart")
         .append("div")
         .style("position", "absolute")
@@ -407,8 +420,23 @@ function chart_zoom(range_data, selection) {
     var button_horizontal = content.append("p")
         .attr("type", "button")
         .attr("class", "btn-cont")
-        .text("linia pozioma")
+        .text("pozioma")
         .on('click', lineHorizontal)
+    var button_parallel = content.append("p")
+        .attr("type", "button")
+        .attr("class", "btn-cont")
+        .text("równoległa")
+        .on('click', lineParallel)
+    var cross = d3.select("#chart")
+        .append("button")
+        .attr("type", "button")
+        .attr("class", "btn-btn")
+        .style("position", "absolute")
+        .style("right", "14%")
+        .style("top", "50px")
+        .on('click', cross)
+        .append("i")
+        .attr("class", "fa fa-crosshairs")
 
     function drop() {
         timesClicked++;
@@ -421,12 +449,30 @@ function chart_zoom(range_data, selection) {
         }
     }
     var drag_start = []
+    var line_Pdrag = []
 
     function dragstarted() {
         zoom_off = true
         var x = d3.event.x;
         var y = d3.event.y;
         drag_start.push(x, y)
+
+        if (this.id.substr(0, 8).substr(-1) === '1') {
+
+            let secend_line = d3.select(`#${this.id.substr(0, 7)}2`)
+
+            line_Pdrag.push(secend_line._groups[0][0].x1.baseVal.value, secend_line._groups[0][0].y1.baseVal.value,
+                secend_line._groups[0][0].x2.baseVal.value, secend_line._groups[0][0].y2.baseVal.value)
+
+        } else if (this.id.substr(0, 8).substr(-1) === '2') {
+
+            let secend_line = d3.select(`#${this.id.substr(0, 7)}1`)
+
+            line_Pdrag.push(secend_line._groups[0][0].x1.baseVal.value, secend_line._groups[0][0].y1.baseVal.value,
+                secend_line._groups[0][0].x2.baseVal.value, secend_line._groups[0][0].y2.baseVal.value)
+
+        }
+
     }
 
     function dragged() {
@@ -468,6 +514,143 @@ function chart_zoom(range_data, selection) {
         }
     }
 
+    function draggedP() {
+        var cx = d3.event.x;
+        var cy = d3.event.y;
+
+        d3.select(this)
+            .attr('cx', cx)
+            .attr('cy', cy)
+        var linename = this.id.substr(0, 8)
+        var linia_drag = d3.select(`#${linename} `)
+        var arrpoints = points.find(x => x.name === linename)
+
+
+        if (this.className.baseVal === 'start') {
+
+            linia_drag
+                .attr('x1', cx)
+                .attr('y1', cy)
+
+
+            if (xScaleZ) {
+                arrpoints.scale[0] = xScaleZ.invert(cx) + xScale_focus.invert(selection[0])
+                arrpoints.scale[1] = yScale.invert(cy)
+            } else {
+                arrpoints.scale[0] = xScale.invert(cx) + xScale_focus.invert(selection[0])
+                arrpoints.scale[1] = yScale.invert(cy)
+            }
+
+            if (this.id.substr(0, 8).substr(-1) === '1') {
+
+                var linia_drag1 = d3.select(`#${this.id.substr(0, 7)}2`)
+                var circle = d3.select(`#${this.id.substr(0, 7)}2Start`)
+
+                var x1 = line_Pdrag[0]
+
+                var y1 = line_Pdrag[1]
+
+                linia_drag1
+                    .attr('x1', (x1 + (cx - d3.event.subject.cx)))
+                    .attr('y1', (y1 + (cy - d3.event.subject.cy)))
+                circle
+                    .attr('cx', (x1 + (cx - d3.event.subject.cx)))
+                    .attr('cy', (y1 + (cy - d3.event.subject.cy)))
+                var arrpoints1 = points.find(x => x.name === `${this.id.substr(0, 7)}2`)
+                if (xScaleZ) {
+                    arrpoints1.scale[0] = xScaleZ.invert((x1 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[1] = yScale.invert((y1 + (cy - d3.event.subject.cy)))
+                } else {
+                    arrpoints1.scale[0] = xScale.invert((x1 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[1] = yScale.invert((y1 + (cy - d3.event.subject.cy)))
+                }
+            } else if (this.id.substr(0, 8).substr(-1) === '2') {
+
+                var linia_drag1 = d3.select(`#${this.id.substr(0, 7)}1`)
+                var circle = d3.select(`#${this.id.substr(0, 7)}1Start`)
+
+                var x1 = line_Pdrag[0]
+                var y1 = line_Pdrag[1]
+
+                linia_drag1
+                    .attr('x1', (x1 + (cx - d3.event.subject.cx)))
+                    .attr('y1', (y1 + (cy - d3.event.subject.cy)))
+                circle
+                    .attr('cx', (x1 + (cx - d3.event.subject.cx)))
+                    .attr('cy', (y1 + (cy - d3.event.subject.cy)))
+
+                var arrpoints1 = points.find(x => x.name === `${this.id.substr(0, 7)}1`)
+                if (xScaleZ) {
+                    arrpoints1.scale[0] = xScaleZ.invert((x1 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[1] = yScale.invert((y1 + (cy - d3.event.subject.cy)))
+                } else {
+                    arrpoints1.scale[0] = xScale.invert((x1 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[1] = yScale.invert((y1 + (cy - d3.event.subject.cy)))
+                }
+            }
+
+        } else {
+            linia_drag
+                .attr('x2', cx)
+                .attr('y2', cy)
+
+            if (xScaleZ) {
+                arrpoints.scale[2] = xScaleZ.invert(cx) + xScale_focus.invert(selection[0])
+                arrpoints.scale[3] = yScale.invert(cy)
+            } else {
+                arrpoints.scale[2] = xScale.invert(cx) + xScale_focus.invert(selection[0])
+                arrpoints.scale[3] = yScale.invert(cy)
+            }
+            if (this.id.substr(0, 8).substr(-1) === '1') {
+
+                var linia_drag1 = d3.select(`#${this.id.substr(0, 7)}2`)
+                var circle = d3.select(`#${this.id.substr(0, 7)}2End`)
+
+                var x2 = line_Pdrag[2]
+                var y2 = line_Pdrag[3]
+
+                linia_drag1
+                    .attr('x2', (x2 + (cx - d3.event.subject.cx)))
+                    .attr('y2', (y2 + (cy - d3.event.subject.cy)))
+                circle
+                    .attr('cx', (x2 + (cx - d3.event.subject.cx)))
+                    .attr('cy', (y2 + (cy - d3.event.subject.cy)))
+                var arrpoints1 = points.find(x => x.name === `${this.id.substr(0, 7)}2`)
+                if (xScaleZ) {
+                    arrpoints1.scale[0] = xScaleZ.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[1] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
+                } else {
+                    arrpoints1.scale[0] = xScale.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[1] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
+                }
+            } else if (this.id.substr(0, 8).substr(-1) === '2') {
+
+                var linia_drag1 = d3.select(`#${this.id.substr(0, 7)}1`)
+                var circle = d3.select(`#${this.id.substr(0, 7)}1End`)
+
+                var x2 = line_Pdrag[2]
+                var y2 = line_Pdrag[3]
+
+                linia_drag1
+                    .attr('x2', (x2 + (cx - d3.event.subject.cx)))
+                    .attr('y2', (y2 + (cy - d3.event.subject.cy)))
+                circle
+                    .attr('cx', (x2 + (cx - d3.event.subject.cx)))
+                    .attr('cy', (y2 + (cy - d3.event.subject.cy)))
+
+                var arrpoints1 = points.find(x => x.name === `${this.id.substr(0, 7)}1`)
+                if (xScaleZ) {
+                    arrpoints1.scale[0] = xScaleZ.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[1] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
+                } else {
+                    arrpoints1.scale[0] = xScale.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[1] = yScale.invert((y1 + (cy - d3.event.subject.cy)))
+                }
+            }
+        }
+
+    }
+
     function dragLineH() {
         var x = d3.event.x;
         var y = d3.event.y;
@@ -485,14 +668,11 @@ function chart_zoom(range_data, selection) {
         };
 
         line_drag
-
             .attr("y1", attributes.y1)
-
-        .attr("y2", attributes.y2)
+            .attr("y2", attributes.y2)
 
         arrpoints.scale[1] = yScale.invert(attributes.y1)
         arrpoints.scale[3] = yScale.invert(attributes.y2)
-
 
     }
 
@@ -504,7 +684,7 @@ function chart_zoom(range_data, selection) {
         var Ny = drag_start[1] - y
 
         var line_drag = d3.select(this);
-        var arrpoints = points.find(x => x.name === this.id.substr(0, 5))
+        var arrpoints = points.find(x => x.name === this.id)
 
         var attributes = {
             "x1": d3.event.subject.x1 - Nx,
@@ -545,12 +725,235 @@ function chart_zoom(range_data, selection) {
     function dragended() {
         zoom_off = false
         drag_start = []
+        line_Pdrag = []
 
     }
 
     var div = d3.select("#rect");
+    var cross_click = 0
+
+    function cross() {
+
+        cross_click++
+
+        if (cross_click < 2) {
+            div.on("click", function() {
+                var m = d3.mouse(this);
+                let panel = d3.select("#chart")
+                    .append("div")
+                    .style("position", "absolute")
+                    .style("left", "0.5%")
+                    .style("top", "50px")
+                    .style("background-color", "grey")
+                    .style("width", "120px")
+                    .style("height", "200px")
+                    .attr("class", "panel")
+                let table = panel.append('table')
+
+                let row1 = table.append('tr')
+                row1
+                    .append('th')
+                    .style("color", "white")
+                    .text('open')
+
+                row1
+                    .append('th')
+                    .text('close')
+                    .style("color", "white")
+                let row2 = table.append('tr')
+                let open_th = row2.append('th')
+                    .text(`${(Number(xDateScale(Math.floor(xScale.invert(m[0]))).open).toFixed(3))}`)
+                    .style("color", "white")
+                let close_th = row2.append('th')
+                    .text(`${(Number(xDateScale(Math.floor(xScale.invert(m[0]))).close).toFixed(3))}`)
+                    .style("color", "white")
+                let row3 = table.append('tr')
+                row3
+                    .append('th')
+                    .text('high')
+                    .style("color", "white")
+                row3
+                    .append('th')
+                    .text('low')
+                    .style("color", "white")
+                let row4 = table.append('tr')
+                let high_th = row4.append('th')
+                    .text(`${(Number(xDateScale(Math.floor(xScale.invert(m[0]))).high).toFixed(3))}`)
+                    .style("color", "white")
+                let low_th = row4.append('th')
+                    .text(`${(Number(xDateScale(Math.floor(xScale.invert(m[0]))).low).toFixed(3))}`)
+                    .style("color", "white")
+                let row5 = table.append('tr')
+                row5
+                    .append('th')
+                    .text('Volume')
+                    .style("color", "white")
+
+                let Volume_th = panel.append('span')
+                    .text(`${xDateScale(Math.floor(xScale.invert(m[0]))).low}`)
+                    .style("font-family", "sans-serif")
+                    .style("font-size", "12px")
+                    .style("color", "white")
 
 
+
+                let cross_line_x = chart.append("g")
+                    .attr("class", "crossx")
+                let line_cross_x = cross_line_x.append("line")
+                    .attr("x1", 30)
+                    .attr("y1", m[1])
+                    .attr("x2", xScale(xScale_focus.domain()[1]))
+                    .attr("y2", m[1])
+                    .attr("stroke-width", 1)
+                    .attr("stroke", "grey")
+                    .attr("clip-path", "url(#clip)")
+
+                let rect_line = cross_line_x.append('rect')
+                    .attr('width', 55)
+                    .attr('height', 20)
+                    .attr("fill", 'grey')
+                    .attr("x", 0)
+                    .attr("y", m[1] - 10)
+
+                let text_x = cross_line_x.append('text')
+                    .attr("x", 5)
+                    .attr("dy", m[1] + 7)
+                    .attr("font-family", "sans-serif")
+                    .attr("font-size", "14px")
+                    .attr("fill", "white")
+                    .text(`${Number(yScale.invert(m[1]).toFixed(1))}`)
+
+                let cross_line_y = chart.append("g")
+                    .attr("class", "crossy")
+                    .append("line")
+                    .attr("x1", m[0])
+                    .attr("y1", yScale(0))
+                    .attr("x2", m[0])
+                    .attr("y2", yScale(width))
+                    .attr("stroke-width", 1)
+                    .attr("stroke", "grey")
+
+
+                let Volume_line_y = Volume_box.append('g')
+                    .attr("class", "crossVolmeY")
+                let line_volume_y = Volume_line_y.append("line")
+                    .attr("x1", m[0])
+                    .attr("y1", yScale(0))
+                    .attr("x2", m[0])
+                    .attr("y2", yScale(Volume_height))
+                    .attr("stroke-width", 1)
+                    .attr("stroke", "grey")
+                let rect_y = Volume_line_y.append('rect')
+                    .attr('width', 100)
+                    .attr('height', 20)
+                    .attr("fill", 'grey')
+                    .attr("x", m[0] - 50)
+                    .attr("y", 0)
+                let text_y = Volume_line_y.append('text')
+                    .attr("x", m[0] - 35)
+                    .attr("y", 15)
+                    .attr("font-family", "sans-serif")
+                    .attr("font-size", "14px")
+                    .attr("fill", "white")
+                    .text(`${dayjs(xDateScale(Math.floor(xScale.invert(m[0]))).date).format('DD/MM/YYYY')}`)
+
+                div.on("mousemove", () => {
+                    var m = d3.mouse(this);
+
+                    line_cross_x
+                        .attr("x1", xScale(xScale_focus.domain()[0]))
+                        .attr("y1", m[1])
+                        .attr("x2", xScale(xScale_focus.domain()[1]))
+                        .attr("y2", m[1])
+                    rect_line
+                        .attr("x", 0)
+                        .attr("y", m[1] - 10)
+                    text_x
+                        .attr("x", 5)
+                        .attr("dy", m[1] + 7)
+                        .text(`${Number(yScale.invert(m[1]).toFixed(1))}`)
+
+
+
+                    cross_line_y
+                        .attr("x1", m[0])
+                        .attr("y1", yScale(0))
+                        .attr("x2", m[0])
+                        .attr("y2", yScale(width))
+                    line_volume_y
+                        .attr("x1", m[0])
+                        .attr("y1", yScale(0))
+                        .attr("x2", m[0])
+                        .attr("y2", yScale(Volume_height))
+                    rect_y
+                        .attr("x", m[0] - 50)
+                        .attr("y", 0)
+                    text_y
+                        .attr("x", m[0] - 35)
+                        .attr("y", 15)
+                    if (xScaleZ) {
+
+                        text_y
+                            .text(`${dayjs(xDateScale(Math.floor(xScaleZ.invert(m[0]))).date).format('DD/MM/YYYY')}`)
+
+                    } else {
+
+                        text_y
+                            .text(`${dayjs(xDateScale(Math.floor(xScale.invert(m[0]))).date).format('DD/MM/YYYY')}`)
+                    }
+                    if (xScaleZ) {
+                        open_th
+                            .text(`${(Number(xDateScale(Math.floor(xScaleZ.invert(m[0]))).open).toFixed(3))}`)
+                    } else {
+                        open_th
+                            .text(`${(Number(xDateScale(Math.floor(xScale.invert(m[0]))).open).toFixed(3))}`)
+
+                    }
+                    if (xScaleZ) {
+                        close_th
+                            .text(`${(Number(xDateScale(Math.floor(xScaleZ.invert(m[0]))).close).toFixed(3))}`)
+                    } else {
+                        close_th
+                            .text(`${(Number(xDateScale(Math.floor(xScale.invert(m[0]))).close).toFixed(3))}`)
+                    }
+                    if (xScaleZ) {
+                        high_th
+                            .text(`${(Number(xDateScale(Math.floor(xScaleZ.invert(m[0]))).high).toFixed(3))}`)
+                    } else {
+                        high_th
+                            .text(`${(Number(xDateScale(Math.floor(xScale.invert(m[0]))).high).toFixed(3))}`)
+                    }
+                    if (xScaleZ) {
+                        low_th
+                            .text(`${(Number(xDateScale(Math.floor(xScaleZ.invert(m[0]))).low).toFixed(3))}`)
+                    } else {
+                        low_th
+                            .text(`${(Number(xDateScale(Math.floor(xScale.invert(m[0]))).low).toFixed(3))}`)
+                    }
+
+                    if (xScaleZ) {
+                        Volume_th
+                            .text(`${xDateScale(Math.floor(xScaleZ.invert(m[0]))).low}`)
+                    } else {
+                        Volume_th
+                            .text(`${xDateScale(Math.floor(xScale.invert(m[0]))).low}`)
+                    }
+                })
+            })
+
+        } else {
+            let cross_line_x = chart.selectAll(".crossx").remove()
+            let cross_line_y = chart.selectAll(".crossy").remove()
+            let Volume_line_y = Volume_box.selectAll(".crossVolmeY").remove()
+            let Panel = d3.select("#chart").selectAll(".panel").remove()
+            cross_click = 0
+            div.on("click", null)
+            div.on("mousemove", null)
+
+        }
+
+
+    }
 
     function lineHorizontal() {
         content.attr("class", "dropdown-content")
@@ -601,10 +1004,10 @@ function chart_zoom(range_data, selection) {
         vardata_circle = []
         scale_var = []
 
-
-
         zoom_off = true
-        var name = "Line" + (points.length + 1)
+        var length_class = d3.selectAll(".tradingLIne")
+
+        var name = "Line" + (length_class._groups[0].length + 1)
 
         isDrawing = true;
         vardata_circle = []
@@ -616,15 +1019,17 @@ function chart_zoom(range_data, selection) {
 
             vardata_circle.push(m[0], m[1])
             if (xScaleZ) {
+
                 scale_var.push(xScaleZ.invert(m[0]) + xScale_focus.invert(selection[0]), yScale.invert(m[1]))
             } else {
+
                 scale_var.push(xScale.invert(m[0]) + xScale_focus.invert(selection[0]), yScale.invert(m[1]))
             }
             line = chart.append("g")
-                .attr("class", "tradingLIne")
+                .attr("class", "tradingLIne");
 
             line1 = line.append("line")
-                .attr("id", `${ name }`)
+                .attr("id", `${name}`)
                 .attr("class", "drowLine")
                 .attr("x1", m[0])
                 .attr("y1", m[1])
@@ -632,7 +1037,7 @@ function chart_zoom(range_data, selection) {
                 .attr("y2", m[1])
                 .attr("stroke-width", 1)
                 .attr("stroke", "black")
-                .attr("clip-path", "url(#clip)")
+                .attr("clip-path", "url(#clip)");
 
 
 
@@ -694,16 +1099,192 @@ function chart_zoom(range_data, selection) {
 
     }
 
+    function lineParallel() {
+        content.attr("class", "dropdown-content")
+        timesClicked = 0
+        let vardata_circle = []
+        let vardata_circle1 = []
+        let scale_var = []
+        let scale_var1 = []
+
+
+
+        zoom_off = true
+        var length_class = d3.selectAll(".ParallelLIne")
+        var number_line = length_class._groups[0].length
+
+        var name = "LineP" + (number_line + 1) + '-1'
+
+        isDrawing = true;
+        vardata_circle = []
+        scale_var = []
+
+        div.on("click", function() {
+
+            var m = d3.mouse(this);
+
+            vardata_circle.push(m[0], m[1])
+            if (xScaleZ) {
+                scale_var.push(xScaleZ.invert(m[0]) + xScale_focus.invert(selection[0]), yScale.invert(m[1]))
+            } else {
+                scale_var.push(xScale.invert(m[0]) + xScale_focus.invert(selection[0]), yScale.invert(m[1]))
+            }
+            line = chart.append("g")
+                .attr("class", "ParallelLIne")
+
+            var line1 = line.append("line")
+                .attr("id", `${name}`)
+                .attr("class", "drowLine")
+                .attr("x1", m[0])
+                .attr("y1", m[1])
+                .attr("x2", m[0])
+                .attr("y2", m[1])
+                .attr("stroke-width", 1)
+                .attr("stroke", "black")
+                .attr("clip-path", "url(#clip)");
+
+            div.on("mousemove", () => {
+                if (isDrawing === true) {
+                    var n = d3.mouse(this);
+                    line1.attr("x2", n[0])
+                        .attr("y2", n[1]);
+                    chart.on("click", function() {
+                        div.on("mousemove", null)
+                        div.on("click", null);
+                        chart.on("click", null);
+                        vardata_circle.push(n[0], n[1])
+                        if (xScaleZ) {
+                            scale_var.push(xScaleZ.invert(n[0]) + xScale_focus.invert(selection[0]), yScale.invert(n[1]))
+                        } else {
+                            scale_var.push(xScale.invert(n[0]) + xScale_focus.invert(selection[0]), yScale.invert(n[1]))
+                        }
+                        points.push({
+                            "name": name,
+                            "xy": vardata_circle,
+                            "scale": scale_var
+
+                        })
+                        isDrawing = false;
+                        circles1 = line.append('circle')
+                            .attr("id", `${name}Start`)
+                            .attr('class', 'start')
+                            .attr('r', 2.0)
+                            .attr('cx', vardata_circle[0])
+                            .attr('cy', vardata_circle[1])
+                            .style('cursor', 'pointer')
+                            .style('fill', "black");
+                        circles2 = line.append('circle')
+                            .attr("id", `${name}End`)
+                            .attr('class', 'End')
+                            .attr('r', 2.0)
+                            .attr('cx', vardata_circle[2])
+                            .attr('cy', vardata_circle[3])
+                            .style('cursor', 'pointer')
+                            .style('fill', "black");
+
+
+                        line.selectAll('circle')
+                            .call(dragP);
+                        line1.style('cursor', 'all-scroll')
+                            .call(moveLine)
+
+                        line = chart.append("g")
+                            .attr("class", "ParallelLIne")
+                        name2 = "LineP" + (number_line + 1) + '-2'
+                        var line2 = line.append("line")
+                            .attr("id", `${name2}`)
+                            .attr("class", "drowLine")
+                            .attr("x1", line1.attr("x1"))
+                            .attr("y1", line1.attr("y1"))
+                            .attr("x2", line1.attr("x2"))
+                            .attr("y2", line1.attr("y2"))
+                            .attr("stroke-width", 1)
+                            .attr("stroke", "black")
+                            .attr("clip-path", "url(#clip)")
+
+
+                        div.on("mousemove", () => {
+
+                            var m = d3.mouse(this);
+                            var x = m[0] - n[0]
+                            var y = m[1] - n[1]
+
+                            line2
+                                .attr("x1", (Number(line1.attr("x1")) + x))
+                                .attr("y1", (Number(line1.attr("y1")) + y))
+                                .attr("x2", (Number(line1.attr("x2")) + x))
+                                .attr("y2", (Number(line1.attr("y2")) + y))
+
+                            chart.on("click", function() {
+                                div.on("mousemove", null)
+                                div.on("click", null);
+                                chart.on("click", null);
+
+                                vardata_circle1.push((Number(line1.attr("x1")) + x), (Number(line1.attr("y1")) + y), (Number(line1.attr("x2")) + x), (Number(line1.attr("y2")) + y))
+
+                                if (xScaleZ) {
+                                    scale_var1.push(xScaleZ.invert((Number(line1.attr("x1")) + x)) + xScale_focus.invert(selection[0]), yScale.invert((Number(line1.attr("y1")) + y)),
+                                        xScaleZ.invert((Number(line1.attr("x2")) + x)) + xScale_focus.invert(selection[0]), yScale.invert((Number(line1.attr("y2")) + y))
+                                    )
+                                } else {
+                                    scale_var1.push(xScale.invert((Number(line1.attr("x1")) + x)) + xScale_focus.invert(selection[0]), yScale.invert((Number(line1.attr("y1")) + y)),
+                                        xScale.invert((Number(line1.attr("x2")) + x)) + xScale_focus.invert(selection[0]), yScale.invert((Number(line1.attr("y2")) + y))
+                                    )
+                                }
+                                points.push({
+                                    "name": name2,
+                                    "xy": vardata_circle1,
+                                    "scale": scale_var1
+
+                                })
+
+                                circles1 = line.append('circle')
+                                    .attr("id", `${name2}Start`)
+                                    .attr('class', 'start')
+                                    .attr('r', 2.0)
+                                    .attr('cx', vardata_circle1[0])
+                                    .attr('cy', vardata_circle1[1])
+                                    .style('cursor', 'pointer')
+                                    .style('fill', "black");
+                                circles2 = line.append('circle')
+                                    .attr("id", `${name2}End`)
+                                    .attr('class', 'End')
+                                    .attr('r', 2.0)
+                                    .attr('cx', vardata_circle1[2])
+                                    .attr('cy', vardata_circle1[3])
+                                    .style('cursor', 'pointer')
+                                    .style('fill', "black");
+                                zoom_off = false
+                                line.selectAll('circle')
+                                    .call(dragP);
+                                line2.style('cursor', 'all-scroll')
+                                    .call(moveLine)
+
+
+
+                            })
+                        })
+
+                    });
+                }
+
+            })
+
+        });
+
+    }
+
     function zoomed() {
+
         if (zoom_off === false) {
 
             var t = d3.event.transform;
 
-            var xScaleZ = t.rescaleX(xScale);
-
+            xScaleZ = t.rescaleX(xScale);
 
             var line_zoom = chart.selectAll(".drowLine")
                 .attr("x1", (line_zoom, x, arr) => {
+
                     var arrpoints = points.find(i => i.name === arr[x].id)
 
                     return xScaleZ(arrpoints.scale[0] - xScale_focus.invert(selection[0]))
@@ -715,7 +1296,8 @@ function chart_zoom(range_data, selection) {
                 })
             var Circle_zoom = chart.selectAll('circle')
                 .attr("cx", (Circle_zoom, x, arr) => {
-                    var arrpoints = points.find(i => i.name === arr[x].id.substr(0, 5))
+
+                    var arrpoints = points.find(i => i.name === arr[x].id.slice(0, `-${arr[x].className.baseVal.length}`))
                     if (arr[x].className.baseVal === 'start') {
 
                         return xScaleZ(arrpoints.scale[0] - xScale_focus.invert(selection[0]))
@@ -778,7 +1360,7 @@ function chart_zoom(range_data, selection) {
 
             var t = d3.event.transform;
 
-            let xScaleZ = t.rescaleX(xScale);
+            xScaleZ = t.rescaleX(xScale);
             clearTimeout(resizeTimer)
 
             resizeTimer = setTimeout(function() {
@@ -846,7 +1428,7 @@ function chart_zoom(range_data, selection) {
                     var Circle_zoom = chart.selectAll('circle')
                         .attr("cy", (Circle_zoom, x, arr) => {
 
-                            var arrpoints = points.find(i => i.name === arr[x].id.substr(0, 5))
+                            var arrpoints = points.find(i => i.name === arr[x].id.slice(0, `-${ arr[x].className.baseVal.length }`))
                             if (arr[x].className.baseVal === 'start') {
 
                                 return yScale(arrpoints.scale[1])
@@ -925,7 +1507,7 @@ focus_chart
 
 var gX_focus = focus_chart.append("g")
     .attr("class", "axis x-axis_focus") //Assign "axis" class
-    .attr("transform", `translate(0,${height_focus})`)
+    .attr("transform", `translate(0, ${height_focus})`)
     .style("fill", "#E5E5E5")
     .call(xAxis_focus)
 
