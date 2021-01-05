@@ -3,7 +3,7 @@ body.baseBackground {
 }
 
 body.PanelbaseBackground {
-    background-color: #cef3b5;
+    background-color: #444642;
 }
 
 .block {
@@ -151,7 +151,9 @@ nav {
 .btn-btn {
     cursor: pointer;
 }
-
+.drowLine:hover{
+    stroke-width: 3
+}
 .btn-btn:hover,
 .btn-btn:focus {
     background-color: #2980B9;
@@ -258,10 +260,10 @@ a.right-topbar-item:hover {
 }
 
 .training-container {
-    margin: 15px 5% 5px 5%;
+    margin: 40px 5% 5px 5%;
     padding: 20px 5% 10px 5%;
     background-color: #f9fafc;
-    box-shadow: 7px 2px 30px -2px rgba(127, 163, 113, 1);
+    box-shadow: 1px 1px 30px -2px rgba(172 187 166);
     border-radius: 10px;
 }
 

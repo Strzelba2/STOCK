@@ -109,8 +109,6 @@ const date_M = () => {
     console.log(month_date)
     */
 
-
-
 var chart = d3.select("#chart")
     .append("svg:svg")
     .attr("class", "chart")
@@ -119,10 +117,9 @@ var Volume_box = d3.select("#chart")
     .append("svg:svg")
 
 
-
-
 var points = []
 var pointsH = []
+var SMA_lines = []
 
 
 
@@ -134,6 +131,7 @@ function chart_zoom(range_data, selection) {
     var timesClicked = 0;
     var resizeTimer;
 
+
     if (range_data[0] <= 0) {
         range_data = [0, range_data[1]];
     } else if (range_data[1] >= sort_Data.length) {
@@ -143,6 +141,70 @@ function chart_zoom(range_data, selection) {
     }
 
     filtered_data = _.filter(sort_Data, d => ((d.date >= sort_Data[range_data[0]].date) && (d.date <= sort_Data[range_data[1]].date)))
+    function SMA_data(data , data_valu,period) {
+        period = parseInt(period)
+
+        let array_data = []
+        data.map((x, i, arr) => {
+            if (selection[0]>period){
+                if (i < period + 1) {
+
+                    let array_sort = sort_Data.slice(range_data[0]-(period-i), range_data[0]).map(data => data[data_valu])
+                    let array = data.slice(0, i).map(data => data[data_valu])
+                    let combine = array_sort.concat(array)
+                    let sum_data = d3.sum(combine)
+
+                    let SMA = sum_data / combine.length
+
+                    if (isNaN(SMA)) {
+                        array_data.push(arr[i + 1][data_valu])
+
+    
+                    } else {
+                        
+                        array_data.push(SMA)
+                    }
+    
+                } else {
+                    let array = data.slice(i - period, i).map(data => data[data_valu])
+                    let sum_data = d3.sum(array)
+                    let SMA = sum_data / array.length
+    
+                    array_data.push(SMA)
+    
+                }
+
+            }else{
+                if (i < period + 1) {
+
+                    let array = data.slice(0, i).map(data => data[data_valu])
+                    let sum_data = d3.sum(array)
+                    let SMA = sum_data / array.length
+
+                    if (isNaN(SMA)) {
+                        array_data.push(arr[i + 1][data_valu])
+  
+                    } else {         
+                        array_data.push(SMA)
+                    }
+    
+                } else {
+                    let array = data.slice(i - period, i).map(data => data[data_valu])
+                    let sum_data = d3.sum(array)
+                    let SMA = sum_data / array.length
+    
+                    array_data.push(SMA)
+    
+                }
+
+
+            }
+            
+
+        })
+        return array_data
+    }
+
 
     var xScale = d3.scaleLinear().domain([-1, filtered_data.length])
         .range([0, width])
@@ -273,6 +335,7 @@ function chart_zoom(range_data, selection) {
         .attr("y2", d => yScale(d.low))
         .attr("stroke", d => (d.open === d.close) ? "black" : (d.open > d.close) ? "red" : "green")
     const Volume_height = 100
+
     Volume_box.attr("viewBox", [0, 0, width, Volume_height])
         .attr("class", "VolumeView")
 
@@ -321,7 +384,29 @@ function chart_zoom(range_data, selection) {
         .on('start', dragstarted)
         .on('drag', draggedP)
         .on('end', dragended);
+    SMA_lines.map((x) => {
 
+        let color = x.color
+        let period = x.period
+        let data_value = x.data_value
+
+        chart.append("path")
+            .attr("class","SMA_path")
+            .datum(SMA_data(filtered_data,data_value,period))
+            .attr("fill", "none")
+            .attr("stroke", `${color}`)
+            .attr("stroke-width", 1.5)
+            .attr("d", d3.line()
+                .x((d, i, arr) => { 
+                    if(xScaleZ){
+                        return xScaleZ(i)
+                    }else{
+                        return xScale(i)} })
+                .y((d, i, arr) => { return yScale(arr[i]) })
+
+            )
+
+    })
 
     points.map((x) => {
 
@@ -401,16 +486,35 @@ function chart_zoom(range_data, selection) {
         .append("div")
         .style("position", "absolute")
         .style("right", "11%")
-        .style("top", "50px")
+        .style("top", "70px")
+        .attr("class", "dropdown")
+    var divButton1 = d3.select("#chart")
+        .append("div")
+        .style("position", "absolute")
+        .style("right", "16%")
+        .style("top", "70px")
         .attr("class", "dropdown")
     var lineButton = divButton.append("button")
         .attr("type", "button")
         .attr("class", "btn-btn")
         .text("linia")
         .on('click', drop)
+    var funcButton = divButton1.append("button")
+        .attr("type", "button")
+        .attr("class", "btn-btn")
+        .text("f(x)")
+        .on('click', drop)
     var content = divButton.append("div")
         .attr("class", "dropdown-content")
         .attr("id", "myDropdow")
+    var contentFx = divButton1.append("div")
+        .attr("class", "dropdown-content")
+        .attr("id", "myDropdow")
+    var button_SMA = contentFx.append("p")
+        .attr("type", "button")
+        .attr("class", "btn-cont")
+        .text("SMA")
+        .on('click', SMA_panel)
 
     var button_line = content.append("p")
         .attr("type", "button")
@@ -433,7 +537,7 @@ function chart_zoom(range_data, selection) {
         .attr("class", "btn-btn")
         .style("position", "absolute")
         .style("right", "14%")
-        .style("top", "50px")
+        .style("top", "70px")
         .on('click', cross)
         .append("i")
         .attr("class", "fa fa-crosshairs")
@@ -441,11 +545,14 @@ function chart_zoom(range_data, selection) {
     function drop() {
         timesClicked++;
 
+        var Parent_div = this.parentNode
+
         if (timesClicked > 1) {
-            content.attr("class", "dropdown-content")
+            let all = d3.selectAll(".dropdown-content")
+            all.attr("class", "dropdown-content")
             timesClicked = 0
         } else {
-            content._groups[0][0].classList.toggle("show");
+            Parent_div.childNodes[1].classList.toggle("show");
         }
     }
     var drag_start = []
@@ -457,14 +564,14 @@ function chart_zoom(range_data, selection) {
         var y = d3.event.y;
         drag_start.push(x, y)
 
-        if (this.id.substr(0, 8).substr(-1) === '1') {
+        if (this.id.substr(0, 8).substr(-1) === '1' && this.id.length === 8) {
 
             let secend_line = d3.select(`#${this.id.substr(0, 7)}2`)
 
             line_Pdrag.push(secend_line._groups[0][0].x1.baseVal.value, secend_line._groups[0][0].y1.baseVal.value,
                 secend_line._groups[0][0].x2.baseVal.value, secend_line._groups[0][0].y2.baseVal.value)
 
-        } else if (this.id.substr(0, 8).substr(-1) === '2') {
+        } else if (this.id.substr(0, 8).substr(-1) === '2' && this.id.length === 8) {
 
             let secend_line = d3.select(`#${this.id.substr(0, 7)}1`)
 
@@ -676,6 +783,41 @@ function chart_zoom(range_data, selection) {
 
     }
 
+    function SMA() {
+        
+        let color = d3.select("#color_SMA").property("value")
+        let period = document.getElementById("period_SMA").value
+        let data_value = document.getElementById("select_data_SMA").value
+        var length_class = d3.selectAll(".SMA_path")
+
+        var name = "SMA" + (length_class._groups[0].length + 1)
+        SMA_lines.push({
+            "name":name,
+            "color":color,
+            "data_value":data_value,
+            "period":period
+        })
+
+        
+        chart.append("path")
+            .attr("class","SMA_path")
+            .datum(SMA_data(filtered_data,data_value,period))
+            .attr("fill", "none")
+            .attr("stroke", `${color}`)
+            .attr("stroke-width", 1.5)
+            .attr("d", d3.line()
+                .x((d, i, arr) => { 
+                    if(xScaleZ){
+                        return xScaleZ(i)
+                    }else{
+                        return xScale(i)} })
+                .y((d, i, arr) => { return yScale(arr[i]) })
+
+            )
+        d3.select(".SMA_panel").remove()
+        timesClicked = 0
+    }
+
     function dragLine() {
         var x = d3.event.x;
         var y = d3.event.y;
@@ -731,6 +873,174 @@ function chart_zoom(range_data, selection) {
 
     var div = d3.select("#rect");
     var cross_click = 0
+
+    function SMA_panel() {
+        contentFx.attr("class", "dropdown-content")
+        let SMA_options = ["high", "low", "open", "close"];
+
+        let pos_div = []
+        let isDown = false;
+
+        let drag_panel = d3.drag()
+            .subject(function() {
+                let pos = d3.select(".SMA_panel").node().getBoundingClientRect();
+
+                return { x: pos.x, y: pos.y,};
+            })
+            .on('start', dragged_panelstart)
+            .on('drag', dragged_panel)
+            .on('end', dragged_panelend)
+            
+        function dragged_panelstart(){
+
+            if (d3.event.sourceEvent.target === this || d3.event.sourceEvent.target === row1._groups[0][0]){
+
+                let x = d3.event.x;
+                let y = d3.event.y;
+                pos_div.push(x,y)
+                
+                isDown = true
+            }
+            
+        }
+        
+        function dragged_panel() {
+
+            if(isDown){
+
+                let x = d3.event.x;
+                let y = d3.event.y;
+
+                Nx = pos_div[0]-x
+                Ny = pos_div[1]-y
+                SMA_div = d3.selectAll(".SMA_panel")
+                    .style("left", (d3.event.subject.x -Nx) + "px")
+                    .style("top", (d3.event.subject.y -Ny) + "px")
+            }
+            
+        }
+        function dragged_panelend(){
+
+            isDown = false
+        }
+        function destroy(){
+            panel.remove()
+            timesClicked = 0
+        }
+        let panel = d3.select(".training-container")
+            .append("div")
+            .style("position", "absolute")
+            .style("left", "45%")
+            .style("top", "200px")
+            .style("background-color", "grey")
+            .style("width", "250px")
+            .style("height", "210px")
+            .attr("class", "SMA_panel")
+            .attr("id", "SMA_panel")
+            .call(drag_panel)
+
+        let row1 = panel.append("div")
+            .style("width", "100%")
+            .style("padding", "10px 5px 15px 15px")
+            .style("background-color", "#1f1f20")
+        row1
+            .append("span")
+            .style("color", "white")
+            .text("Śednia krocząca SMA")
+        row1
+            .append("span")
+            .style("float", "right")
+            .style("margin-top", "-5px")
+            .style("margin-right", "3%")
+            .on('click', destroy)
+            .append("i")
+            .attr("class", "fa fa-times")
+            .style("color", "white")
+            .style("cursor","pointer")
+
+        let row2 = panel.append("div")
+            .style("width", "100%")
+            .style("display", "block")
+        let div1 = row2.append("div")
+            .style("display","table-cell")
+            .style("padding","5px 10px")
+            .style("width","50%")
+        let div2 = row2.append("div")
+            .style("display","table-cell")
+            .style("padding","5px 10px")
+            .style("width","50%")
+        div1
+            .append("label")
+            .style("padding-left","15px")
+            .text("Okres")
+        let input_period = div1.append("input")
+            .attr("id","period_SMA")
+            .attr("type", "number")
+            .style("width","100%")
+            .style("height","30px")
+            .style("background-color","#152126")
+            .style("border","solid 1px #2b3a42")
+            .style("color","white")
+            .attr("value","10")
+        input_period
+            .on("mousedown", function() { d3.event.stopPropagation(); })
+        div2
+            .append("label")
+            .text("W oparciu o")
+        let selection = div2.append("select")
+            .style("width","100%")
+            .attr("id","select_data_SMA")
+            .style("height","30px")
+            .style("background-color","#152126")
+            .style("border","solid 1px #2b3a42")
+            .style("color","white")
+        let options = selection.selectAll("option")
+            .data(SMA_options)
+            .enter()
+            .append("option");
+
+
+        options.text(function(d) {
+                return d;
+            })
+            .attr("value", function(d) {
+                return d;
+            });
+        let row3 = panel.append("div")
+            .style("width", "100%")
+            .style("display", "flex")
+        let div3 = row3.append("div")
+            .style("padding","5px 10px")
+            .style("width","50%")
+        let div4 = row3.append("div")
+            .style("padding","35px 5px 5px 20px")
+            .style("width","45%")
+        div3
+            .append("label")
+            .style("padding-left","15px")
+            .text("Kolor")
+        let input_color = div3.append("input")
+            .attr("type", "color")
+            .attr("id","color_SMA")
+            .style("width","100%")
+            .style("height","30px")
+            .style("background-color","#152126")
+            .style("border","solid 1px #2b3a42")
+            .attr("value","#FFA200")
+
+        div4
+            .append("button")
+            .attr("type","button")
+            .style("padding-left","20px")
+            .text("Zastosuj")
+            .style("color","white")
+            .style("background-color","#00b276")
+            .on('click', SMA)
+            
+
+
+
+    }
 
     function cross() {
 
@@ -1308,6 +1618,18 @@ function chart_zoom(range_data, selection) {
                     }
 
                 })
+            var SMA_zoom = chart.selectAll('.SMA_path')
+                .attr("d", d3.line()
+                    .x((d, i, arr) => { 
+
+                            return xScaleZ(i)
+                        })
+                    .y((d, i, arr) => { return yScale(arr[i]) })
+
+                        )
+
+
+
             gX.call(
                 d3.axisBottom(xScaleZ)
                 .tickValues(Rick_date_value(filtered_data))
@@ -1438,6 +1760,13 @@ function chart_zoom(range_data, selection) {
                                 return yScale(arrpoints.scale[3])
                             }
                         })
+                    var SMA_zoom = chart.selectAll('.SMA_path')
+                        .attr("d", d3.line()
+                            .x((d, i, arr) => { 
+                                return xScaleZ(i)
+                            })
+                            .y((d, i, arr) => { return yScale(arr[i]) }))
+                    
                 },
                 500)
         }
@@ -1508,7 +1837,6 @@ focus_chart
 var gX_focus = focus_chart.append("g")
     .attr("class", "axis x-axis_focus") //Assign "axis" class
     .attr("transform", `translate(0, ${height_focus})`)
-    .style("fill", "#E5E5E5")
     .call(xAxis_focus)
 
 
@@ -1553,9 +1881,14 @@ function brushed() {
 
 function brushended() {
 
-    const selection = d3.event.selection;
+    let selection = d3.event.selection;
+    let all = d3.selectAll(".dropdown-content")
+
+    all.attr("class", "dropdown-content")
+    timesClicked = 0
 
     if (!selection) {
+        
         area.call(brush.move, defaultSelection);
 
     } else {
