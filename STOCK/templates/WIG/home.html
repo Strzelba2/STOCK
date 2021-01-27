@@ -1,7 +1,7 @@
 {% extends 'basePanel.html' %} {% load static %}
 {% block nav %}
 	{% if request.user.is_authenticated %}
-		<a class="right-topbar-item " href="">Panel</a>
+		<a class="right-topbar-item " href="">Portfel</a>
 	{% endif %}
 {% endblock nav %}
 
@@ -11,16 +11,154 @@
 
 
 <div class="training-container" >
+    <div class="profilemenu">
+        
+        <div class="{{choose.0}}" id="WIG_btn">
 
-<form action="Analysis" method="GET" >
-    {% csrf_token %}
-    <span>Nazwa szkolenia</span> 
-    
-    <input type="text" name="name" value="06N"  style="display:None;">
-    <button type="submit" class="orderlist_title"  >06N  </button>
+            <form action="." method="GET" >
+                {% csrf_token %}
 
-</form>
+                <input type="text" name="quotes" value="WIG"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >WIG</button>
+                        
+            </form> 
+            <div class="dropdown-WIG">
+                <a href={% url 'update_fast' %}> Update WIG</a>
+            
+            </div>
+        
+        </div>
+        <div class="{{choose.1}}">
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="Waluty"  style="display:None;">
+                <button type="submit"  class="buttonQuotes"  >Waluty  </button>
+                        
+            </form> 
+        
+        </div>
+
+        <div class="{{choose.2}}">
+            <form action="." method="GET" >
+                {% csrf_token %}
+                
+                <input type="text" name="quotes" value="Index"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  > Index </button>
+                        
+            </form> 
+        
+        </div>
+        <div class="{{choose.3}}">
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="Towary"  style="display:None;">
+                <button type="submit"  class="buttonQuotes"  >  Towary</button>
+                        
+            </form> 
+        
+        </div>
+
+
+    </div>
+    <div class ="table-responsive">
+        <table id="" class="table table-vcenter table-condensed table-bordered">
+            <thead>
+                <tr>
+                {% for key, value in tabela_nav.items %}
+                    {% if genre != "WIG"  and key == "Wolumen" %}
+                        <!-- continue -->
+
+                    {% else %}
+                        <th class="text-center">
+                                <div class="table-filter">
+                                    <form action="." method="GET" >
+                                        {% csrf_token %}
+                                        <span>{{key}}</span> 
+                                        <input type="text" name="quotes" value={{genre}}  style="display:None;">
+                                        <input type="text" name="orderlist" value="{{value.0}}"  style="display:None;">
+                                        <button type="submit" class="orderlist_title"  ><i class="{{value.1}}"></i>  </button>
+                                
+                                    </form> 
+
+                                </div>
+                                
+                        </th>
+                    {% endif %}
+ 
+                {% endfor %}
+                     
+                
+                        
+
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in quates_data %}
+                
+
+                    <tr>
+                        <td class="text-center"> 
+                            <form action="Analysis" method="GET" >
+                            {% csrf_token %}
+                            <input type="text" name="genre" value="{{genre}}"  style="display:None;">
+                            <input type="text" name="name" value="{{item.Name}}"  style="display:None;">
+                            <button type="submit" class="buttonQuotes"  style="font-weight:bold;color: #555405">{{item.Name}}  </button>
+
+                        </form>
+
+                        </td>
+                        <td class="text-center" style="font-weight:bold;color: #555405" > {{item.Day_trading}}</td>
+                        <td class="text-center" style="font-weight:bold;color: #555405" > {{item.Closing_price}}</td>
+                        <td class="text-center change_price" style="font-weight:bold"> {{item.Change_price}} %</td>
+                        <td class="text-center" style="font-weight:bold;color: #555405" > {{item.Opening_price}}</td>
+                        <td class="text-center" style="font-weight:bold;color: #555405" > {{item.Highest_price}}</td>
+                        <td class="text-center" style="font-weight:bold;color: #555405" > {{item.Lowest_price}}</td>
+                        {% if genre == "WIG" %}
+                            <td class="text-center" style="font-weight:bold;color: #555405" > {{item.Volume}}</td>
+                        {% endif %}
+
+                    </tr>
+
+                {% endfor %}
+            <tbody>
+            
+    </div>
 
 </div>
 
 {% endblock content%} 
+{% block extra_js %}
+<script>
+let WIG_upd= document.getElementById("WIG_btn")
+let content_wig = document.getElementsByClassName("dropdown-WIG")
+WIG_upd.oncontextmenu = function (){
+    
+    console.log(content_wig)
+    content_wig[0].classList.toggle("show")
+
+    window.onclick = ()=>{
+        content_wig[0].className = "dropdown-WIG"
+    }
+    event.stopPropagation();
+
+    return false;     // cancel default menu
+}
+
+let change_price = document.getElementsByClassName("change_price")
+console.log(change_price)
+Array.prototype.map.call(change_price, (x)=>{
+    if (parseFloat(x.textContent.replace(/,/g, '.')).toFixed(2)< 0){
+        x.classList.toggle("lowqty")
+    }else if(parseFloat(x.textContent.replace(/,/g, '.')).toFixed(2)> 0){
+        x.classList.toggle("highqty")
+    }
+})
+
+</script>
+
+{% endblock extra_js %}
+

@@ -175,5 +175,9 @@ SESSION_SAVE_EVERY_REQUEST = True
 QUOTE = config('QUOTE')
 FINANCIAL = config('FINANCIAL')
 RAPORTY = config('RAPORTY')
-PROXY = config('PROXY')
+
+WIG_HOST = config('WIG_HOST')
+INDEX_HOST = config('INDEX_HOST')
+
+WIFI_PASSWORD  = config('WIFI_PASSWORD')
 

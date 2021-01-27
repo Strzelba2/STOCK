@@ -1,7 +1,7 @@
 function doSomethingWithData(error, jsondata) {
 
     const object = JSON.parse(jsondata)
-    object.forEach(function(obj) {
+    object.forEach(function (obj) {
         var jsonObj = [];
 
         jsonObj.push(obj.fields);
@@ -50,64 +50,65 @@ function sortdata(json) {
 
 
 var sort_Data = sortdata(data)
+console.log(sort_Data)
 const date_D = sort_Data.slice(-240)
 
 
 const date_M = () => {
-        arr = [];
-        sort_Data.map((item) => {
-            var monthinYear = item.date.getMonth() + '-' + item.date.getFullYear()
+    arr = [];
+    sort_Data.map((item) => {
+        var monthinYear = item.date.getMonth() + '-' + item.date.getFullYear()
 
-            if (arr.find(obj => {
-                    return obj.date === monthinYear
-                })) {
+        if (arr.find(obj => {
+            return obj.date === monthinYear
+        })) {
 
-                arr.find(obj => {
-                    return obj.date === monthinYear
-                }).add = [item.high, item.close, item.low, item.open, item.volume]
+            arr.find(obj => {
+                return obj.date === monthinYear
+            }).add = [item.high, item.close, item.low, item.open, item.volume]
 
-            } else {
-                arr.push({
-                    'date': monthinYear,
-                    'fields': {
-                        'high': [item.high],
-                        'close': [item.close],
-                        'low': [item.low],
-                        'open': [item.open],
-                        'volume': [item.volume],
-                    },
-                    set add(value) {
+        } else {
+            arr.push({
+                'date': monthinYear,
+                'fields': {
+                    'high': [item.high],
+                    'close': [item.close],
+                    'low': [item.low],
+                    'open': [item.open],
+                    'volume': [item.volume],
+                },
+                set add(value) {
 
-                        this.fields.high.push(value[0])
-                        this.fields.close.push(value[1])
-                        this.fields.low.push(value[2])
-                        this.fields.open.push(value[3])
-                        this.fields.volume.push(value[4])
-                    }
-                })
+                    this.fields.high.push(value[0])
+                    this.fields.close.push(value[1])
+                    this.fields.low.push(value[2])
+                    this.fields.open.push(value[3])
+                    this.fields.volume.push(value[4])
+                }
+            })
 
-            }
+        }
 
 
 
-        })
-        return arr.map((item) => ({
+    })
+    return arr.map((item) => ({
 
-            date: new Date('01-' + item.date),
-            high: Math.max.apply(null, item.fields.high),
-            low: Math.min.apply(null, item.fields.low),
-            open: item.fields.open[0],
-            close: item.fields.close[-1],
-            volume: item.fields.volume.reduce((a, b) => {
-                return a + b;
-            }),
+        date: new Date('01-' + item.date),
+        high: Math.max.apply(null, item.fields.high),
+        low: Math.min.apply(null, item.fields.low),
+        open: item.fields.open[0],
+        close: item.fields.close[-1],
+        volume: item.fields.volume.reduce((a, b) => {
+            return a + b;
+        }),
 
-        }))
-    }
-    /*
-    var month_date = date_M()
-    console.log(month_date)
-    */
+    }))
+}
+/*
+var month_date = date_M()
+console.log(month_date)
+*/
 
 var chart = d3.select("#chart")
     .append("svg:svg")
@@ -116,10 +117,19 @@ var chart = d3.select("#chart")
 var Volume_box = d3.select("#chart")
     .append("svg:svg")
 
+var RSI_div = d3.select("#chart")
+    .append("div")
+    .attr("class", "RSI_box")
+var Stochastic_div = d3.select("#chart")
+    .append("div")
+    .attr("class", "Stochastic_box")
+
 
 var points = []
 var pointsH = []
 var SMA_lines = []
+var RSI_lines = []
+var Stochastic_lines = []
 
 
 
@@ -130,6 +140,9 @@ function chart_zoom(range_data, selection) {
     var xScaleZ;
     var timesClicked = 0;
     var resizeTimer;
+    const Volume_height = 100;
+    const RSI_height = 100;
+    const Stochastic_height = 100;
 
 
     if (range_data[0] <= 0) {
@@ -141,15 +154,144 @@ function chart_zoom(range_data, selection) {
     }
 
     filtered_data = _.filter(sort_Data, d => ((d.date >= sort_Data[range_data[0]].date) && (d.date <= sort_Data[range_data[1]].date)))
-    function SMA_data(data , data_valu,period) {
+    function Stochastic_data(period, k_slow, d_slow) {
+        period = parseInt(period)
+        k_slow = parseInt(k_slow)
+        d_slow = parseInt(d_slow)
+        console.log(period)
+        let array_data = []
+
+        let array_max = []
+        let array_low = []
+        let array_K = []
+        let array_K_slow = []
+        let first_k = 0
+        let first_d = 0
+
+        sort_Data.map((x, i, arr) => {
+            if (i < period) {
+                array_max.push(x.high)
+                array_low.push(x.low)
+                array_data.push([0, 0])
+                if (array_low.length == period && array_max.length == period) {
+
+                    let val_max = d3.max(array_max)
+                    let val_min = d3.min(array_low)
+                    let k = (x.close - val_min) / (val_max - val_min) * 100
+                    array_K.push(k)
+                    array_data.push([0, 0])
+                }
+            } else {
+
+                array_max.shift()
+                array_low.shift()
+                array_max.push(x.high)
+                array_low.push(x.low)
+                let val_max = d3.max(array_max)
+                let val_min = d3.min(array_low)
+                let k = (x.close - val_min) / (val_max - val_min) * 100
+
+                if (array_K.length <= k_slow) {
+                    first_k++
+                    array_K.push(k)
+                    if (first_k == k_slow) {
+                        array_K_slow.push(d3.sum(array_K) / array_K.length)
+                        array_data.push([(d3.sum(array_K) / array_K.length), 0])
+                    } else {
+                        array_data.push([0, 0])
+                    }
+                } else {
+                    array_K.shift()
+                    array_K.push(k)
+                    if (array_K_slow <= d_slow) {
+                        first_d++
+                        array_K_slow.push(d3.sum(array_K) / array_K.length)
+                        if (first_d == d_slow) {
+
+                            array_data.push([(d3.sum(array_K) / array_K.length), (d3.sum(array_K_slow) / array_K_slow.length)])
+
+                        } else {
+                            array_data.push([(d3.sum(array_K) / array_K.length), 0])
+
+                        }
+
+                    } else {
+                        array_K_slow.shift()
+                        array_K_slow.push(d3.sum(array_K) / array_K.length)
+                        array_data.push([(d3.sum(array_K) / array_K.length), (d3.sum(array_K_slow) / array_K_slow.length)])
+                    }
+                }
+            }
+
+        })
+        return array_data.slice(range_data[0], range_data[1])
+    }
+    function RSI_data(period) {
+        period = parseInt(period)
+
+        let array_data = []
+        let av_up = []
+        let av_down = []
+        let av_gain = 0
+        let av_loss = 0
+        sort_Data.map((x, i, arr) => {
+            console.log(x.date)
+            if (i == 0) {
+                av_up.push(0)
+                av_down.push(0)
+                let RSI = 0
+                array_data.push(RSI)
+
+            } else if (i < period) {
+
+                if (arr[i].close > arr[(i - 1)].close) {
+
+                    av_up.push(arr[i].close - arr[(i - 1)].close)
+                } else {
+
+                    av_down.push(arr[(i - 1)].close - arr[i].close)
+                }
+                let RSI = 0
+                array_data.push(RSI)
+                av_gain = d3.sum(av_up) / period
+                av_loss = d3.sum(av_down) / period
+                console.log(av_gain)
+                console.log(av_loss)
+                console.log(RSI)
+
+            } else {
+
+                if (arr[i].close > arr[i - 1].close) {
+                    av_gain = (av_gain * (period - 1) + (arr[i].close - arr[i - 1].close)) / period
+                    console.log(av_gain)
+                    av_loss = ((av_loss * (period - 1)) / period)
+                    console.log(av_loss)
+                } else {
+
+                    av_gain = ((av_gain * (period - 1)) / period)
+                    console.log(av_gain)
+
+                    av_loss = ((av_loss * (period - 1) + (arr[i - 1].close - arr[i].close)) / period)
+                    console.log(av_loss)
+                }
+                let RSI = 100 - (100 / (1 + (av_gain / av_loss)))
+                console.log(x.date,RSI)
+                array_data.push(RSI)
+            }
+
+        })
+
+        return array_data.slice(range_data[0], range_data[1])
+    }
+    function SMA_data(data, data_valu, period) {
         period = parseInt(period)
 
         let array_data = []
         data.map((x, i, arr) => {
-            if (selection[0]>period){
+            if (selection[0] > period) {
                 if (i < period + 1) {
 
-                    let array_sort = sort_Data.slice(range_data[0]-(period-i), range_data[0]).map(data => data[data_valu])
+                    let array_sort = sort_Data.slice(range_data[0] - (period - i), range_data[0]).map(data => data[data_valu])
                     let array = data.slice(0, i).map(data => data[data_valu])
                     let combine = array_sort.concat(array)
                     let sum_data = d3.sum(combine)
@@ -159,22 +301,22 @@ function chart_zoom(range_data, selection) {
                     if (isNaN(SMA)) {
                         array_data.push(arr[i + 1][data_valu])
 
-    
+
                     } else {
-                        
+
                         array_data.push(SMA)
                     }
-    
+
                 } else {
                     let array = data.slice(i - period, i).map(data => data[data_valu])
                     let sum_data = d3.sum(array)
                     let SMA = sum_data / array.length
-    
+
                     array_data.push(SMA)
-    
+
                 }
 
-            }else{
+            } else {
                 if (i < period + 1) {
 
                     let array = data.slice(0, i).map(data => data[data_valu])
@@ -183,30 +325,30 @@ function chart_zoom(range_data, selection) {
 
                     if (isNaN(SMA)) {
                         array_data.push(arr[i + 1][data_valu])
-  
-                    } else {         
+
+                    } else {
                         array_data.push(SMA)
                     }
-    
+
                 } else {
                     let array = data.slice(i - period, i).map(data => data[data_valu])
                     let sum_data = d3.sum(array)
                     let SMA = sum_data / array.length
-    
+
                     array_data.push(SMA)
-    
+
                 }
 
 
             }
-            
+
 
         })
         return array_data
     }
 
 
-    var xScale = d3.scaleLinear().domain([-1, filtered_data.length])
+    var xScale = d3.scaleLinear().domain([-1, filtered_data.length+50])
         .range([0, width])
     var xBand = d3.scaleBand().domain(d3.range(-1, filtered_data.length)).range([0, width]).padding(0.3)
     var xDateScale = d3.scaleQuantize().domain([0, filtered_data.length]).range(filtered_data)
@@ -260,7 +402,9 @@ function chart_zoom(range_data, selection) {
     var ymin = d3.min(filtered_data.map((x) => { return x.low; }));
     var ymax = d3.max(filtered_data.map((x) => { return x.high; }));
     var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]).nice();
-    var yScale_volume = d3.scaleLinear().domain([0, d3.max(filtered_data.map((x) => { return x.volume; }))]).range([100, 0]).nice();
+    var yScale_volume = d3.scaleLinear().domain([0, d3.max(filtered_data.map((x) => { return x.volume; }))]).range([Volume_height, 0]).nice();
+    var yScale_RSI = d3.scaleLinear().domain([-10, 110]).range([RSI_height, 0]).nice();
+    var yScale_Stochastic = d3.scaleLinear().domain([0, 100]).range([Stochastic_height, 0]).nice();
     var yAxis = d3.axisRight()
         .scale(yScale)
         .tickSize(width)
@@ -274,7 +418,7 @@ function chart_zoom(range_data, selection) {
         .attr("id", "rect")
         .attr("width", width)
         .attr("height", height)
-        .style("fill", "#E5E5E5")
+        .style("fill", "#b3b6b7")
 
 
     chart.append("defs").append("clipPath")
@@ -334,11 +478,11 @@ function chart_zoom(range_data, selection) {
         .attr("y1", d => yScale(d.high))
         .attr("y2", d => yScale(d.low))
         .attr("stroke", d => (d.open === d.close) ? "black" : (d.open > d.close) ? "red" : "green")
-    const Volume_height = 100
+
 
     Volume_box.attr("viewBox", [0, 0, width, Volume_height])
         .attr("class", "VolumeView")
-
+       
     var Volume = Volume_box.selectAll(".volume")
         .data(filtered_data)
         .enter()
@@ -351,7 +495,7 @@ function chart_zoom(range_data, selection) {
         .attr("fill", d => (d.open === d.close) ? "silver" : (d.open > d.close) ? "red" : "green")
 
     let moveLine = d3.drag()
-        .subject(function() {
+        .subject(function () {
             var t = d3.select(this);
 
             return { x1: t.attr("x1"), y1: t.attr("y1"), x2: t.attr("x2"), y2: t.attr("y2") };
@@ -361,7 +505,7 @@ function chart_zoom(range_data, selection) {
         .on('end', dragended);
 
     let moveLineH = d3.drag()
-        .subject(function() {
+        .subject(function () {
             var t = d3.select(this);
 
             return { x1: t.attr("x1"), y1: t.attr("y1"), x2: t.attr("x2"), y2: t.attr("y2") };
@@ -376,7 +520,7 @@ function chart_zoom(range_data, selection) {
         .on('end', dragended);
 
     let dragP = d3.drag()
-        .subject(function() {
+        .subject(function () {
             var t = d3.select(this);
 
             return { cx: t.attr("cx"), cy: t.attr("cy") };
@@ -384,86 +528,215 @@ function chart_zoom(range_data, selection) {
         .on('start', dragstarted)
         .on('drag', draggedP)
         .on('end', dragended);
-    SMA_lines.map((x) => {
+    if (Stochastic_lines.length >= 1) {
+        Stochastic_lines.map((x) => {
+            let period = x.period
+            let k_slow = x.k_slow
+            let d_slow = x.d_slow
 
-        let color = x.color
-        let period = x.period
-        let data_value = x.data_value
+            Stochastic_box = Stochastic_div.append("svg:svg")
+            Stochastic_box.attr("viewBox", [0, 0, width, Stochastic_height])
+                .attr("class", "StochasticView")
 
-        chart.append("path")
-            .attr("class","SMA_path")
-            .datum(SMA_data(filtered_data,data_value,period))
-            .attr("fill", "none")
-            .attr("stroke", `${color}`)
-            .attr("stroke-width", 1.5)
-            .attr("d", d3.line()
-                .x((d, i, arr) => { 
-                    if(xScaleZ){
-                        return xScaleZ(i)
-                    }else{
-                        return xScale(i)} })
-                .y((d, i, arr) => { return yScale(arr[i]) })
-
-            )
-
-    })
-
-    points.map((x) => {
-
-        var name = x.name
-
-        if (name.substr(0, 5) === "LineH") {
-            var tradingLIne = chart.append("g")
-                .attr("class", "HorizontalLIne")
-            var line_trend = tradingLIne.append("line")
-                .attr("id", `${ x.name }`)
-                .attr("class", "drowLine")
-                .attr("x1", xScale(x.scale[0]))
-                .attr("y1", yScale(x.scale[1]))
-                .attr("x2", xScale(x.scale[2]))
-                .attr("y2", yScale(x.scale[3]))
+            Stochastic_box.append("path")
+                .attr("class", "Stochastic_path_K")
+                .datum(Stochastic_data(period, k_slow, d_slow))
+                .attr("fill", "none")
+                .attr("stroke", `red`)
+                .attr("stroke-width", 1)
+                .attr("d", d3.line()
+                    .x((d, i, arr) => {
+                        if (xScaleZ) {
+                            return xScaleZ(i)
+                        } else {
+                            return xScale(i)
+                        }
+                    })
+                    .y((d, i, arr) => { return yScale_Stochastic(arr[i][0]) })
+                )
+            Stochastic_box.append("path")
+                .attr("class", "Stochastic_path_D")
+                .datum(Stochastic_data(period, k_slow, d_slow))
+                .attr("fill", "none")
+                .attr("stroke", `blue`)
+                .attr("stroke-width", 1)
+                .attr("d", d3.line()
+                    .x((d, i, arr) => {
+                        if (xScaleZ) {
+                            return xScaleZ(i)
+                        } else {
+                            return xScale(i)
+                        }
+                    })
+                    .y((d, i, arr) => { return yScale_Stochastic(arr[i][1]) })
+                )
+            let line30 = Stochastic_box.append("line")
+                .attr("x1", xScale(xScale_focus.domain()[0]))
+                .attr("y1", yScale_Stochastic(20))
+                .attr("x2", xScale(xScale_focus.domain()[1]))
+                .attr("y2", yScale_Stochastic(20))
                 .attr("stroke-width", 1)
                 .attr("stroke", "black")
-                .style('cursor', 'all-scroll')
                 .attr("clip-path", "url(#clip)")
-                .call(moveLineH)
 
-        } else {
-            var tradingLIne = chart.append("g")
-                .attr("class", "tradingLIne")
-            var line_trend = tradingLIne.append("line")
-                .attr("id", `${ x.name }`)
-                .attr("class", "drowLine")
-                .attr("x1", xScale((x.scale[0] - xScale_focus.invert(selection[0]))))
-                .attr("y1", yScale(x.scale[1]))
-                .attr("x2", xScale((x.scale[2] - xScale_focus.invert(selection[0]))))
-                .attr("y2", yScale(x.scale[3]))
+            let line70 = Stochastic_box.append("line")
+                .attr("x1", xScale(xScale_focus.domain()[0]))
+                .attr("y1", yScale_Stochastic(80))
+                .attr("x2", xScale(xScale_focus.domain()[1]))
+                .attr("y2", yScale_Stochastic(80))
                 .attr("stroke-width", 1)
                 .attr("stroke", "black")
-                .style('cursor', 'all-scroll')
                 .attr("clip-path", "url(#clip)")
-                .call(moveLine)
 
-            circles1 = tradingLIne.append('circle')
-                .attr("id", `${x.name}Start`)
-                .attr('class', 'start')
-                .attr('r', 2.0)
-                .attr('cx', xScale((x.scale[0] - xScale_focus.invert(selection[0]))))
-                .attr('cy', yScale(x.scale[1]))
-                .style('cursor', 'pointer')
-                .style('fill', "black")
-                .call(drag);
-            circles2 = tradingLIne.append('circle')
-                .attr("id", `${x.name}End`)
-                .attr('class', 'End')
-                .attr('r', 2.0)
-                .attr('cx', xScale((x.scale[2] - xScale_focus.invert(selection[0]))))
-                .attr('cy', yScale(x.scale[3]))
-                .style('cursor', 'pointer')
-                .style('fill', "black")
-                .call(drag);
-        }
-    })
+        })
+    }
+    if (RSI_lines.length >= 1) {
+        RSI_lines.map((x) => {
+            let color = x.color;
+            let period = x.period
+            RSI_box = RSI_div.append("svg:svg")
+            RSI_box.attr("viewBox", [0, 0, width, RSI_height])
+                .attr("class", "RSIView")
+            RSI_box.append("path")
+                .attr("class", "RSI_path")
+                .datum(RSI_data(period))
+                .attr("fill", "none")
+                .attr("stroke", `${color}`)
+                .attr("stroke-width", 1.5)
+                .attr("d", d3.line()
+                    .x((d, i, arr) => {
+                        if (xScaleZ) {
+                            return xScaleZ(i)
+                        } else {
+                            return xScale(i)
+                        }
+                    })
+                    .y((d, i, arr) => { return yScale_RSI(arr[i]) })
+                )
+            let line30 = RSI_box.append("line")
+                .attr("x1", xScale(xScale_focus.domain()[0]))
+                .attr("y1", yScale_RSI(30))
+                .attr("x2", xScale(xScale_focus.domain()[1]))
+                .attr("y2", yScale_RSI(30))
+                .attr("stroke-width", 1)
+                .attr("stroke", "black")
+                .attr("clip-path", "url(#clip)")
+
+            let line70 = RSI_box.append("line")
+                .attr("x1", xScale(xScale_focus.domain()[0]))
+                .attr("y1", yScale_RSI(70))
+                .attr("x2", xScale(xScale_focus.domain()[1]))
+                .attr("y2", yScale_RSI(70))
+                .attr("stroke-width", 1)
+                .attr("stroke", "black")
+                .attr("clip-path", "url(#clip)")
+
+        })
+    }
+    if (SMA_lines.length >= 1) {
+        SMA_lines.map((x) => {
+
+            let color = x.color
+            let period = x.period
+            let data_value = x.data_value
+
+            chart.append("path")
+                .attr("class", "SMA_path")
+                .datum(SMA_data(filtered_data, data_value, period))
+                .attr("fill", "none")
+                .attr("stroke", `${color}`)
+                .attr("stroke-width", 1.5)
+                .attr("d", d3.line()
+                    .x((d, i, arr) => {
+                        if (xScaleZ) {
+                            return xScaleZ(i)
+                        } else {
+                            return xScale(i)
+                        }
+                    })
+                    .y((d, i, arr) => { return yScale(arr[i]) })
+
+                )
+        })
+    }
+    if (points.length >= 1) {
+        points.map((x) => {
+
+            var name = x.name
+
+            if (name.substr(0, 5) === "LineH") {
+                var tradingLIne = chart.append("g")
+                    .attr("class", "HorizontalLIne")
+                var line_trend = tradingLIne.append("line")
+                    .attr("id", `${x.name}`)
+                    .attr("class", "drowLine")
+                    .attr("x1", xScale(x.scale[0]))
+                    .attr("y1", yScale(x.scale[1]))
+                    .attr("x2", xScale(x.scale[2]))
+                    .attr("y2", yScale(x.scale[3]))
+                    .attr("stroke-width", 1)
+                    .attr("stroke", "black")
+                    .style('cursor', 'all-scroll')
+                    .attr("clip-path", "url(#clip)")
+                    .call(moveLineH)
+
+            } else {
+                var tradingLIne = chart.append("g")
+                    .attr("class", "tradingLIne")
+                var line_trend = tradingLIne.append("line")
+                    .attr("id", `${x.name}`)
+                    .attr("class", "drowLine")
+                    .attr("x1", xScale((x.scale[0] - xScale_focus.invert(selection[0]))))
+                    .attr("y1", yScale(x.scale[1]))
+                    .attr("x2", xScale((x.scale[2] - xScale_focus.invert(selection[0]))))
+                    .attr("y2", yScale(x.scale[3]))
+                    .attr("stroke-width", 1)
+                    .attr("stroke", "black")
+                    .style('cursor', 'all-scroll')
+                    .attr("clip-path", "url(#clip)")
+                    .call(moveLine)
+
+                circles1 = tradingLIne.append('circle')
+                    .attr("id", `${x.name}Start`)
+                    .attr('class', 'start')
+                    .attr('r', 2.0)
+                    .attr('cx', xScale((x.scale[0] - xScale_focus.invert(selection[0]))))
+                    .attr('cy', yScale(x.scale[1]))
+                    .style('cursor', 'pointer')
+                    .style('fill', "black")
+
+                if (x.name.includes("P", 4)) {
+                    circles1
+                        .call(dragP)
+                } else {
+                    circles1
+                        .call(drag);
+
+                }
+
+
+                circles2 = tradingLIne.append('circle')
+                    .attr("id", `${x.name}End`)
+                    .attr('class', 'End')
+                    .attr('r', 2.0)
+                    .attr('cx', xScale((x.scale[2] - xScale_focus.invert(selection[0]))))
+                    .attr('cy', yScale(x.scale[3]))
+                    .style('cursor', 'pointer')
+                    .style('fill', "black")
+
+                if (x.name.includes("P", 4)) {
+                    circles2
+                        .call(dragP)
+                } else {
+                    circles2
+                        .call(drag);
+
+                }
+            }
+        })
+
+    }
+
 
     const extent = [
         [0, 0],
@@ -486,13 +759,13 @@ function chart_zoom(range_data, selection) {
         .append("div")
         .style("position", "absolute")
         .style("right", "11%")
-        .style("top", "70px")
+        .style("top", "100px")
         .attr("class", "dropdown")
     var divButton1 = d3.select("#chart")
         .append("div")
         .style("position", "absolute")
         .style("right", "16%")
-        .style("top", "70px")
+        .style("top", "100px")
         .attr("class", "dropdown")
     var lineButton = divButton.append("button")
         .attr("type", "button")
@@ -513,8 +786,22 @@ function chart_zoom(range_data, selection) {
     var button_SMA = contentFx.append("p")
         .attr("type", "button")
         .attr("class", "btn-cont")
+        .style("text-align", "left")
         .text("SMA")
         .on('click', SMA_panel)
+
+    var button_RSI = contentFx.append("p")
+        .attr("type", "button")
+        .attr("class", "btn-cont")
+        .style("text-align", "left")
+        .text("RSI")
+        .on('click', RSI_panel)
+    var button_Stochastic = contentFx.append("p")
+        .attr("type", "button")
+        .attr("class", "btn-cont")
+        .style("text-align", "left")
+        .text("Stochastic")
+        .on('click', Stochastic_panel)
 
     var button_line = content.append("p")
         .attr("type", "button")
@@ -537,13 +824,14 @@ function chart_zoom(range_data, selection) {
         .attr("class", "btn-btn")
         .style("position", "absolute")
         .style("right", "14%")
-        .style("top", "70px")
+        .style("top", "100px")
         .on('click', cross)
         .append("i")
         .attr("class", "fa fa-crosshairs")
 
     function drop() {
         timesClicked++;
+        destroy_CROSS()
 
         var Parent_div = this.parentNode
 
@@ -563,17 +851,22 @@ function chart_zoom(range_data, selection) {
         var x = d3.event.x;
         var y = d3.event.y;
         drag_start.push(x, y)
+        let line = d3.select(`#${this.id.substr(0, 8)}`)
 
-        if (this.id.substr(0, 8).substr(-1) === '1' && this.id.length === 8) {
+
+        if (this.id.substr(0, 8).substr(-1) == '1' && line.attr("id").length === 8) {
+            console.log(this.id.substr(0, 8).substr(-1))
 
             let secend_line = d3.select(`#${this.id.substr(0, 7)}2`)
+
 
             line_Pdrag.push(secend_line._groups[0][0].x1.baseVal.value, secend_line._groups[0][0].y1.baseVal.value,
                 secend_line._groups[0][0].x2.baseVal.value, secend_line._groups[0][0].y2.baseVal.value)
 
-        } else if (this.id.substr(0, 8).substr(-1) === '2' && this.id.length === 8) {
+        } else if (this.id.substr(0, 8).substr(-1) == '2' && line.attr("id").length === 8) {
 
             let secend_line = d3.select(`#${this.id.substr(0, 7)}1`)
+
 
             line_Pdrag.push(secend_line._groups[0][0].x1.baseVal.value, secend_line._groups[0][0].y1.baseVal.value,
                 secend_line._groups[0][0].x2.baseVal.value, secend_line._groups[0][0].y2.baseVal.value)
@@ -589,7 +882,7 @@ function chart_zoom(range_data, selection) {
             .attr('cx', cx)
             .attr('cy', cy)
 
-        var linia_drag = d3.select(`#${ this.id.substr(0, 5)} `)
+        var linia_drag = d3.select(`#${this.id.substr(0, 5)} `)
         var arrpoints = points.find(x => x.name === this.id.substr(0, 5))
 
         if (this.className.baseVal === 'start') {
@@ -629,6 +922,7 @@ function chart_zoom(range_data, selection) {
             .attr('cx', cx)
             .attr('cy', cy)
         var linename = this.id.substr(0, 8)
+
         var linia_drag = d3.select(`#${linename} `)
         var arrpoints = points.find(x => x.name === linename)
 
@@ -656,7 +950,7 @@ function chart_zoom(range_data, selection) {
                 var x1 = line_Pdrag[0]
 
                 var y1 = line_Pdrag[1]
-
+                console.log(line_Pdrag)
                 linia_drag1
                     .attr('x1', (x1 + (cx - d3.event.subject.cx)))
                     .attr('y1', (y1 + (cy - d3.event.subject.cy)))
@@ -664,6 +958,7 @@ function chart_zoom(range_data, selection) {
                     .attr('cx', (x1 + (cx - d3.event.subject.cx)))
                     .attr('cy', (y1 + (cy - d3.event.subject.cy)))
                 var arrpoints1 = points.find(x => x.name === `${this.id.substr(0, 7)}2`)
+                console.log(arrpoints1)
                 if (xScaleZ) {
                     arrpoints1.scale[0] = xScaleZ.invert((x1 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
                     arrpoints1.scale[1] = yScale.invert((y1 + (cy - d3.event.subject.cy)))
@@ -672,6 +967,7 @@ function chart_zoom(range_data, selection) {
                     arrpoints1.scale[1] = yScale.invert((y1 + (cy - d3.event.subject.cy)))
                 }
             } else if (this.id.substr(0, 8).substr(-1) === '2') {
+                console.log(this.id.substr(0, 8).substr(-1))
 
                 var linia_drag1 = d3.select(`#${this.id.substr(0, 7)}1`)
                 var circle = d3.select(`#${this.id.substr(0, 7)}1Start`)
@@ -709,6 +1005,7 @@ function chart_zoom(range_data, selection) {
                 arrpoints.scale[3] = yScale.invert(cy)
             }
             if (this.id.substr(0, 8).substr(-1) === '1') {
+                console.log(this.id.substr(0, 8).substr(-1))
 
                 var linia_drag1 = d3.select(`#${this.id.substr(0, 7)}2`)
                 var circle = d3.select(`#${this.id.substr(0, 7)}2End`)
@@ -724,13 +1021,14 @@ function chart_zoom(range_data, selection) {
                     .attr('cy', (y2 + (cy - d3.event.subject.cy)))
                 var arrpoints1 = points.find(x => x.name === `${this.id.substr(0, 7)}2`)
                 if (xScaleZ) {
-                    arrpoints1.scale[0] = xScaleZ.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
-                    arrpoints1.scale[1] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
+                    arrpoints1.scale[2] = xScaleZ.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[3] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
                 } else {
-                    arrpoints1.scale[0] = xScale.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
-                    arrpoints1.scale[1] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
+                    arrpoints1.scale[2] = xScale.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[3] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
                 }
             } else if (this.id.substr(0, 8).substr(-1) === '2') {
+
 
                 var linia_drag1 = d3.select(`#${this.id.substr(0, 7)}1`)
                 var circle = d3.select(`#${this.id.substr(0, 7)}1End`)
@@ -747,11 +1045,11 @@ function chart_zoom(range_data, selection) {
 
                 var arrpoints1 = points.find(x => x.name === `${this.id.substr(0, 7)}1`)
                 if (xScaleZ) {
-                    arrpoints1.scale[0] = xScaleZ.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
-                    arrpoints1.scale[1] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
+                    arrpoints1.scale[2] = xScaleZ.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[3] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
                 } else {
-                    arrpoints1.scale[0] = xScale.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
-                    arrpoints1.scale[1] = yScale.invert((y1 + (cy - d3.event.subject.cy)))
+                    arrpoints1.scale[2] = xScale.invert((x2 + (cx - d3.event.subject.cx))) + xScale_focus.invert(selection[0])
+                    arrpoints1.scale[3] = yScale.invert((y2 + (cy - d3.event.subject.cy)))
                 }
             }
         }
@@ -783,8 +1081,143 @@ function chart_zoom(range_data, selection) {
 
     }
 
+    function Stochastic() {
+        console.log("Stochastic")
+        let period = document.getElementById("period_Stochastic").value
+        let d_slow = document.getElementById("D_slow_Stochastic").value
+        let k_slow = document.getElementById("K_slow_Stochastic").value
+        console.log(period)
+        console.log(d_slow)
+        console.log(k_slow)
+
+        Stochastic_lines.shift()
+        Stochastic_div.selectAll("*").remove();
+
+        Stochastic_lines.push({
+            "period": period,
+            "d_slow": d_slow,
+            "k_slow": k_slow
+        })
+
+        Stochastic_box = Stochastic_div.append("svg:svg")
+        Stochastic_box.attr("viewBox", [0, 0, width, Stochastic_height])
+            .attr("class", "StochasticView")
+
+        Stochastic_box.append("path")
+            .attr("class", "Stochastic_path_K")
+            .datum(Stochastic_data(period, k_slow, d_slow))
+            .attr("fill", "none")
+            .attr("stroke", `red`)
+            .attr("stroke-width", 1)
+            .attr("d", d3.line()
+                .x((d, i, arr) => {
+                    if (xScaleZ) {
+                        return xScaleZ(i)
+                    } else {
+                        return xScale(i)
+                    }
+                })
+                .y((d, i, arr) => { return yScale_Stochastic(arr[i][0]) })
+            )
+        Stochastic_box.append("path")
+            .attr("class", "Stochastic_path_D")
+            .datum(Stochastic_data(period, k_slow, d_slow))
+            .attr("fill", "none")
+            .attr("stroke", `blue`)
+            .attr("stroke-width", 1)
+            .attr("d", d3.line()
+                .x((d, i, arr) => {
+                    if (xScaleZ) {
+                        return xScaleZ(i)
+                    } else {
+                        return xScale(i)
+                    }
+                })
+                .y((d, i, arr) => { return yScale_Stochastic(arr[i][1]) })
+            )
+        let line30 = Stochastic_box.append("line")
+            .attr("x1", xScale(xScale_focus.domain()[0]))
+            .attr("y1", yScale_Stochastic(20))
+            .attr("x2", xScale(xScale_focus.domain()[1]))
+            .attr("y2", yScale_Stochastic(20))
+            .attr("stroke-width", 1)
+            .attr("stroke", "black")
+            .attr("clip-path", "url(#clip)")
+
+        let line70 = Stochastic_box.append("line")
+            .attr("x1", xScale(xScale_focus.domain()[0]))
+            .attr("y1", yScale_Stochastic(80))
+            .attr("x2", xScale(xScale_focus.domain()[1]))
+            .attr("y2", yScale_Stochastic(80))
+            .attr("stroke-width", 1)
+            .attr("stroke", "black")
+            .attr("clip-path", "url(#clip)")
+
+
+
+        d3.select(".Stochastic_panel").remove()
+        timesClicked = 0
+    }
+    function RSI() {
+        console.log("rsi")
+        let color = d3.select("#color_RSI").property("value")
+        let period = document.getElementById("period_RSI").value
+        console.log(period)
+        console.log(color)
+        RSI_lines.shift()
+        RSI_div.selectAll("*").remove();
+
+        RSI_lines.push({
+            "color": color,
+            "period": period
+        })
+
+        RSI_box = RSI_div.append("svg:svg")
+        RSI_box.attr("viewBox", [0, 0, width, RSI_height])
+            .attr("class", "RSIView")
+
+        RSI_box.append("path")
+            .attr("class", "RSI_path")
+            .datum(RSI_data(period))
+            .attr("fill", "none")
+            .attr("stroke", `${color}`)
+            .attr("stroke-width", 1.5)
+            .attr("d", d3.line()
+                .x((d, i, arr) => {
+                    if (xScaleZ) {
+                        return xScaleZ(i)
+                    } else {
+                        return xScale(i)
+                    }
+                })
+                .y((d, i, arr) => { return yScale_RSI(arr[i]) })
+            )
+        let line30 = RSI_box.append("line")
+            .attr("x1", xScale(xScale_focus.domain()[0]))
+            .attr("y1", yScale_RSI(30))
+            .attr("x2", xScale(xScale_focus.domain()[1]))
+            .attr("y2", yScale_RSI(30))
+            .attr("stroke-width", 1)
+            .attr("stroke", "black")
+            .attr("clip-path", "url(#clip)")
+
+        let line70 = RSI_box.append("line")
+            .attr("x1", xScale(xScale_focus.domain()[0]))
+            .attr("y1", yScale_RSI(70))
+            .attr("x2", xScale(xScale_focus.domain()[1]))
+            .attr("y2", yScale_RSI(70))
+            .attr("stroke-width", 1)
+            .attr("stroke", "black")
+            .attr("clip-path", "url(#clip)")
+
+
+
+        d3.select(".RSI_panel").remove()
+        timesClicked = 0
+    }
+
     function SMA() {
-        
+
         let color = d3.select("#color_SMA").property("value")
         let period = document.getElementById("period_SMA").value
         let data_value = document.getElementById("select_data_SMA").value
@@ -792,25 +1225,27 @@ function chart_zoom(range_data, selection) {
 
         var name = "SMA" + (length_class._groups[0].length + 1)
         SMA_lines.push({
-            "name":name,
-            "color":color,
-            "data_value":data_value,
-            "period":period
+            "name": name,
+            "color": color,
+            "data_value": data_value,
+            "period": period
         })
 
-        
+
         chart.append("path")
-            .attr("class","SMA_path")
-            .datum(SMA_data(filtered_data,data_value,period))
+            .attr("class", "SMA_path")
+            .datum(SMA_data(filtered_data, data_value, period))
             .attr("fill", "none")
             .attr("stroke", `${color}`)
             .attr("stroke-width", 1.5)
             .attr("d", d3.line()
-                .x((d, i, arr) => { 
-                    if(xScaleZ){
+                .x((d, i, arr) => {
+                    if (xScaleZ) {
                         return xScaleZ(i)
-                    }else{
-                        return xScale(i)} })
+                    } else {
+                        return xScale(i)
+                    }
+                })
                 .y((d, i, arr) => { return yScale(arr[i]) })
 
             )
@@ -871,8 +1306,320 @@ function chart_zoom(range_data, selection) {
 
     }
 
-    var div = d3.select("#rect");
+
     var cross_click = 0
+
+    function Stochastic_panel() {
+        contentFx.attr("class", "dropdown-content")
+
+
+        let pos_div = []
+        let isDown = false;
+
+        let drag_panel = d3.drag()
+            .subject(function () {
+                let pos = d3.select(".Stochastic_panel").node().getBoundingClientRect();
+
+                return { x: pos.x, y: pos.y, };
+            })
+            .on('start', dragged_panelstart)
+            .on('drag', dragged_panel)
+            .on('end', dragged_panelend)
+
+        function dragged_panelstart() {
+
+            if (d3.event.sourceEvent.target === this || d3.event.sourceEvent.target === row1._groups[0][0]) {
+
+                let x = d3.event.x;
+                let y = d3.event.y;
+                pos_div.push(x, y)
+
+                isDown = true
+            }
+
+        }
+
+        function dragged_panel() {
+
+            if (isDown) {
+
+                let x = d3.event.x;
+                let y = d3.event.y;
+
+                Nx = pos_div[0] - x
+                Ny = pos_div[1] - y
+                SMA_div = d3.selectAll(".Stochastic_panel")
+                    .style("left", (d3.event.subject.x - Nx) + "px")
+                    .style("top", (d3.event.subject.y - Ny) + "px")
+            }
+
+        }
+        function dragged_panelend() {
+
+            isDown = false
+        }
+        function destroy() {
+            panel.remove()
+            timesClicked = 0
+        }
+        let panel = d3.select(".training-container")
+            .append("div")
+            .style("position", "absolute")
+            .style("left", "45%")
+            .style("top", "200px")
+            .style("background-color", "grey")
+            .style("width", "250px")
+            .style("height", "250px")
+            .attr("class", "Stochastic_panel")
+            .attr("id", "Stochastic_panel")
+            .call(drag_panel)
+
+        let row1 = panel.append("div")
+            .style("width", "100%")
+            .style("padding", "10px 5px 15px 15px")
+            .style("background-color", "#1f1f20")
+        row1
+            .append("span")
+            .style("color", "white")
+            .text("Stochastic oscillator")
+        row1
+            .append("span")
+            .style("float", "right")
+            .style("margin-top", "-5px")
+            .style("margin-right", "3%")
+            .on('click', destroy)
+            .append("i")
+            .attr("class", "fa fa-times")
+            .style("color", "white")
+            .style("cursor", "pointer")
+
+        let row2 = panel.append("div")
+            .style("width", "100%")
+            .style("display", "block")
+        let row3 = panel.append("div")
+            .style("width", "100%")
+            .style("display", "block")
+        let div1 = row2.append("div")
+            .style("display", "table-cell")
+            .style("padding", "5px 10px")
+            .style("width", "50%")
+        let div2 = row3.append("div")
+            .style("display", "table-cell")
+            .style("padding", "5px 10px")
+            .style("width", "50%")
+        let div3 = row3.append("div")
+            .style("display", "table-cell")
+            .style("padding", "5px 10px")
+            .style("width", "50%")
+
+
+        div1
+            .append("label")
+            .style("padding-left", "15px")
+            .text("Okres")
+        let input_period = div1.append("input")
+            .attr("id", "period_Stochastic")
+            .attr("type", "number")
+            .style("width", "100%")
+            .style("height", "30px")
+            .style("background-color", "#152126")
+            .style("border", "solid 1px #2b3a42")
+            .style("color", "white")
+            .attr("value", "10")
+        input_period
+            .on("mousedown", function () { d3.event.stopPropagation(); })
+
+        div2
+            .append("label")
+            .style("padding-left", "15px")
+            .text("K Slow")
+        div3
+            .append("label")
+            .style("padding-left", "15px")
+            .text("D Slow")
+        let input_K_slow = div2.append("input")
+            .attr("id", "K_slow_Stochastic")
+            .attr("type", "number")
+            .style("width", "100%")
+            .style("height", "30px")
+            .style("background-color", "#152126")
+            .style("border", "solid 1px #2b3a42")
+            .style("color", "white")
+            .attr("value", "3")
+        let input_D_slow = div3.append("input")
+            .attr("id", "D_slow_Stochastic")
+            .attr("type", "number")
+            .style("width", "100%")
+            .style("height", "30px")
+            .style("background-color", "#152126")
+            .style("border", "solid 1px #2b3a42")
+            .style("color", "white")
+            .attr("value", "3")
+        input_K_slow
+            .on("mousedown", function () { d3.event.stopPropagation(); })
+
+
+        let row4 = panel.append("div")
+            .style("width", "100%")
+            .style("display", "flex")
+        let div4 = row4.append("div")
+            .style("padding", "15px")
+            .style("width", "70%")
+            .style("margin", "auto")
+
+        div4
+            .append("button")
+            .attr("type", "button")
+            .text("Zastosuj")
+            .style("width", "100%")
+            .style("color", "white")
+            .style("background-color", "#00b276")
+            .on('click', Stochastic)
+
+    }
+
+    function RSI_panel() {
+        contentFx.attr("class", "dropdown-content")
+
+
+        let pos_div = []
+        let isDown = false;
+
+        let drag_panel = d3.drag()
+            .subject(function () {
+                let pos = d3.select(".RSI_panel").node().getBoundingClientRect();
+
+                return { x: pos.x, y: pos.y, };
+            })
+            .on('start', dragged_panelstart)
+            .on('drag', dragged_panel)
+            .on('end', dragged_panelend)
+
+        function dragged_panelstart() {
+
+            if (d3.event.sourceEvent.target === this || d3.event.sourceEvent.target === row1._groups[0][0]) {
+
+                let x = d3.event.x;
+                let y = d3.event.y;
+                pos_div.push(x, y)
+
+                isDown = true
+            }
+
+        }
+
+        function dragged_panel() {
+
+            if (isDown) {
+
+                let x = d3.event.x;
+                let y = d3.event.y;
+
+                Nx = pos_div[0] - x
+                Ny = pos_div[1] - y
+                SMA_div = d3.selectAll(".RSI_panel")
+                    .style("left", (d3.event.subject.x - Nx) + "px")
+                    .style("top", (d3.event.subject.y - Ny) + "px")
+            }
+
+        }
+        function dragged_panelend() {
+
+            isDown = false
+        }
+        function destroy() {
+            panel.remove()
+            timesClicked = 0
+        }
+        let panel = d3.select(".training-container")
+            .append("div")
+            .style("position", "absolute")
+            .style("left", "45%")
+            .style("top", "200px")
+            .style("background-color", "grey")
+            .style("width", "250px")
+            .style("height", "250px")
+            .attr("class", "RSI_panel")
+            .attr("id", "RSI_panel")
+            .call(drag_panel)
+
+        let row1 = panel.append("div")
+            .style("width", "100%")
+            .style("padding", "10px 5px 15px 15px")
+            .style("background-color", "#1f1f20")
+        row1
+            .append("span")
+            .style("color", "white")
+            .text("Wskaźnik siły RSI")
+        row1
+            .append("span")
+            .style("float", "right")
+            .style("margin-top", "-5px")
+            .style("margin-right", "3%")
+            .on('click', destroy)
+            .append("i")
+            .attr("class", "fa fa-times")
+            .style("color", "white")
+            .style("cursor", "pointer")
+
+        let row2 = panel.append("div")
+            .style("width", "100%")
+            .style("display", "block")
+        let div1 = row2.append("div")
+            .style("display", "table-cell")
+            .style("padding", "5px 10px")
+            .style("width", "50%")
+
+        div1
+            .append("label")
+            .style("padding-left", "15px")
+            .text("Okres")
+        let input_period = div1.append("input")
+            .attr("id", "period_RSI")
+            .attr("type", "number")
+            .style("width", "100%")
+            .style("height", "30px")
+            .style("background-color", "#152126")
+            .style("border", "solid 1px #2b3a42")
+            .style("color", "white")
+            .attr("value", "10")
+        input_period
+            .on("mousedown", function () { d3.event.stopPropagation(); })
+
+
+
+        let row3 = panel.append("div")
+            .style("width", "100%")
+            .style("display", "flex")
+        let div4 = row3.append("div")
+            .style("padding", "15px")
+            .style("width", "70%")
+            .style("margin", "auto")
+        div1
+            .append("label")
+            .style("padding-left", "15px")
+            .text("Kolor")
+        let input_color = div1.append("input")
+            .attr("type", "color")
+            .attr("id", "color_RSI")
+            .style("width", "100%")
+            .style("height", "30px")
+            .style("background-color", "#152126")
+            .style("border", "solid 1px #2b3a42")
+            .attr("value", "#FFA200")
+
+        div4
+            .append("button")
+            .attr("type", "button")
+            .text("Zastosuj")
+            .style("width", "100%")
+            .style("color", "white")
+            .style("background-color", "#00b276")
+            .on('click', RSI)
+
+    }
+
+
 
     function SMA_panel() {
         contentFx.attr("class", "dropdown-content")
@@ -882,48 +1629,48 @@ function chart_zoom(range_data, selection) {
         let isDown = false;
 
         let drag_panel = d3.drag()
-            .subject(function() {
+            .subject(function () {
                 let pos = d3.select(".SMA_panel").node().getBoundingClientRect();
 
-                return { x: pos.x, y: pos.y,};
+                return { x: pos.x, y: pos.y, };
             })
             .on('start', dragged_panelstart)
             .on('drag', dragged_panel)
             .on('end', dragged_panelend)
-            
-        function dragged_panelstart(){
 
-            if (d3.event.sourceEvent.target === this || d3.event.sourceEvent.target === row1._groups[0][0]){
+        function dragged_panelstart() {
+
+            if (d3.event.sourceEvent.target === this || d3.event.sourceEvent.target === row1._groups[0][0]) {
 
                 let x = d3.event.x;
                 let y = d3.event.y;
-                pos_div.push(x,y)
-                
+                pos_div.push(x, y)
+
                 isDown = true
             }
-            
+
         }
-        
+
         function dragged_panel() {
 
-            if(isDown){
+            if (isDown) {
 
                 let x = d3.event.x;
                 let y = d3.event.y;
 
-                Nx = pos_div[0]-x
-                Ny = pos_div[1]-y
+                Nx = pos_div[0] - x
+                Ny = pos_div[1] - y
                 SMA_div = d3.selectAll(".SMA_panel")
-                    .style("left", (d3.event.subject.x -Nx) + "px")
-                    .style("top", (d3.event.subject.y -Ny) + "px")
+                    .style("left", (d3.event.subject.x - Nx) + "px")
+                    .style("top", (d3.event.subject.y - Ny) + "px")
             }
-            
+
         }
-        function dragged_panelend(){
+        function dragged_panelend() {
 
             isDown = false
         }
-        function destroy(){
+        function destroy() {
             panel.remove()
             timesClicked = 0
         }
@@ -956,98 +1703,103 @@ function chart_zoom(range_data, selection) {
             .append("i")
             .attr("class", "fa fa-times")
             .style("color", "white")
-            .style("cursor","pointer")
+            .style("cursor", "pointer")
 
         let row2 = panel.append("div")
             .style("width", "100%")
             .style("display", "block")
         let div1 = row2.append("div")
-            .style("display","table-cell")
-            .style("padding","5px 10px")
-            .style("width","50%")
+            .style("display", "table-cell")
+            .style("padding", "5px 10px")
+            .style("width", "50%")
         let div2 = row2.append("div")
-            .style("display","table-cell")
-            .style("padding","5px 10px")
-            .style("width","50%")
+            .style("display", "table-cell")
+            .style("padding", "5px 10px")
+            .style("width", "50%")
         div1
             .append("label")
-            .style("padding-left","15px")
+            .style("padding-left", "15px")
             .text("Okres")
         let input_period = div1.append("input")
-            .attr("id","period_SMA")
+            .attr("id", "period_SMA")
             .attr("type", "number")
-            .style("width","100%")
-            .style("height","30px")
-            .style("background-color","#152126")
-            .style("border","solid 1px #2b3a42")
-            .style("color","white")
-            .attr("value","10")
+            .style("width", "100%")
+            .style("height", "30px")
+            .style("background-color", "#152126")
+            .style("border", "solid 1px #2b3a42")
+            .style("color", "white")
+            .attr("value", "10")
         input_period
-            .on("mousedown", function() { d3.event.stopPropagation(); })
+            .on("mousedown", function () { d3.event.stopPropagation(); })
         div2
             .append("label")
             .text("W oparciu o")
         let selection = div2.append("select")
-            .style("width","100%")
-            .attr("id","select_data_SMA")
-            .style("height","30px")
-            .style("background-color","#152126")
-            .style("border","solid 1px #2b3a42")
-            .style("color","white")
+            .style("width", "100%")
+            .attr("id", "select_data_SMA")
+            .style("height", "30px")
+            .style("background-color", "#152126")
+            .style("border", "solid 1px #2b3a42")
+            .style("color", "white")
         let options = selection.selectAll("option")
             .data(SMA_options)
             .enter()
             .append("option");
 
 
-        options.text(function(d) {
-                return d;
-            })
-            .attr("value", function(d) {
+        options.text(function (d) {
+            return d;
+        })
+            .attr("value", function (d) {
                 return d;
             });
         let row3 = panel.append("div")
             .style("width", "100%")
             .style("display", "flex")
         let div3 = row3.append("div")
-            .style("padding","5px 10px")
-            .style("width","50%")
+            .style("padding", "5px 10px")
+            .style("width", "50%")
         let div4 = row3.append("div")
-            .style("padding","35px 5px 5px 20px")
-            .style("width","45%")
+            .style("padding", "35px 5px 5px 20px")
+            .style("width", "45%")
         div3
             .append("label")
-            .style("padding-left","15px")
+            .style("padding-left", "15px")
             .text("Kolor")
         let input_color = div3.append("input")
             .attr("type", "color")
-            .attr("id","color_SMA")
-            .style("width","100%")
-            .style("height","30px")
-            .style("background-color","#152126")
-            .style("border","solid 1px #2b3a42")
-            .attr("value","#FFA200")
+            .attr("id", "color_SMA")
+            .style("width", "100%")
+            .style("height", "30px")
+            .style("background-color", "#152126")
+            .style("border", "solid 1px #2b3a42")
+            .attr("value", "#FFA200")
 
         div4
             .append("button")
-            .attr("type","button")
-            .style("padding-left","20px")
+            .attr("type", "button")
+            .style("padding-left", "20px")
             .text("Zastosuj")
-            .style("color","white")
-            .style("background-color","#00b276")
+            .style("color", "white")
+            .style("background-color", "#00b276")
             .on('click', SMA)
-            
+
 
 
 
     }
 
     function cross() {
+        let all = d3.selectAll(".dropdown-content")
+        let div = d3.select("#rect");
+
+        all.attr("class", "dropdown-content")
+        timesClicked = 0
 
         cross_click++
 
         if (cross_click < 2) {
-            div.on("click", function() {
+            div.on("click", function () {
                 var m = d3.mouse(this);
                 let panel = d3.select("#chart")
                     .append("div")
@@ -1114,7 +1866,7 @@ function chart_zoom(range_data, selection) {
                     .attr("y1", m[1])
                     .attr("x2", xScale(xScale_focus.domain()[1]))
                     .attr("y2", m[1])
-                    .attr("stroke-width", 1)
+                    .attr("stroke-width", 0.7)
                     .attr("stroke", "grey")
                     .attr("clip-path", "url(#clip)")
 
@@ -1140,7 +1892,7 @@ function chart_zoom(range_data, selection) {
                     .attr("y1", yScale(0))
                     .attr("x2", m[0])
                     .attr("y2", yScale(width))
-                    .attr("stroke-width", 1)
+                    .attr("stroke-width", 0.7)
                     .attr("stroke", "grey")
 
 
@@ -1148,10 +1900,10 @@ function chart_zoom(range_data, selection) {
                     .attr("class", "crossVolmeY")
                 let line_volume_y = Volume_line_y.append("line")
                     .attr("x1", m[0])
-                    .attr("y1", yScale(0))
+                    .attr("y1", yScale_volume(0))
                     .attr("x2", m[0])
-                    .attr("y2", yScale(Volume_height))
-                    .attr("stroke-width", 1)
+                    .attr("y2", yScale_volume(Volume_height))
+                    .attr("stroke-width", 0.7)
                     .attr("stroke", "grey")
                 let rect_y = Volume_line_y.append('rect')
                     .attr('width', 100)
@@ -1166,6 +1918,19 @@ function chart_zoom(range_data, selection) {
                     .attr("font-size", "14px")
                     .attr("fill", "white")
                     .text(`${dayjs(xDateScale(Math.floor(xScale.invert(m[0]))).date).format('DD/MM/YYYY')}`)
+                if (RSI_lines.length >= 1) {
+                    let RSI_line_y = RSI_box.append('g')
+                        .attr("class", "crossRSIY")
+                    var line_RSI_y = RSI_line_y.append("line")
+                        .attr("x1", m[0])
+                        .attr("y1", yScale_RSI(0))
+                        .attr("x2", m[0])
+                        .attr("y2", yScale_RSI(RSI_height))
+                        .attr("stroke-width", 0.7)
+                        .attr("stroke", "grey")
+
+                }
+
 
                 div.on("mousemove", () => {
                     var m = d3.mouse(this);
@@ -1195,6 +1960,13 @@ function chart_zoom(range_data, selection) {
                         .attr("y1", yScale(0))
                         .attr("x2", m[0])
                         .attr("y2", yScale(Volume_height))
+                    if (RSI_lines.length >= 1) {
+                        line_RSI_y
+                            .attr("x1", m[0])
+                            .attr("y1", yScale_RSI(0))
+                            .attr("x2", m[0])
+                            .attr("y2", yScale_RSI(RSI_height))
+                    }
                     rect_y
                         .attr("x", m[0] - 50)
                         .attr("y", 0)
@@ -1252,16 +2024,24 @@ function chart_zoom(range_data, selection) {
             })
 
         } else {
-            let cross_line_x = chart.selectAll(".crossx").remove()
-            let cross_line_y = chart.selectAll(".crossy").remove()
-            let Volume_line_y = Volume_box.selectAll(".crossVolmeY").remove()
-            let Panel = d3.select("#chart").selectAll(".panel").remove()
+            destroy_CROSS()
             cross_click = 0
             div.on("click", null)
             div.on("mousemove", null)
 
         }
 
+
+    }
+    function destroy_CROSS() {
+        let cross_line_x = chart.selectAll(".crossx").remove()
+        let cross_line_y = chart.selectAll(".crossy").remove()
+        let Volume_line_y = Volume_box.selectAll(".crossVolmeY").remove()
+        if (RSI_lines.length >= 1) {
+            let Volume_RSI_y = RSI_box.selectAll(".crossRSIY").remove()
+        }
+        let Panel = d3.select("#chart").selectAll(".panel").remove()
+        cross_click = 0
 
     }
 
@@ -1271,11 +2051,12 @@ function chart_zoom(range_data, selection) {
         zoom_off = true
         vardata_circle = []
         scale_var = []
+        let div = d3.select("#rect");
 
         var length_class = d3.selectAll(".HorizontalLIne")
 
         var name = "LineH" + (length_class._groups[0].length + 1)
-        div.on("click", function() {
+        div.on("click", function () {
 
             var m = d3.mouse(this);
 
@@ -1313,6 +2094,7 @@ function chart_zoom(range_data, selection) {
         timesClicked = 0
         vardata_circle = []
         scale_var = []
+        let div = d3.select("#rect");
 
         zoom_off = true
         var length_class = d3.selectAll(".tradingLIne")
@@ -1323,7 +2105,7 @@ function chart_zoom(range_data, selection) {
         vardata_circle = []
         scale_var = []
 
-        div.on("click", function() {
+        div.on("click", function () {
 
             var m = d3.mouse(this);
 
@@ -1358,7 +2140,7 @@ function chart_zoom(range_data, selection) {
                     var m = d3.mouse(this);
                     line1.attr("x2", m[0])
                         .attr("y2", m[1]);
-                    chart.on("click", function() {
+                    chart.on("click", function () {
                         div.on("mousemove", null)
                         div.on("click", null);
                         chart.on("click", null);
@@ -1416,6 +2198,7 @@ function chart_zoom(range_data, selection) {
         let vardata_circle1 = []
         let scale_var = []
         let scale_var1 = []
+        let div = d3.select("#rect");
 
 
 
@@ -1429,7 +2212,7 @@ function chart_zoom(range_data, selection) {
         vardata_circle = []
         scale_var = []
 
-        div.on("click", function() {
+        div.on("click", function () {
 
             var m = d3.mouse(this);
 
@@ -1458,7 +2241,7 @@ function chart_zoom(range_data, selection) {
                     var n = d3.mouse(this);
                     line1.attr("x2", n[0])
                         .attr("y2", n[1]);
-                    chart.on("click", function() {
+                    chart.on("click", function () {
                         div.on("mousemove", null)
                         div.on("click", null);
                         chart.on("click", null);
@@ -1525,7 +2308,7 @@ function chart_zoom(range_data, selection) {
                                 .attr("x2", (Number(line1.attr("x2")) + x))
                                 .attr("y2", (Number(line1.attr("y2")) + y))
 
-                            chart.on("click", function() {
+                            chart.on("click", function () {
                                 div.on("mousemove", null)
                                 div.on("click", null);
                                 chart.on("click", null);
@@ -1620,43 +2403,80 @@ function chart_zoom(range_data, selection) {
                 })
             var SMA_zoom = chart.selectAll('.SMA_path')
                 .attr("d", d3.line()
-                    .x((d, i, arr) => { 
+                    .x((d, i, arr) => {
 
-                            return xScaleZ(i)
-                        })
+                        return xScaleZ(i)
+                    })
                     .y((d, i, arr) => { return yScale(arr[i]) })
 
-                        )
+                )
+            if (RSI_lines.length >= 1) {
+                let RSI_zoom = RSI_box.selectAll('.RSI_path')
+                    .attr("d", d3.line()
+                        .x((d, i, arr) => {
+                            if (xScaleZ) {
+                                return xScaleZ(i)
+                            } else {
+                                return xScale(i)
+                            }
+                        })
+                        .y((d, i, arr) => { return yScale_RSI(arr[i]) }))
 
+            }
+            if (Stochastic_lines.length >= 1) {
+                let Stochastic_zoom_k = Stochastic_box.selectAll('.Stochastic_path_K')
+                    .attr("d", d3.line()
+                        .x((d, i, arr) => {
+                            if (xScaleZ) {
+                                return xScaleZ(i)
+                            } else {
+                                return xScale(i)
+                            }
+                        })
+                        .y((d, i, arr) => { return yScale_Stochastic(arr[i][0]) })
+                    )
+                let Stochastic_zoom_d = Stochastic_box.selectAll('.Stochastic_path_D')
+                    .attr("d", d3.line()
+                        .x((d, i, arr) => {
+                            if (xScaleZ) {
+                                return xScaleZ(i)
+                            } else {
+                                return xScale(i)
+                            }
+                        })
+                        .y((d, i, arr) => { return yScale_Stochastic(arr[i][1]) })
+                    )
+
+            }
 
 
             gX.call(
                 d3.axisBottom(xScaleZ)
-                .tickValues(Rick_date_value(filtered_data))
-                .tickFormat((x, i, arr) => {
+                    .tickValues(Rick_date_value(filtered_data))
+                    .tickFormat((x, i, arr) => {
 
-                    d = filtered_data[x]
-                    v = filtered_data[x - 1]
-                    if (i === 0) {
-                        date_axis = d.date.getFullYear()
-                        return date_axis
-                    } else {
-                        if (d.date.getMonth() !== v.date.getMonth() && d.date.getFullYear() === v.date.getFullYear()) {
-                            date_axis = months[d.date.getMonth()]
-                            return date_axis
-                        }
-                        if (d.date.getMonth() !== v.date.getMonth() && d.date.getFullYear() !== v.date.getFullYear()) {
-
+                        d = filtered_data[x]
+                        v = filtered_data[x - 1]
+                        if (i === 0) {
                             date_axis = d.date.getFullYear()
                             return date_axis
-                        }
-                    }
+                        } else {
+                            if (d.date.getMonth() !== v.date.getMonth() && d.date.getFullYear() === v.date.getFullYear()) {
+                                date_axis = months[d.date.getMonth()]
+                                return date_axis
+                            }
+                            if (d.date.getMonth() !== v.date.getMonth() && d.date.getFullYear() !== v.date.getFullYear()) {
 
-                })
-                .tickSizeInner([-height])
+                                date_axis = d.date.getFullYear()
+                                return date_axis
+                            }
+                        }
+
+                    })
+                    .tickSizeInner([-height])
             )
 
-            .call(g => g.selectAll(".tick line")
+                .call(g => g.selectAll(".tick line")
                     .attr("stroke-opacity", 0.5)
                     .attr("stroke-dasharray", "2,2"))
                 .style("fill", "#E5E5E5")
@@ -1685,89 +2505,89 @@ function chart_zoom(range_data, selection) {
             xScaleZ = t.rescaleX(xScale);
             clearTimeout(resizeTimer)
 
-            resizeTimer = setTimeout(function() {
+            resizeTimer = setTimeout(function () {
 
-                    var xmin = xDateScale(Math.floor(xScaleZ.domain()[0])).date
+                var xmin = xDateScale(Math.floor(xScaleZ.domain()[0])).date
 
-                    xmax = xDateScale(Math.floor(xScaleZ.domain()[1])).date
+                xmax = xDateScale(Math.floor(xScaleZ.domain()[1])).date
 
-                    filtered = _.filter(filtered_data, d => ((d.date >= xmin) && (d.date <= xmax)))
+                filtered = _.filter(filtered_data, d => ((d.date >= xmin) && (d.date <= xmax)))
 
-                    minP = +d3.min(filtered, d => d.low)
-                    maxP = +d3.max(filtered, d => d.high)
-                    var buffer = () => {
+                minP = +d3.min(filtered, d => d.low)
+                maxP = +d3.max(filtered, d => d.high)
+                var buffer = () => {
 
-                        if ((maxP - minP) * 0.1 > 1) {
+                    if ((maxP - minP) * 0.1 > 1) {
 
-                            return Math.floor((maxP - minP) * 0.1)
-                        } else {
+                        return Math.floor((maxP - minP) * 0.1)
+                    } else {
 
-                            return Number(((maxP - minP) * 0.1).toFixed(2))
-                        }
+                        return Number(((maxP - minP) * 0.1).toFixed(2))
                     }
+                }
 
-                    yScale.domain([minP - buffer(), maxP + buffer()])
+                yScale.domain([minP - buffer(), maxP + buffer()])
 
-                    candles.transition()
-                        .duration(2)
-                        .attr("y", (d) => yScale(Math.max(d.open, d.close)))
-                        .attr("height", d => (d.open === d.close) ? 1 : yScale(Math.min(d.open, d.close)) - yScale(Math.max(d.open, d.close)));
+                candles.transition()
+                    .duration(2)
+                    .attr("y", (d) => yScale(Math.max(d.open, d.close)))
+                    .attr("height", d => (d.open === d.close) ? 1 : yScale(Math.min(d.open, d.close)) - yScale(Math.max(d.open, d.close)));
 
-                    stems.transition().duration(2)
-                        .attr("y1", (d) => yScale(d.high))
-                        .attr("y2", (d) => yScale(d.low))
+                stems.transition().duration(2)
+                    .attr("y1", (d) => yScale(d.high))
+                    .attr("y2", (d) => yScale(d.low))
 
-                    gY.transition()
-                        .call(d3.axisRight()
-                            .scale(yScale)
-                            .tickSize(width)
-                        )
-                        .attr("transform", `translate(0, 0)`)
-                        .call(g => g.select(".domain")
-                            .remove())
-                        .call(g => g.selectAll(".tick line")
-                            .attr("stroke-opacity", 0.5)
-                            .attr("stroke-dasharray", "2,2"))
-                        .call(g => g.selectAll(".tick text")
-                            .attr("x", 40)
-                            .attr("y", -4))
-                        .style("fill", "#E5E5E5")
+                gY.transition()
+                    .call(d3.axisRight()
+                        .scale(yScale)
+                        .tickSize(width)
+                    )
+                    .attr("transform", `translate(0, 0)`)
+                    .call(g => g.select(".domain")
+                        .remove())
+                    .call(g => g.selectAll(".tick line")
+                        .attr("stroke-opacity", 0.5)
+                        .attr("stroke-dasharray", "2,2"))
+                    .call(g => g.selectAll(".tick text")
+                        .attr("x", 40)
+                        .attr("y", -4))
+                    .style("fill", "#E5E5E5")
 
-                    var line_zoom = chart.selectAll(".drowLine")
-                        .attr("y1", (line_zoom, x, arr) => {
+                var line_zoom = chart.selectAll(".drowLine")
+                    .attr("y1", (line_zoom, x, arr) => {
 
-                            var arrpoints = points.find(i => i.name === arr[x].id)
+                        var arrpoints = points.find(i => i.name === arr[x].id)
+
+                        return yScale(arrpoints.scale[1])
+                    })
+                    .attr("y2", (line_zoom, x, arr) => {
+
+                        var arrpoints = points.find(i => i.name === arr[x].id)
+
+                        return yScale(arrpoints.scale[3])
+                    })
+
+                var Circle_zoom = chart.selectAll('circle')
+                    .attr("cy", (Circle_zoom, x, arr) => {
+
+                        var arrpoints = points.find(i => i.name === arr[x].id.slice(0, `-${arr[x].className.baseVal.length}`))
+                        if (arr[x].className.baseVal === 'start') {
 
                             return yScale(arrpoints.scale[1])
-                        })
-                        .attr("y2", (line_zoom, x, arr) => {
 
-                            var arrpoints = points.find(i => i.name === arr[x].id)
+                        } else {
 
                             return yScale(arrpoints.scale[3])
+                        }
+                    })
+                var SMA_zoom = chart.selectAll('.SMA_path')
+                    .attr("d", d3.line()
+                        .x((d, i, arr) => {
+                            return xScaleZ(i)
                         })
+                        .y((d, i, arr) => { return yScale(arr[i]) }))
 
-                    var Circle_zoom = chart.selectAll('circle')
-                        .attr("cy", (Circle_zoom, x, arr) => {
-
-                            var arrpoints = points.find(i => i.name === arr[x].id.slice(0, `-${ arr[x].className.baseVal.length }`))
-                            if (arr[x].className.baseVal === 'start') {
-
-                                return yScale(arrpoints.scale[1])
-
-                            } else {
-
-                                return yScale(arrpoints.scale[3])
-                            }
-                        })
-                    var SMA_zoom = chart.selectAll('.SMA_path')
-                        .attr("d", d3.line()
-                            .x((d, i, arr) => { 
-                                return xScaleZ(i)
-                            })
-                            .y((d, i, arr) => { return yScale(arr[i]) }))
-                    
-                },
+            },
                 500)
         }
     }
@@ -1824,7 +2644,7 @@ var xAxis_focus = d3.axisBottom()
 var areaGenerator = d3.area()
     .x((d, i) => { return xScale_focus(i) })
     .y0(yScale_focus(0))
-    .y1(function(d) { return yScale_focus(d.high) })
+    .y1(function (d) { return yScale_focus(d.high) })
 var focus_chart = d3.select("#chart")
     .append("svg:svg")
     .attr("viewBox", [0, 0, width_focus, height_focus + margin_bottom])
@@ -1839,10 +2659,7 @@ var gX_focus = focus_chart.append("g")
     .attr("transform", `translate(0, ${height_focus})`)
     .call(xAxis_focus)
 
-
-
 var area = focus_chart.append('g')
-
 
 var brush = d3.brushX() // Add the brush feature using the d3.brush function
     .extent([
@@ -1855,7 +2672,7 @@ var brush = d3.brushX() // Add the brush feature using the d3.brush function
 area.append("path")
     .datum(sort_Data)
     .attr("class", "myArea") // I add the class myArea to be able to modify it later on.
-    .attr("fill", "#69b3a2")
+    .attr("fill", "#b3b6b7")
     .attr("fill-opacity", .3)
     .attr("stroke", "black")
     .attr("stroke-width", 1)
@@ -1888,14 +2705,17 @@ function brushended() {
     timesClicked = 0
 
     if (!selection) {
-        
+
         area.call(brush.move, defaultSelection);
 
     } else {
         range_data = [Math.floor(xScale_focus.invert(selection[0])), Math.floor(xScale_focus.invert(selection[1]))]
         chart.selectAll("*").remove();
         Volume_box.selectAll("*").remove();
-        chart_zoom(range_data, selection)
+        RSI_div.selectAll("*").remove();
+        Stochastic_div.selectAll("*").remove();
+        d3.selectAll(".panel").remove();
 
+        let new_char = chart_zoom(range_data, selection)
     }
 }
