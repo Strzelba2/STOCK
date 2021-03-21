@@ -1,0 +1,131 @@
+{% extends 'basePanel.html' %} {% load static %}
+
+{% block nav %}
+	{% if request.user.is_authenticated %}
+        <a class="right-topbar-item " href="{% url 'wallet' %}">Portfel</a>
+		<a class="right-topbar-item " href="{% url 'home' %}">Notowania</a>
+	{% endif %}
+{% endblock nav %}
+
+
+{% block content %}
+
+<div class="training-container" >
+    <div class="profilemenu">
+        
+        <div class="divQuotes" id="PLAN_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="PLAN"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >PLAN</button>
+                        
+            </form> 
+
+        </div>
+        <div class="divQuotes" id="Observe_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="Obserwowane"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >Obserwowane</button>
+                        
+            </form> 
+
+        </div>
+    </div>
+    <div class="border_middle">
+        <div class = "center_cash">
+            <form method="POST" action='.'>
+                {% csrf_token %}
+                <h1>{{title_account}} Operacja: </h1>
+      
+                <div class="input-center"> 
+                    {{form.order}}
+                    {{form.order.errors}}
+                </div>
+
+                <div>
+                    <span style="font-size: 19px">Firma:</span>
+                </div>
+                <div class="text-center"> 
+                    <h4 style="color:#70b97b;">{{stock}}</h4>
+                </div>
+                {% if amount.amount %}
+                    <div>
+                        <span style="font-size: 19px">ilość Akcji na koncie:</span>
+                    </div>
+                    <div class="text-center"> 
+                        <h5 style="color:#a5611c;">{{amount.amount}} szt.</h5>
+                    </div>
+                    <div>
+                        <span style="font-size: 19px">Cena kupna:</span>
+                    </div>
+                    <div class="text-center"> 
+                        <h5 style="color:#a5611c;">{{amount.price_buy}} {{amount.currency}}</h5>
+                    </div>
+                
+                
+                {% endif %}
+                <div>
+                    <span style="font-size: 19px">Środki na koncie:</span>
+                </div>
+                <div class="text-center"> 
+                    <h5 style="color:#a5611c;">{{broker.cash}} {{broker.currency}}</h5>
+                    {{ form.non_field_errors }}
+                </div>
+                
+
+                <div >
+                    <span style="font-size: 19px" >Ilość</span>
+                </div>
+                <div class="input-center"> 
+                    {{form.ammount}}
+                    <div class="text-center"> 
+                        {{form.ammount.errors}}
+                    </div>
+                </div>
+                <div >
+                    <span style="font-size: 19px" >Cena</span>
+                </div>
+                <div class="input-center"> 
+                    {{form.price}}
+                    <div class="text-center"> 
+                        {{form.price.errors}}
+                    </div>
+                </div>
+                <div >
+                    <span style="font-size: 19px" >Wybierz datę</span>
+                </div>
+                <div class="input-center">
+                    {{form.day_transfer}}
+                    {{form.day_transfer.errors}}
+                </div>
+                <div class="text-center">
+                    <button type="submit"   class=" btn-primary-account"  >wyślij transakcję</button>
+                </div>
+            
+            </form>
+            <div class="text-center">
+                    <button onclick="location.href='{% url 'Lista_Stocks' pk=view.kwargs.pk %}'" class="btn-primary-cancel" >Anuluj</button>
+            </div>
+        </div>
+    </div>
+ </div>
+{% endblock content %}
+{% block extra_js %}
+    <script>
+        $(function () {
+            $("#id_day_transfer").datepicker({
+                format:'yyyy-mm-dd',
+            });
+        });
+
+
+
+    </script>
+
+
+{% endblock extra_js %}

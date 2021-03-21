@@ -1,7 +1,383 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'basePanel.html' %} {% load static %}
+{% block nav %}
+	{% if request.user.is_authenticated %}
+		<a class="right-topbar-item " href="{% url 'home' %}">Notowania</a>
+	{% endif %}
+{% endblock nav %}
 
 
 {% block content %}
- działa
+<div class="training-container" >
+    <div class="profilemenu">
+        
+        <div class="divQuotes" id="PLAN_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="PLAN"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >PLAN</button>
+                        
+            </form> 
+
+        </div>
+        <div class="divQuotes" id="Observe_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="Obserwowane"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >Obserwowane</button>
+                        
+            </form> 
+
+        </div>
+    </div>
+    <div class="border">
+        <div class="accountPanel">
+            {% if  account_PLN %}
+                <div>
+                    <span class="spanaccount">Konta w walucie PLN</span>
+                
+                </div>
+                
+                {% for x in account_PLN %}
+                    <div class="tableaccount">
+                        <div class="nameaccount" id = "{{x}}">
+                            <span >{{x}}</span>
+                            <div class="dropdown-wallet">
+                                <div class="dropdownW">
+
+                                    <form action="{% url 'Cash_Deposit' %}" method="GET" >
+                                        {% csrf_token %}
+
+                                        <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                        <button type="submit"   class="buttonQuotes"  >Wpłata</button>
+                                                
+                                    </form> 
+                                </div>
+                                <div class="dropdownW">
+                                    <form action="{% url 'Cash_withdrawal' %}" method="GET" >
+                                        {% csrf_token %}
+
+                                        <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                        <button type="submit"   class="buttonQuotes"  >Wypłata</button>
+                                                
+                                    </form> 
+                                </div>
+                                <div class="dropdownW">
+                                    <form action="{% url 'Lista_Bank_transfer' %}"method="GET" > 
+                                    <input type="text" name="exchange" value="transfer"  style="display:None;">
+                                    <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                        <button type="submit"   class="buttonQuotes"  >Historia</button>
+                                                
+                                    </form> 
+                                </div>
+                                <div class="dropdownW">
+                                    <a href=""> Wykres</a>
+                                </div>
+                                 <div class="dropdownW">
+
+                                    <a href="{% url 'AccountDelete'  pk=x.id %}"> Usuń konto</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="cashccount">
+                            <span>{{x.cash}} zł</span>
+                        </div>
+                    </div>
+                    
+                    
+                {% endfor %}
+                <div class="sumaccount" > 
+                    <div class="spanaccountLabel">
+                        <span >Suma gotóki PLN</span>
+                    </div>
+                    
+                    <div class="spansumaccount">
+                        <span >{{cashPLN}} zł</span>
+                    </div>
+                    
+                
+                </div>
+
+            {% endif %}
+            {% if  account_EUR  %}
+                <div>
+                    <span class="spanaccount">Konta w walucie EUR</span>
+                
+                </div>
+                
+                {% for x in account_EUR %}
+                    <div class="tableaccount">
+                        <div class="nameaccount" id = "{{x}}">
+                            <span >{{x}}</span>
+                             <div class="dropdown-wallet">
+                                <div class="dropdownW">
+                                    <form action="{% url 'Cash_exchange' %}" method="GET" >
+                                        {% csrf_token %}
+
+                                        <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                        <button type="submit"   class="buttonQuotes"  >Wymiana</button>
+                                                
+                                    </form> 
+                                </div>
+
+                                <div class="dropdownW">
+                                    <form action="{% url 'Lista_Bank_transfer' %}"method="GET" > 
+                                        <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                        <input type="text" name="exchange" value="exchange"  style="display:None;">
+                                        <button type="submit"   class="buttonQuotes"  >Historia</button>
+                                                
+                                    </form> 
+                                </div>
+                                <div class="dropdownW">
+                                    <a href=""> wykres</a>
+                                </div>
+                                <div class="dropdownW">
+                                    <a href="{% url 'AccountDelete'  pk=x.id %}"> Usuń konto</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="cashccount">
+                            <span>{{x.cash}} EUR / {{x.average_exchange|floatformat:2}}(EUR/PLN)</span>      
+                        </div>
+                    </div>
+                    
+                    
+                {% endfor %}
+                <div class="sumaccount"> 
+                    <div class="spanaccountLabel">
+                        <span >Suma gotóki EUR</span>
+                    </div>
+                    
+                    <div class="spansumaccount">
+                        <span >{{cashEUR.cash}} EUR / {{cashEUR.average|floatformat:2}}(EUR/PLN)</span>
+                    </div>
+                    
+                
+                </div>
+            {% endif %}
+            {% if  account_USD   %}
+                <div>
+                    <span class="spanaccount">Konta w walucie USD</span>
+                
+                </div>
+                
+                {% for x in account_USD  %}
+                    <div class="tableaccount">
+                        <div class="nameaccount" id = "{{x}}">
+                            <span >{{x}}</span>
+                             <div class="dropdown-wallet">
+                                <div class="dropdownW">
+                                    <form action="{% url 'Cash_exchange' %}" method="GET" >
+                                        {% csrf_token %}
+
+                                        <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                        <button type="submit"   class="buttonQuotes"  >Wymiana</button>
+                                                
+                                    </form> 
+                                </div>
+
+                                <div class="dropdownW">
+                                    <form action="{% url 'Lista_Bank_transfer' %}"method="GET" > 
+                                        <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                        <input type="text" name="exchange" value="exchange"  style="display:None;">
+                                        <button type="submit"   class="buttonQuotes"  >Historia</button>
+                                                
+                                    </form> 
+                                </div>
+                                <div class="dropdownW">
+                                    <a href=""> wykres</a>
+                                </div>
+                                <div class="dropdownW">
+
+                                    <a href="{% url 'AccountDelete'  pk=x.id %}"> Usuń konto</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="cashccount">
+                            <span>{{x.cash}} USD / {{x.average_exchange|floatformat:2}}(USD/PLN)</span>
+                           
+                        </div>
+                    </div>
+
+                    
+                    
+                {% endfor %}
+                <div class="sumaccount"> 
+                    <div class="spanaccountLabel">
+                        <span >Suma gotówki USD</span>
+                    </div>
+                    
+                    <div class="spansumaccount">
+                        <span >{{cashUSD.cash}} USD / {{cashUSD.average|floatformat:2}}(USD/PLN)</span>
+                    </div>
+                    
+                
+                </div>
+            {% endif %}
+
+
+            {% if  account_GBP   %}
+                <div>
+                    <span class="spanaccount">Konta w walucie GBP</span>
+                
+                </div>
+                
+                {% for x in account_GBP  %}
+                    <div class="tableaccount">
+                        <div class="nameaccount" id = "{{x}}">
+                            <span >{{x}}</span>
+                            <div class="dropdown-wallet">
+                                <div class="dropdownW">
+                                    <form action="{% url 'Cash_exchange' %}" method="GET" >
+                                        {% csrf_token %}
+
+                                        <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                        <button type="submit"   class="buttonQuotes"  >Wymiana</button>
+                                                
+                                    </form> 
+                                </div>
+
+                                <div class="dropdownW">
+                                    <form action="{% url 'Lista_Bank_transfer' %}"method="GET" > 
+                                        <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                        <input type="text" name="exchange" value="exchange"  style="display:None;">
+                                        <button type="submit"   class="buttonQuotes"  >Historia</button>
+                                                
+                                    </form> 
+                                </div>
+                                <div class="dropdownW">
+                                    <a href=""> wykres</a>
+                                </div>
+                                <div class="dropdownW">
+
+                                    <a href="{% url 'AccountDelete'  pk=x.id %}"> Usuń konto</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="cashccount">
+                            <span>{{x.cash}} GBP / {{x.average_exchange|floatformat:2}}(GBP/PLN)</span>
+                        
+                        </div>
+                    </div>
+
+                    
+                    
+                {% endfor %}
+                <div class="sumaccount"> 
+                    <div class="spanaccountLabel">
+                        <span >Suma gotówki GBP</span>
+                    </div>
+                    
+                    <div class="spansumaccount">
+                        <span >{{cashGBP.cash}} GBP / {{cashGBP.average|floatformat:2}}(GBP/PLN)</span>
+                    </div>
+                    
+                
+                </div>
+            {% endif %}
+
+            <div class="dropdownW" style="position: relative;top: 100px;left: 76%;text-align: center;">
+                <a href="{% url 'Create_account' %}"> Dodaj konto</a>
+            </div>
+        </div>
+        <div class="accountPanel">
+            <div>
+                <span class="spanaccount">Konta w Maklerskie</span>
+            
+            </div>
+                
+            {% for x in account_broker %}
+                <div class="tableaccount" >
+                    <div class="nameaccount" id = "{{x}}">
+                        <span >{{x}}</span>
+                        <div class="dropdown-wallet">
+                            <div class="dropdownW">
+
+
+                                <a href="{% url 'Lista_Stocks'  pk=x.id %}"> Szczegóły</a>
+                            </div>
+                            <div class="dropdownW">
+
+                                <form action="{% url 'Cash_Deposit' %}" method="GET" >
+                                    {% csrf_token %}
+
+                                    <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                    <button type="submit"   class="buttonQuotes"  >Wpłata</button>
+                                            
+                                </form> 
+                            </div>
+                            <div class="dropdownW">
+                                <form action="{% url 'Cash_withdrawal' %}" method="GET" >
+                                    {% csrf_token %}
+
+                                    <input type="text" name="account_name" value="{{x}}"  style="display:None;">
+                                    <button type="submit"   class="buttonQuotes"  >Wypłata</button>
+                                            
+                                </form> 
+                            </div>
+                           
+                            <div class="dropdownW">
+
+                                <a href="{% url 'AccountDelete'  pk=x.id %}"> Usuń konto</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cashccount">
+                        <span>{{x.cash}} zł</span>
+                    </div>
+                </div >
+                
+                
+            {% endfor %}
+
+        </div>
+    </div>
+ </div>
 {% endblock content %}
+{% block extra_js %}
+    <script>
+    
+    let nameaccount = document.getElementsByClassName("nameaccount")
+    console.log(nameaccount)
+    Array.prototype.map.call(nameaccount, (item)=>{
+        console.log(item.offsetLeft)
+        console.log(item.offsetTop)
+        item.oncontextmenu = function (){
+            select = document.getElementsByClassName("dropdown-wallet")
+            Array.prototype.map.call(select, (x)=>{
+                x.className = "dropdown-wallet"
+            })
+            
+            console.log(select)
+            drop = item.childNodes[3]
+
+            
+            drop.style.left = `${item.offsetLeft}px`
+            drop.style.top = `${item.offsetTop + 30}px`
+            drop.classList.toggle("show")
+
+            window.onclick = ()=>{
+                drop.className = "dropdown-wallet"
+            }
+            event.stopPropagation();
+
+            return false;
+
+        }
+
+
+    })
+    
+    </script>
+
+{% endblock extra_js %}

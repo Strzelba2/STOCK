@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CompanyData , Quotes,Index,IndexData,Wares,WaresData,Currency,CurrencyData,Quotes_last,Currency_Last,Index_Last,Wares_Last
+from .models import CompanyData , Quotes,Index,IndexData,Wares,WaresData,Currency,CurrencyData,Quotes_last,Currency_Last,Index_Last,Wares_Last,NCData,NC_Quotes,NC_Quotes_last
 # Register your models here.
 
 
@@ -15,5 +15,9 @@ admin.site.register(Quotes_last)
 admin.site.register(Index_Last)
 admin.site.register(Wares_Last)
 admin.site.register(Currency_Last)
+admin.site.register(NCData)
+admin.site.register(NC_Quotes)
+admin.site.register(NC_Quotes_last)
+
 
 

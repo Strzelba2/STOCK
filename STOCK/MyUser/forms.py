@@ -87,7 +87,7 @@ class UserLoginForm(forms.Form,OTPAuthenticationFormMixin):
             raise forms.ValidationError("credentials are not correct")
 
         device = TOTPDevice.objects.filter(user=user_obj)
-
+        print(device)
         if  device.exists():
             device = TOTPDevice.objects.get(user=user_obj)
             self.cleaned_data['otp_device'] = self.device_choices(user_obj)
@@ -103,21 +103,3 @@ class UserLoginForm(forms.Form,OTPAuthenticationFormMixin):
         return super(UserLoginForm, self).clean(*args, **kwargs)
 
 
-
-class RegisterNumForm(forms.Form):
-    RandomNUM = forms.IntegerField(label='RandomNUM',widget=forms.TextInput(attrs = {"class":"form-control",
-        'placeholder':'Wpisz numer wysłany email'}))
-    def __init__(self, *args, **kwargs):
-
-        self.randoNumUser = kwargs.pop('randoNumUser')
-        super(RegisterNumForm, self).__init__(*args, **kwargs)
-    
-
-    def clean(self, *args, **kwargs):
-        RandomNUM = self.cleaned_data.get('RandomNUM')
-        
-        rundomN = self.randoNumUser
-        if RandomNUM != rundomN:
-            raise forms.ValidationError("numer nie pasuje")
-
-        return super(RegisterNumForm, self).clean(*args, **kwargs)

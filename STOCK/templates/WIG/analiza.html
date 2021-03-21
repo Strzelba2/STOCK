@@ -9,8 +9,11 @@
 {% endblock meta %}
 {% block nav %}
 	{% if request.user.is_authenticated %}
-		<a class="right-topbar-item " href="">Panel</a>
+		
+		<a class="right-topbar-item " href="{% url 'wallet' %}">Portfel</a>
+		
 	{% endif %}
+	<a class="right-topbar-item " href="{% url 'home' %}">Notowania</a>
 {% endblock nav %}
 
 

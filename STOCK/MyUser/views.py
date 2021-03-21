@@ -29,7 +29,7 @@ from django.views.decorators.cache import never_cache
 from django.core.exceptions import PermissionDenied
 from datetime import timedelta
 
-from .forms import UserCreationForm, UserLoginForm , RegisterNumForm
+from .forms import UserCreationForm, UserLoginForm 
 from .tokens import account_activation_token
 
 User =  get_user_model ()
@@ -161,8 +161,14 @@ def login_view(request, *args, **kwargs):
             return redirect('wallet')
         else:
             if 'otp_device' in form.errors:
+                query = form.cleaned_data.get('query')
+                user_qs_final = User.objects.filter(
+                Q(username__iexact=query) |
+                Q(email__iexact=query)
+                ).distinct()
 
-                user = request.user
+                user = user_qs_final.first()
+
                 user_gr = MyUsers.objects.get(username = user)
                 device = get_user_totp_device( user)
                 if not device:

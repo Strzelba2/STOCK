@@ -5,6 +5,3 @@ from .models import CompanyData , Quotes,Wares,WaresData
 # Create your tests here.
 
 
-
-
-

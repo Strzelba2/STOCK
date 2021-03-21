@@ -1,0 +1,195 @@
+{% extends 'basePanel.html' %} {% load static %}
+
+{% block nav %}
+	{% if request.user.is_authenticated %}
+        <a class="right-topbar-item " href="{% url 'wallet' %}">Portfel</a>
+		<a class="right-topbar-item " href="{% url 'home' %}">Notowania</a>
+	{% endif %}
+{% endblock nav %}
+
+
+{% block content %}
+
+<div class="training-container" >
+    <div class="profilemenu">
+        
+        <div class="divQuotes" id="PLAN_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="PLAN"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >PLAN</button>
+                        
+            </form> 
+
+        </div>
+        <div class="divQuotes" id="Observe_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="Obserwowane"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >Obserwowane</button>
+                        
+            </form> 
+
+        </div>
+    </div>
+    {% if listaBankTransfer %}
+    <div class="border_middle" >
+    {% else %}
+    <div class="border_middle" style= "height:500px">
+    {% endif %}
+        <div class = "center_history">
+            <form method="GET" action="{% url 'Lista_Bank_transfer' %}">
+                {% csrf_token %}
+                <div style="padding-left: 3%;">
+                    <h3 >Wybierz zakres dat </h3>
+                </div>
+                
+                <div style="display: flex;width: 100%;">
+                    <div class = "filtrdate">
+                        <div>
+                            <span style="font-size: 19px">od:</span>
+                        </div>
+                        <div class="input-center">
+                            <input id="date-since"  name = "date-since" type="text" autocomplete="off">
+                        </div>
+                    
+                    </div >
+                    <div class = "filtrdate">
+                        <div >
+                            <span style="font-size: 19px" >do</span>
+                        </div>
+                        <div class="input-center"> 
+                            <input id="date-to" name="date-to" type="text" autocomplete="off">
+                        </div>
+                    </div>
+                    <div  style = "display: block;padding-top: 37px;width: 20%;">
+                  
+                        <div >
+                            <button type="submit"   class=" btn-primary-account"  >Filtuj</button>
+                        </div>
+                    </div>
+                
+                </div>
+                
+            
+            </form>
+
+        </div>
+        <div>
+        {% if listaBankTransfer %}
+            <div class ="center-history-table">
+                <table id="" class="table table-vcenter table-condensed table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-center">
+                                <div class="table-filter">
+                                    <span> Nazwa konta</span>
+                                </div>
+                            </th>
+                            <th class="text-center">
+                                <div class="table-filter">
+                                    <span> Tytuł przelewu</span>
+                                </div>
+                            </th>
+                            <th class="text-center">
+                                <div class="table-filter">
+                                    <span> Data</span>
+                                </div>
+                            </th>
+                            <th class="text-center">
+                                <div class="table-filter">
+                                    <span> Kwota</span>
+                                </div>
+                            </th>
+                            <th class="text-center">
+                                <div class="table-filter">
+                                    <span> Stan Konta</span>
+                                </div>
+                            </th>
+                            {% if exchange %}
+                                <th class="text-center">
+                                    <div class="table-filter">
+                                        <span> Średni kurs</span>
+                                    </div>
+                                </th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in listaBankTransfer %}
+                            {% if exchange %}
+                                <tr>
+                                    <td class="text-center" style="font-weight:bold;color: #555405" > {{x.currency_account_to}}</td>
+                                    <td class="text-center" style="font-weight:bold;color: #555405" > Wymiana :{{x.cash_for}}/{{x.currency_account_for.currency}} na {{x.cash_to}}/{{x.currency_account_to.currency}}</td>
+                                    <td class="text-center" style="font-weight:bold;color: #555405" > {{x.day_transfer}}</td>
+                                    <td class="text-center cash" style="font-weight:bold;color: #555405" > {{x.cash_to}} {{x.currency_account_to.currency}}</td>
+                                    <td class="text-center" style="font-weight:bold;color: #555405" > {{x.cash_after}} {{x.currency_account_to.currency}}</td>
+                                    <td class="text-center" style="font-weight:bold;color: #555405" > {{x.exchange_rate_after|floatformat:2}} {{x.currency_account_for.currency}}/{{x.currency_account_to.currency}}</td>
+                                </tr>
+
+                            {% else %}
+                                {% if x.account %}
+                                    <tr>
+                                        <td class="text-center" style="font-weight:bold;color: #555405" > {{x.account}}</td>
+                                        <td class="text-center" style="font-weight:bold;color: #555405" > {{x.title}}</td>
+                                        <td class="text-center" style="font-weight:bold;color: #555405" > {{x.day_transfer}}</td>
+                                        <td class="text-center cash" style="font-weight:bold;color: #555405" > {{x.cash}}</td>
+                                        <td class="text-center" style="font-weight:bold;color: #555405" > {{x.cash_after}}</td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <td class="text-center" style="font-weight:bold;color: #555405" > {{x.currency_account_for}}</td>
+                                        <td class="text-center" style="font-weight:bold;color: #555405" > Wymiana :{{x.cash_for}}/{{x.currency_account_for.currency}} na {{x.cash_to}}/{{x.currency_account_to.currency}}</td>
+                                        <td class="text-center" style="font-weight:bold;color: #555405" > {{x.day_transfer}}</td>
+                                        <td class="text-center cash" style="font-weight:bold;color: #555405" > {{x.cash_for}}</td>
+                                        <td class="text-center" style="font-weight:bold;color: #555405" > {{x.cash_after_for}}</td>
+                                    </tr>
+                                
+                                
+                                {% endif %}
+                            {% endif %}
+
+
+                {% endfor %}
+        {% else %}
+            <div style="margin-left:20%;width:60%;padding-left:3%">
+                <h5>brak danych w danym kryterium proszę wybrać zakres dat</h1>
+            
+            </div>
+        {% endif %}
+
+        
+        </div>
+    </div>
+ </div>
+{% endblock content %}
+{% block extra_js %}
+    <script>
+        $(function () {
+            $("#date-since").datepicker({
+                format:'yyyy-mm-dd',
+            });
+            $("#date-to").datepicker({
+                format:'yyyy-mm-dd',
+            });
+
+        });
+        let cash = document.getElementsByClassName("cash")
+        console.log(cash)
+
+        Array.prototype.map.call(cash, (x)=>{
+            if (parseFloat(x.textContent.replace(/,/g, '.')).toFixed(2)< 0){
+                x.classList.toggle("cash_W")
+            }
+        })
+
+
+
+    </script>
+
+
+{% endblock extra_js %}

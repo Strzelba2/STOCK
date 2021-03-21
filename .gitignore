@@ -5,3 +5,4 @@ key.json
 .env
 STOCK/data
 .history
+STOCK/geckodriver.log

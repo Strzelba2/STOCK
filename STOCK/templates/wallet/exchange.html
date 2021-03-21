@@ -1,0 +1,336 @@
+{% extends 'basePanel.html' %} {% load static %}
+
+{% block nav %}
+	{% if request.user.is_authenticated %}
+        <a class="right-topbar-item " href="{% url 'wallet' %}">Portfel</a>
+		<a class="right-topbar-item " href="{% url 'home' %}">Notowania</a>
+	{% endif %}
+{% endblock nav %}
+
+
+{% block content %}
+
+<div class="training-container" >
+    <div class="profilemenu">
+        
+        <div class="divQuotes" id="PLAN_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="PLAN"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >PLAN</button>         
+            </form> 
+
+        </div>
+        <div class="divQuotes" id="Observe_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="Obserwowane"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >Obserwowane</button>         
+            </form> 
+
+        </div>
+    </div>
+    <div class="border_middle">
+        <div class = "center_history">
+            <form method="POST" action='.'>
+                {% csrf_token %}
+                <h1>{{title_account}} Kantor: </h1>
+                <div style="padding: 0 3%;">
+                    <span style="font-size: 19px">Wybierz konto</span>
+                </div>
+                <div class="input-center" style="padding:0 3%;">
+                    {{form.currency_account_for}}
+                    {{form.currency_account_for.errors}}
+                </div>
+
+                <div style="display: flex;width: 100%;">
+                    <div class = "filtrdate" style="width:70%;">
+                        <div>
+                            <span style="font-size: 19px">Chcę wymienić</span>
+                        </div>
+                        <div class="input-center">
+                            {{form.cash_for}}
+                            {{form.cash_for.errors}}
+                        </div>
+                    </div>  
+                    <div class = "filtrdate" style="width:30%;">
+                        <div>
+                            <span style="font-size: 19px">Na:</span>
+                        </div>
+                        <div class="input-center">
+                                <input id="date-since" value={{currency}} name = "date-since" type="text" readonly>
+                        </div>
+                    </div>
+                </div >
+                <div style="text-align: right">
+                    <span onclick="count_whole()"style="color:#c35522;position:relative;cursor: pointer;right: 3%">przelicz całą kwotę</span>
+                </div>
+                <div class="input-center" id="divcash_to" style="padding:0 3%;display:none">
+                    {{form.cash_to}}
+                    {{form.cash_to.errors}}
+                </div>
+                <div style="display: flex;width: 100%;" id="Count_Rate">
+                    <div class = "filtrdate" style="width:70%;padding: 40px 10%">
+                        <div class="input-center" >
+                            <a style="width:100%;height:40px;font-size: 18px;" onclick="count_rate()" id="count" class="btn btn-sm btn-primary "  >Przelicz </a>
+                        </div>
+                    </div>
+                    <div class = "filtrdate" style="width:30%;">
+                        <div >
+                            <span style="font-size: 19px" >Kurs</span>
+                        </div>
+                        <div class="input-center">
+                            {{form.exchange_rate}}
+                            {{form.exchange_rate.errors}}
+                        </div>
+                    </div>
+                   
+                </div>
+                <div id="receive">   
+                </div>
+
+                <div id="divday_exchange" style="display:none;">
+                    <div style="padding: 0 3%;">
+                        <span style="font-size: 19px" >Wybierz datę</span>
+                    </div>
+                    <div class="input-center" style="padding: 0 3%;">
+                        {{form.day_transfer}}
+                        {{form.day_transfer.errors}}
+                    </div>
+
+                </div>
+                
+                <div class="text-center" style="display:none;" id="btn_exchange">
+                    <button type="submit"   class=" btn-primary-account"  >wyślij przelew</button>
+                </div>
+            
+            </form>
+            <div class="text-center" style="display:none;" id="btn_cancel">
+                    <button onclick="location.href='{% url 'wallet' %}'" class="btn-primary-cancel" >Anuluj</button>
+            </div>
+        </div>
+    </div>
+ </div>
+{% endblock content %}
+{% block extra_js %}
+    <script>
+        $(function () {
+            $("#id_day_transfer").datepicker({
+                format:'yyyy-mm-dd',
+            });
+        });
+        function hidden_btn(){
+            let Count_Rate = document.getElementById("Count_Rate")
+            let btn_exchange = document.getElementById("btn_exchange")
+            let btn_cancel = document.getElementById("btn_cancel")
+            let divday_exchange =  document.getElementById("divday_exchange")
+
+            btn_exchange.classList.replace("show","hidden")
+            btn_cancel.classList.replace("show","hidden")
+            Count_Rate.className = "showflex"
+            divday_exchange.className = "hidden"
+
+        }
+        function count_rate() {
+            console.log("działa")
+            let Count_Rate = document.getElementById("Count_Rate")
+            let btn_exchange = document.getElementById("btn_exchange")
+            let btn_cancel = document.getElementById("btn_cancel")
+            let exchange_rate = document.getElementById("id_exchange_rate")
+            let currency_account_for = document.getElementById("id_currency_account_for")
+            let cash_for = document.getElementById("id_cash_for")
+            let divcash_to = document.getElementById("divcash_to").classList
+            let cash_to = document.getElementById("id_cash_to")
+            let divday_exchange =  document.getElementById("divday_exchange")
+            let p_currency_account_for = document.getElementById("p_currency_account_for")
+            let p_cash_for = document.getElementById("p_cash_for")
+            let p_cash_to = document.getElementById("p_cash_to")
+            let receive = document.getElementById("receive")
+            let date_since = document.getElementById("date-since")
+
+            if(!currency_account_for.value){
+                if(!p_currency_account_for){
+                    console.log("niejest null")
+                    let p = document.createElement("p")
+                    p.setAttribute("id", "p_currency_account_for")
+                    currency_account_for.parentElement.append(p)
+                    p.append("Wybierz rachunek")
+                    p.style.padding = "10px 5%"
+                    p.style.color = "#c35522"
+                }
+                
+
+            }else if(!cash_for.value && !Array.prototype.includes.call(divcash_to,"show")){
+                if(!p_cash_for ){
+                    let p = document.createElement("p")
+                    p.setAttribute("id", "p_cash_for")
+                    cash_for.parentElement.append(p)
+                    p.append("wpisz kwotę")
+                    p.style.padding = "10px 5%"
+                    p.style.color = "#c35522"
+                }
+            }else if(Array.prototype.includes.call(divcash_to,"show") && !cash_to.value){
+                console.log("spełniony")
+                if(!p_cash_to){
+                    let p = document.createElement("p")
+                    p.setAttribute("id", "p_cash_to")
+                    cash_to.parentElement.append(p)
+                    p.append("wpisz kwotę")
+                    p.style.padding = "10px 5%"
+                    p.style.color = "#c35522"
+                }  
+            }else{
+
+                if (Array.prototype.includes.call(btn_exchange.classList,"hidden")){
+                    btn_exchange.classList.replace("hidden","show")
+                }else{
+                    btn_exchange.classList.toggle("show")
+                }
+                if (Array.prototype.includes.call(btn_cancel.classList,"hidden")){
+                    btn_cancel.classList.replace("hidden","show")
+                }else{
+                    btn_cancel.classList.toggle("show")
+                }
+                divday_exchange.className = "show"
+                Count_Rate.className = "hidden"
+                if (Array.prototype.includes.call(divcash_to,"show")){
+                    let count = cash_to.value*exchange_rate.value
+                    receive.querySelectorAll('*').forEach(n => n.remove())
+                    let p = document.createElement("p")
+                    let p1 = document.createElement("p")
+                    p.style.textAlign = "center"
+                    p1.style.textAlign = "center"
+                    receive.append(p)
+                    p.append(`Przeznaczę :${Number(count).toFixed(2)}/${cash_for.placeholder}`)
+                    receive.append(p1)
+                    p1.append(`Po kursie :${exchange_rate.value} ${cash_for.placeholder}`)
+                    cash_for.value = Number(count).toFixed(2)
+
+                }else{
+
+                    let count = cash_for.value/exchange_rate.value
+                    receive.querySelectorAll('*').forEach(n => n.remove())
+                    let p = document.createElement("p")
+                    let p1 = document.createElement("p")
+                    p.style.textAlign = "center"
+                    p1.style.textAlign = "center"
+                    receive.append(p)
+                    p.append(`Otrzymasz :${Number(count).toFixed(2)}/${date_since.value}`)
+                    receive.append(p1)
+                    p1.append(`Po kursie :${exchange_rate.value} ${cash_for.placeholder}`)
+                    cash_to.value = Number(count).toFixed(2)
+                }
+            }
+        }
+        function count_whole(){
+            let cash_to = document.getElementById("divcash_to")
+            let cash_for = document.getElementById("id_cash_for")
+            let date_since = document.getElementById("date-since")
+            let currency_account_for = document.getElementById("id_currency_account_for")
+            let p_currency_account_for = document.getElementById("p_currency_account_for")
+            let divday_exchange =  document.getElementById("divday_exchange")
+            console.log(Array.prototype.includes.call(cash_to.classList,"show"))
+            if(Array.prototype.includes.call(cash_to.classList,"show")){
+                cash_for.value = null
+                cash_for.readOnly = false
+                console.log(cash_for.parentElement.parentElement)
+                cash_for.parentElement.parentElement.style.width = "70%"
+                date_since.parentElement.parentElement.style.width = "30%"
+                
+                cash_to.classList.replace("show","hidden")
+                    
+            }else{
+                if(!currency_account_for.value){
+                    if(!p_currency_account_for){
+                        let p = document.createElement("p")
+                        p.setAttribute("id", "p_currency_account_for")
+                        currency_account_for.parentElement.append(p)
+                        p.append("Wybierz rachunek")
+                        p.style.padding = "10px 5%"
+                        p.style.color = "#c35522"     
+                    }
+                    
+                }else{
+                    cash_for.value = null
+                    cash_for.readOnly = true
+                    console.log(cash_for.parentElement.parentElement)
+                    cash_for.parentElement.parentElement.style.width = "50%"
+                    date_since.parentElement.parentElement.style.width = "50%"
+
+                    if (Array.prototype.includes.call(cash_to.classList,"hidden")){
+                        cash_to.classList.replace("hidden","show")
+                    }else{
+                        cash_to.classList.toggle("show")
+                    }
+                }
+            }
+        }
+        function cash_for_val(){
+            let p_cash_for = document.getElementById("p_cash_for")
+            let receive = document.getElementById("receive")
+
+            if(p_cash_for){
+                p_cash_for.remove()
+            }
+            hidden_btn()
+            receive.querySelectorAll('*').forEach(n => n.remove())
+            
+
+        }
+        function cash_to_val(){
+            let p_cash_to = document.getElementById("p_cash_to")
+            let receive = document.getElementById("receive")
+            
+            if (p_cash_to){
+                p_cash_to.remove()
+            }
+
+            hidden_btn()
+            receive.querySelectorAll('*').forEach(n => n.remove())
+
+        }
+
+        function getSelectValue() {
+            let select_currency_account = document.getElementById("id_currency_account_for").value;
+            let exchange_rate = document.getElementById("id_exchange_rate");
+            let currency = document.getElementById("date-since").value;
+            let cash_for = document.getElementById("id_cash_for")
+            
+
+
+            $.ajax({
+                url: "{% url 'Get_Rate' %}",
+                type: "GET", // or "get"
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }, // for csrf token
+
+                data: {
+                    'account': select_currency_account,
+                    'currency':currency,
+                },
+                success: function(data) {
+
+                    cash_for.placeholder = data.currency
+                    exchange_rate.value = data.rate
+                    let p_text = document.getElementById("p_currency_account_for")
+                    let receive = document.getElementById("receive")
+                    if(p_text){
+                        p_text.remove()
+                    }
+                    hidden_btn()
+                    receive.querySelectorAll('*').forEach(n => n.remove())
+                
+                },
+            })
+        }
+
+
+    </script>
+
+
+{% endblock extra_js %}

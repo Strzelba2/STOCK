@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.generic import ListView 
-from .models import CompanyData , Quotes ,IndexData , Index,Quotes_last,Index_Last,Wares_Last,Currency_Last,Currency,CurrencyData,WaresData,Wares
+from .models import CompanyData , Quotes ,IndexData , Index,Quotes_last,Index_Last,Wares_Last,Currency_Last,Currency,CurrencyData,WaresData,Wares,NC_Quotes_last,NCData,NC_Quotes
 from .WIG_scrap import SCRAP
 from .WIG_udate import UPDATE_SCRAP
 from pathlib import Path
@@ -25,10 +25,11 @@ def init_data(request):
 
     if data_init is False:
 
-        SCRAP().down_index()
-        SCRAP().down_wares()
-        SCRAP().down_currency()
-        SCRAP().down_company_quote()
+        #SCRAP().down_index()
+        #SCRAP().down_wares()
+        #SCRAP().down_currency()
+        #SCRAP().down_company_quote()
+        #SCRAP().down_NC_quote()
 
         SCRAP.down_RSI()
 
@@ -59,24 +60,36 @@ def init_data(request):
 
     return redirect('home')
 
-def update_data(request):
-
+def update_WIG(request):
+    
     UPDATE_SCRAP.update_Company()
-    UPDATE_SCRAP.update_Currency()
+
+    return redirect('home')
+
+def update_NC(request):
+    
+    UPDATE_SCRAP.update_NC()
+
+    return redirect('home')
+
+def update_Index(request):
+
     UPDATE_SCRAP.update_Index()
+
+    return redirect('home')
+    
+def update_Wares(request):
+
     UPDATE_SCRAP.update_Wares()
 
-    UPDATE_SCRAP.change_price()
+    return redirect('home')
 
-    UPDATE_SCRAP.update_Rsi()
+def update_Currency(request):
+
+    UPDATE_SCRAP.update_Currency()
 
     return redirect('home')
 
-def update_fast(request):
-    print("fast_update_WIG")
-    UPDATE_SCRAP.fast_update_Company()
-
-    return redirect('home')
 
 class Home (ListView):
 
@@ -92,6 +105,7 @@ class Home (ListView):
         self.tabela_nav = {"Nazwa":["Name","fa fa-angle-up"],"Data":['Day_trading',"fa fa-angle-up"],"Kurs":['Closing_price',"fa fa-angle-up"]
                 ,"Zmiana":["Change_price","fa fa-angle-up"],"Cena otwarcia":['Opening_price',"fa fa-angle-up"]
                 ,"Cena Max.":['Highest_price',"fa fa-angle-up"],"Cena Min.":['Lowest_price',"fa fa-angle-up"],"Wolumen":["Volume","fa fa-angle-up"]
+                ,"RSI":["RSI","fa fa-angle-up"]
                 }
 
     def get(self, request, *args, **kwargs):
@@ -123,6 +137,8 @@ class Home (ListView):
 
             elif quates == "Towary":
                 data = Wares_Last.objects.all().order_by(ordering)
+            elif quates == "NC":
+                data = NC_Quotes_last.objects.all().order_by(ordering)
 
         return data
 
@@ -163,7 +179,7 @@ class Home (ListView):
         
         if quates == None or quates == "":
 
-            class_choose= ["divQuotes","divQuotes","divQuotes","divQuotes"]
+            class_choose= ["divQuotes","divQuotes","divQuotes","divQuotes","divQuotes"]
     
             context["genre"] = "WIG"
             context["choose"] = class_choose
@@ -171,25 +187,31 @@ class Home (ListView):
         else:
 
             if quates == "WIG":
-                class_choose= ["divQuotes active","divQuotes","divQuotes","divQuotes"]
+                class_choose= ["divQuotes active","divQuotes","divQuotes","divQuotes","divQuotes"]
 
                 context["choose"] = class_choose
                 context["genre"] = quates
 
+            elif quates == "NC":
+                class_choose= ["divQuotes","divQuotes active","divQuotes","divQuotes","divQuotes"]
+                 
+                context["choose"] = class_choose
+                context["genre"] = quates
+
             elif quates == "Waluty":
-                class_choose= ["divQuotes","divQuotes active","divQuotes","divQuotes"]
+                class_choose= ["divQuotes","divQuotes","divQuotes active","divQuotes","divQuotes"]
                  
                 context["choose"] = class_choose
                 context["genre"] = quates
 
             elif quates == "Index":
-                class_choose= ["divQuotes","divQuotes","divQuotes active","divQuotes"]
+                class_choose= ["divQuotes","divQuotes","divQuotes","divQuotes active","divQuotes"]
 
                 context["choose"] = class_choose
                 context["genre"] = quates
 
             elif quates == "Towary":
-                class_choose= ["divQuotes","divQuotes","divQuotes","divQuotes active"]
+                class_choose= ["divQuotes","divQuotes","divQuotes","divQuotes","divQuotes active"]
 
                 context["choose"] = class_choose
                 context["genre"] = quates
@@ -248,6 +270,10 @@ class Analysis (ListView):
 
             Company = CompanyData.objects.get(Name = name)
             Quotes_company =list(Quotes.objects.filter(Name = Company).order_by(ordering))
+            data = serializers.serialize('json', Quotes_company)
+        if genre == "NC":
+            Company = NCData.objects.get(Name = name)
+            Quotes_company =list(NC_Quotes.objects.filter(Name = Company).order_by(ordering))
             data = serializers.serialize('json', Quotes_company)
         elif genre == "Waluty":
 

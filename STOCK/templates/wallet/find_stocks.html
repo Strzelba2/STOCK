@@ -1,0 +1,184 @@
+{% extends 'basePanel.html' %} {% load static %}
+
+{% block nav %}
+	{% if request.user.is_authenticated %}
+        <a class="right-topbar-item " href="{% url 'wallet' %}">Portfel</a>
+		<a class="right-topbar-item " href="{% url 'home' %}">Notowania</a>
+	{% endif %}
+{% endblock nav %}
+
+
+{% block content %}
+
+<div class="training-container" >
+    <div class="profilemenu">
+        
+        <div class="divQuotes" id="PLAN_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="PLAN"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >PLAN</button>
+                        
+            </form> 
+
+        </div>
+        <div class="divQuotes" id="Observe_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="Obserwowane"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >Obserwowane</button>
+                        
+            </form> 
+
+        </div>
+    </div>
+    <div class="border_middle">
+        <div class = "center_cash" style="padding:150px 0 400px 0">
+  
+            <h1>Nowe Zlecenie</h1>
+            <div class="input-center">
+                <label  style="font-size: 19px" for="product">Wyszukaj Akcję</label>
+                <input type="text" name="product" id="product">
+            </div>
+            
+        </div>
+    </div>
+ </div>
+{% endblock content %}
+{% block extra_js %}
+    <script>
+        function get_url(val){
+            var theResponse = null;
+            $.ajax({
+                url: "{% url 'autocomplete' pk=pk %}",
+                type: "GET", // or "get"
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }, // for csrf token
+
+                data: {
+                    'term': val,
+                },
+                async: false,
+                success: function(data) {
+                      theResponse = data.Stocks
+     
+                },
+
+
+            })
+            return theResponse;
+
+        }
+        function closeAllLists(){
+            let item = document.getElementById("autocomplete-list")
+            if (item){
+                while (item.hasChildNodes()) {
+                        item.removeChild(item.lastChild);
+                    }
+                item.remove()
+            }
+
+            
+        }
+        function autocomplete(inp){
+            inp.addEventListener("input", function(e) {
+                var a,b,c,d,e, val = this.value;
+                closeAllLists();
+                let  Stocks = JSON.parse(get_url(val))
+                a = document.createElement("DIV");
+                a.setAttribute("id",  "autocomplete-list");
+                a.setAttribute("class", "autocomplete-items");
+
+                if(Stocks.length > 5){
+
+                    let panel = document.getElementsByClassName("center_cash")[0] 
+                    console.log(panel)
+                    panel.style.padding = "100px 0 50px 0 "
+                    console.log(panel)
+                }
+                this.parentNode.appendChild(a);
+                Stocks.map((item) => {
+                    
+                    if(item.model == "WIG.companydata"){
+                        console.log("WIG")
+                        console.log(item)
+                        b  = document.createElement("DIV");
+                        b.setAttribute("class", "autocomplete-div");
+                        a.appendChild(b);
+                        e  = document.createElement("span");
+                        e.setAttribute("class", "genre");
+                        
+                        e.innerHTML = "WIG"
+                        let Name = item.fields.Name
+                        let url = "{% url 'buy_stocks' pk=pk stock=123 genre='WIG' %}".replace('123',Name)
+
+                        b.onclick = () => {window.location.href = url}
+                        b.appendChild(e)
+                    }else if(item.model == "WIG.ncdata"){
+
+                        b  = document.createElement("DIV");
+                        b.setAttribute("class", "autocomplete-div");
+                        a.appendChild(b);
+                        e  = document.createElement("span");
+                        e.setAttribute("class", "genre");
+
+                        e.innerHTML = "NEWCONNTECT"
+                        let Name = item.fields.Name
+                        let url = "{% url 'buy_stocks' pk=pk stock=123 genre='NEWCONNTECT' %}".replace('123',Name)
+
+                        b.onclick = () => {window.location.href = url}
+                        b.appendChild(e)
+                    }
+                    c  = document.createElement("DIV");
+                    c.innerHTML = ""
+
+                    for (i = 0; i < item.fields.Name.length; i++) {
+                        if (item.fields.Name.substr(i, val.length).toUpperCase() == val.toUpperCase()) {
+
+                            c.innerHTML += "<span style='color: red;'>"+`${item.fields.Name.substr(i, val.length).toUpperCase()}`+"</span>";
+                            c.innerHTML += item.fields.Name.substr(i+val.length,(item.fields.Name.length)-(i+val.length))
+
+                            break;
+                        }else{
+
+                            c.innerHTML += item.fields.Name.substr(i,1)
+                        }
+                    }
+                    b.appendChild(c);
+                    d  = document.createElement("DIV");
+                    d.setAttribute("class", "symbol");
+                    d.innerHTML = "";
+                    for (i = 0; i < item.fields.Symbol.length; i++) {
+                        if (item.fields.Symbol.substr(i, val.length).toUpperCase() == val.toUpperCase()) {
+
+                            d.innerHTML += "<span style='color: red;'>"+`${item.fields.Symbol.substr(i, val.length).toUpperCase()}`+"</span>";
+                            d.innerHTML += item.fields.Symbol.substr(i+val.length,(item.fields.Symbol.length)-(i+val.length))
+
+                            break;
+                        }else{
+
+                            d.innerHTML += item.fields.Symbol.substr(i,1)
+                        }
+                    }
+                    b.appendChild(d);
+                    
+
+                })
+
+            })
+        }
+        autocomplete(document.getElementById("product"))
+        
+    
+
+
+
+    </script>
+
+
+{% endblock extra_js %}

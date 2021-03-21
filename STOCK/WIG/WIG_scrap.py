@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import sys
 from django.conf import settings  
 import pandas as pd
-from .models import CompanyData , Quotes , Index,IndexData,Wares,WaresData,Currency,CurrencyData
+from .models import CompanyData , Quotes , Index,IndexData,Wares,WaresData,Currency,CurrencyData,NCData,NC_Quotes
 from django.shortcuts import get_object_or_404
 from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
@@ -226,12 +226,11 @@ class SCRAP:
 
         return self.WIG
 
-    def merge_dicts(self,a, b,c,d,e):
+    def merge_dicts(self,a,*args):
         z = a.copy()
-        z.update(b)
-        z.update(c)
-        z.update(d)
-        z.update(e)
+        for x in args:
+            z.update(x)
+        print(z)
         return z
 
    
@@ -413,12 +412,73 @@ class SCRAP:
                 continue
         
         self.driver.quit()
+
+    def down_NC_quote(self):
+        print("down company")
+
+        WIG_0=self.get_link_quote('?i=514')
+        WIG_1=self.get_link_quote('?i=514&v=0&l=2')
+        WIG_2=self.get_link_quote('?i=514&v=0&l=3')
+        WIG_3=self.get_link_quote('?i=514&v=0&l=4')
+
+        cj = browser_cookie3.chrome()
+        header_INDEX = self.headers['Index']
+
+        WIG = self.merge_dicts(WIG_0,WIG_1,WIG_2,WIG_3)
+
+        for name ,link in WIG.items():
+
+            Company = NCData.objects.filter(Name=name)
+            if not Company.exists():
+                Company = NCData(Name=name, Symbol =link.upper())
+                Company.save()
+        
+
+                href=f"q/d/l/?s={link}&i=d"
+                while True:
+                    page = requests.get(f"https://{settings.QUOTE}/{href}",headers=header_INDEX, cookies=cj)
+                    if page.content:
+                        url_data = settings.DATA_ROOT 
+                        print(link)
+                        try:
+                            with open(f'{url_data}{link}.csv', 'wb') as f:
+                                f.write(page.content)
+                        except:
+                            with open(f'{url_data}{link}_d.csv', 'wb') as f:
+                                f.write(page.content)
+                        break
+                    else:
+                        self.reset_wifi()
+
+                try:
+                    data=pd.read_csv(f'{url_data}{link}.csv') 
+                except:
+                    data=pd.read_csv(f'{url_data}{link}_d.csv') 
+                for row in data.itertuples(index=False):
+                    print(row)
+
+                    quotes = NC_Quotes.objects.create(Name=Company,Day_trading = row[0],Opening_price = row[1],Highest_price = row[2],
+                    Lowest_price = row[3],Closing_price = row[4])
+
+                    try:
+                        numer_volume = int(row[5])
+                        if type(numer_volume) is int:
+                            print("volumen",numer_volume)
+                            quotes.Volume = numer_volume
+                            quotes.save()
+                    except:
+                        continue
+
+            else:
+                continue
+        
+        self.driver.quit()
     @classmethod
     def down_RSI(cls,) :
 
         period = 14
-
-        Company = CompanyData.objects.filter(Name = "BEST")
+        '''
+        Company = CompanyData.objects.all()
         for name in Company:
             print(name)
             av_up = []
@@ -480,8 +540,8 @@ class SCRAP:
                     obj.av_loss = av_loss
                     obj.RSI = RSI
                     obj.save()
-  
-        Index_data = IndexData.objects.filter()
+     
+        Index_data = IndexData.objects.all()
         for name in Index_data:
             print(name)
             av_up = []
@@ -550,7 +610,7 @@ class SCRAP:
                     obj.av_gain = av_gain
                     obj.av_loss = av_loss
                     obj.save()
-
+        
         Wares_data = WaresData.objects.all()
         for name in Wares_data:
             print(name)
@@ -609,7 +669,7 @@ class SCRAP:
                     obj.av_loss = av_loss
                     obj.RSI = RSI
                     obj.save()
-
+        
         Currency_data = CurrencyData.objects.all()
         for name in Currency_data:
             print(name)
@@ -671,7 +731,72 @@ class SCRAP:
                     obj.RSI = RSI
                     obj.save()
 
-  
+        '''
+        #Company = NCData.objects.all()
+        Company = NCData.objects.filter(Symbol = "PRN")
+        for name in Company:
+            print(name)
+            av_up = []
+            av_down = []
+            av_gain = 0
+            av_loss = 0
+            Quotes_data = NC_Quotes.objects.filter(Name=name).order_by('Day_trading')
+            for i, item in enumerate(Quotes_data):
+
+                if i == 0 :
+                    av_up.append(0)
+                    av_down.append(0)
+                    obj = get_object_or_404(NC_Quotes.objects.filter(Name=name , Day_trading = item.Day_trading))
+
+                    obj.RSI = 0
+                    obj.save()
+                elif i < period:
+                    if item.Closing_price > Quotes_data[i-1].Closing_price:
+
+                        av_up.append(item.Closing_price-Quotes_data[i-1].Closing_price)
+                    else:
+                        av_down.append(Quotes_data[i-1].Closing_price-item.Closing_price)
+
+                    obj = get_object_or_404(NC_Quotes.objects.filter(Name=name , Day_trading = item.Day_trading))
+
+                    obj.RSI = 0
+                    obj.save()
+
+                    av_gain = sum(av_up)/period
+                    av_loss = sum(av_down)/period
+
+                else:
+
+                    if item.Closing_price > Quotes_data[i-1].Closing_price:
+                        av_gain = (av_gain*(period-1)+(item.Closing_price - Quotes_data[i-1].Closing_price))/period
+                        av_loss = (av_loss*(period-1))/period
+                        if av_gain == 0:
+                            av_gain = 0.0001
+
+                        if av_loss == 0:
+                            av_loss = 0.0001
+
+
+                    else:
+
+                        av_gain = (av_gain*(period-1))/period
+                        av_loss = (av_loss*(period-1)+(Quotes_data[i-1].Closing_price-item.Closing_price))/period
+                        if av_gain == 0:
+                            av_gain = 0.0001
+
+                        if av_loss == 0:
+                            av_loss = 0.0001
+
+
+                    RSI = 100 - (100 / (1 + (av_gain / av_loss)))
+
+                    obj = get_object_or_404(NC_Quotes.objects.filter(Name=name , Day_trading = item.Day_trading))
+                    obj.av_gain = av_gain
+                    obj.av_loss = av_loss
+                    obj.RSI = RSI
+                    obj.save()
+
+        
     '''
     @classmethod
     def down_company_financial(cls):

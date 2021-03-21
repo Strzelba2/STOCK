@@ -1,7 +1,7 @@
 {% extends 'basePanel.html' %} {% load static %}
 {% block nav %}
 	{% if request.user.is_authenticated %}
-		<a class="right-topbar-item " href="">Portfel</a>
+		<a class="right-topbar-item " href="{% url 'wallet' %}">Portfel</a>
 	{% endif %}
 {% endblock nav %}
 
@@ -23,12 +23,27 @@
                         
             </form> 
             <div class="dropdown-WIG">
-                <a href={% url 'update_fast' %}> Update WIG</a>
-            
+                <a href="{% url 'update_WIG' %}"> Update WIG</a>
             </div>
-        
+            
+ 
         </div>
-        <div class="{{choose.1}}">
+        <div class="{{choose.1}}" id="NC_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="NC"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >NEWCONNECT</button>
+                        
+            </form> 
+            <div class="dropdown-NC">
+                <a href="{% url 'update_NC' %}"> Update NC</a>
+            </div>
+            
+ 
+        </div>
+        <div class="{{choose.2}}" id="Currency_btn">
             <form action="." method="GET" >
                 {% csrf_token %}
 
@@ -36,10 +51,13 @@
                 <button type="submit"  class="buttonQuotes"  >Waluty  </button>
                         
             </form> 
+            <div class="dropdown-Currency">
+                <a href="{% url 'update_Currency' %}"> Update Waluty</a>
+            </div>
         
         </div>
 
-        <div class="{{choose.2}}">
+        <div class="{{choose.3}}" id="Index_btn">
             <form action="." method="GET" >
                 {% csrf_token %}
                 
@@ -47,9 +65,12 @@
                 <button type="submit"   class="buttonQuotes"  > Index </button>
                         
             </form> 
+            <div class="dropdown-Index">
+                <a href="{% url 'update_Index' %}"> Update Index</a>
+            </div>
         
         </div>
-        <div class="{{choose.3}}">
+        <div class="{{choose.4}}" id="Wares_btn">
             <form action="." method="GET" >
                 {% csrf_token %}
 
@@ -57,6 +78,9 @@
                 <button type="submit"  class="buttonQuotes"  >  Towary</button>
                         
             </form> 
+            <div class="dropdown-Wares">
+                <a href="{% url 'update_Wares' %}"> Update Towary</a>
+            </div>
         
         </div>
 
@@ -120,6 +144,7 @@
                         {% if genre == "WIG" %}
                             <td class="text-center" style="font-weight:bold;color: #555405" > {{item.Volume}}</td>
                         {% endif %}
+                        <td class="text-center" style="font-weight:bold;color: #555405" > {{item.RSI|floatformat:"2" }}</td>
 
                     </tr>
 
@@ -135,9 +160,20 @@
 <script>
 let WIG_upd= document.getElementById("WIG_btn")
 let content_wig = document.getElementsByClassName("dropdown-WIG")
+let Currency_upd= document.getElementById("Currency_btn")
+let content_Currency = document.getElementsByClassName("dropdown-Currency")
+let Index_upd= document.getElementById("Index_btn")
+let content_Index = document.getElementsByClassName("dropdown-Index")
+let Wares_upd= document.getElementById("Wares_btn")
+let content_Wares = document.getElementsByClassName("dropdown-Wares")
+let NC_upd= document.getElementById("NC_btn")
+let content_NC = document.getElementsByClassName("dropdown-NC")
 WIG_upd.oncontextmenu = function (){
+    content_Wares[0].className = "dropdown-Wares"
+    content_Index[0].className = "dropdown-Index"
+    content_Currency[0].className = "dropdown-Currency"
+    content_NC[0].className = "dropdown-NC"
     
-    console.log(content_wig)
     content_wig[0].classList.toggle("show")
 
     window.onclick = ()=>{
@@ -148,8 +184,76 @@ WIG_upd.oncontextmenu = function (){
     return false;     // cancel default menu
 }
 
+Currency_upd.oncontextmenu = function (){
+    content_Wares[0].className = "dropdown-Wares"
+    content_Index[0].className = "dropdown-Index"
+    content_wig[0].className = "dropdown-WIG"
+    content_NC[0].className = "dropdown-NC"
+
+    content_Currency[0].classList.toggle("show")
+
+    window.onclick = ()=>{
+        content_Currency[0].className = "dropdown-Currency"
+    }
+    event.stopPropagation();
+
+    return false;     // cancel default menu
+}
+
+
+Index_upd.oncontextmenu = function (){
+    content_Wares[0].className = "dropdown-Wares"
+    content_Currency[0].className = "dropdown-Currency"
+    content_wig[0].className = "dropdown-WIG"
+    content_NC[0].className = "dropdown-NC"
+    
+
+    content_Index[0].classList.toggle("show")
+
+    window.onclick = ()=>{
+        content_Index[0].className = "dropdown-Index"
+    }
+    event.stopPropagation();
+
+    return false;     // cancel default menu
+}
+
+Wares_upd.oncontextmenu = function (){
+    content_Index[0].className = "dropdown-Index"
+    content_Currency[0].className = "dropdown-Currency"
+    content_wig[0].className = "dropdown-WIG"
+    content_NC[0].className = "dropdown-NC"
+
+    
+    content_Wares[0].classList.toggle("show")
+
+    window.onclick = ()=>{
+        content_Wares[0].className = "dropdown-Wares"
+    }
+    event.stopPropagation();
+
+    return false;     // cancel default menu
+}
+
+NC_upd.oncontextmenu = function (){
+    content_Index[0].className = "dropdown-Index"
+    content_Currency[0].className = "dropdown-Currency"
+    content_wig[0].className = "dropdown-WIG"
+    content_Wares[0].className = "dropdown-Wares"
+
+    
+    content_NC[0].classList.toggle("show")
+
+    window.onclick = ()=>{
+        content_NC[0].className = "dropdown-Wares"
+    }
+    event.stopPropagation();
+
+    return false;     // cancel default menu
+}
+
 let change_price = document.getElementsByClassName("change_price")
-console.log(change_price)
+
 Array.prototype.map.call(change_price, (x)=>{
     if (parseFloat(x.textContent.replace(/,/g, '.')).toFixed(2)< 0){
         x.classList.toggle("lowqty")

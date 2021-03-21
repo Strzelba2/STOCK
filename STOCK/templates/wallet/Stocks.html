@@ -1,0 +1,205 @@
+{% extends 'basePanel.html' %} {% load static %}
+
+{% block nav %}
+	{% if request.user.is_authenticated %}
+        <a class="right-topbar-item " href="{% url 'wallet' %}">Portfel</a>
+		<a class="right-topbar-item " href="{% url 'home' %}">Notowania</a>
+	{% endif %}
+{% endblock nav %}
+
+
+{% block content %}
+
+<div class="training-container" >
+    <div class="profilemenu">
+        
+        <div class="divQuotes" id="PLAN_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="PLAN"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >PLAN</button>
+                        
+            </form> 
+
+        </div>
+        <div class="divQuotes" id="Observe_btn">
+
+            <form action="." method="GET" >
+                {% csrf_token %}
+
+                <input type="text" name="quotes" value="Obserwowane"  style="display:None;">
+                <button type="submit"   class="buttonQuotes"  >Obserwowane</button>
+                        
+            </form> 
+
+        </div>
+    </div>
+
+    <div class="border_middle" >
+        <div class ="center-history-table">
+            <div class ="left-wallet">
+                <div style="width:30%;margin:1%;">
+                    <div style="margin:1%;">
+                        <span>Portfel:</span>
+                        <span style="float: right;"> {{sum_wallet}} {{cash.currency}}</span>
+                    </div>
+                    <div style="margin:1%;">
+                        <span> Środki do Inwestycji:</span>
+                        <span style="float: right;">{{cash.cash}} {{cash.currency}}</span>
+                    </div>
+
+                    <div style="margin:1%;">
+                        <span>Wartość Akcji :</span>
+                        <span style="float: right;">{{sum_profit}} {{cash.currency}}</span>
+                    </div>
+                </div>
+                <div style="margin-left: 5%;">
+                    <div class="dropdownW" style="margin:7%;background-color:#ea8007;text-align: center;">
+                        <a href="{% url 'autocomplete' pk=view.kwargs.pk %}"> Nowe Zlecenie</a>
+                    </div>
+                    <div class="dropdownW" style="margin:7%;background-color:#ea8007;text-align: center;">
+                        <a href="">Tranzakcje</a>
+                    </div>
+
+                </div>
+            </div>
+            <table id="" class="table table-vcenter table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            <div class="table-filter">
+                                <span> Akcje</span>
+                            </div>
+                        </th>
+                        <th class="text-center">
+                            <div class="table-filter">
+                                <span> Ilość</span>
+                            </div>
+                        </th>
+                        <th class="text-center">
+                            <div class="table-filter">
+                                <span> Cena </span>
+                            </div>
+                        </th>
+                        <th class="text-center">
+                            <div class="table-filter">
+                                <span> Cena zakupu</span>
+                            </div>
+                        </th>
+                        <th class="text-center">
+                            <div class="table-filter">
+                                <span> Kwota nabycia</span>
+                            </div>
+                        </th>
+
+                        <th class="text-center">
+                            <div class="table-filter">
+                                <span> Wartość</span>
+                            </div>
+                        </th>
+                        <th class="text-center">
+                            <div class="table-filter">
+                                <span> Zysk/Strata</span>
+                            </div>
+                        </th>
+                          
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for x in Stocks %}
+                        <tr>
+                            <td class="text-center" style="font-weight:bold;color: #555405" > {{x.stock}}</td>
+                            <td class="text-center" style="font-weight:bold;color: #555405" > {{x.amount}}</td>
+                            <td class="text-center" style="font-weight:bold;color: #555405" > 
+                                <div>
+                                    {{x.last_price.Closing_price|floatformat:2}}
+                                </div>
+                                <div class = "change_price" >
+                                    {{x.last_price.Change_price|floatformat:2}}%
+                                </div>
+                            
+                            </td>
+                            <td class="text-center cash" style="font-weight:bold;color: #555405" > {{x.price_buy|floatformat:2}}</td>
+                            <td class="text-center cash" style="font-weight:bold;color: #555405" > {{x.acquisition_cost|floatformat:2}} {{cash.currency}}</td>
+                            <td class="text-center cash" style="font-weight:bold;color: #555405" > {{x.worth|floatformat:2}} {{cash.currency}}</td>
+                            <td class="text-center cash" style="font-weight:bold;color: #555405" > 
+                                <div >
+                                    <span>{{x.profit|floatformat:2}} {{cash.currency}}</span>
+                                    
+                                </div>
+                                <div class = "change_price">
+                                    <span>{{x.profit_pr|floatformat:2}}%</span>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    {% endfor %}
+                    
+                </tbody>   
+            </table> 
+            <div class="sum-worth" >
+                <div>
+                    <span>Razem</span>
+                </div>
+                <div>
+                    <span>{{sum_acquisition_cost}}{{cash.currency}}</span>
+                </div>
+                <div>
+                    <span>{{sum_worth}}{{cash.currency}}</span>
+                </div>
+
+                <div style="margin: 2px 8%;">
+                    <div>
+                        <span>{{sum_profit}}{{cash.currency}}</span>
+                    </div>
+                    <div class="change_price"> 
+                        <span>{{sum_profit_pr|floatformat:2}}%</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        
+    </div>  
+ </div>
+ 
+{% endblock content %}
+{% block extra_js %}
+    <script>
+        $(function () {
+            $("#date-since").datepicker({
+                format:'yyyy-mm-dd',
+            });
+            $("#date-to").datepicker({
+                format:'yyyy-mm-dd',
+            });
+
+        });
+        let cash = document.getElementsByClassName("cash")
+        console.log(cash)
+
+        Array.prototype.map.call(cash, (x)=>{
+            if (parseFloat(x.textContent.replace(/,/g, '.')).toFixed(2)< 0){
+                x.classList.toggle("cash_W")
+            }
+        })
+
+        let change_price = document.getElementsByClassName("change_price")
+
+        Array.prototype.map.call(change_price, (x)=>{
+            if (parseFloat(x.textContent.replace(/,/g, '.')).toFixed(2)< 0){
+                x.classList.toggle("lowqty")
+            }else if(parseFloat(x.textContent.replace(/,/g, '.')).toFixed(2)> 0){
+                x.classList.toggle("highqty")
+            }
+        })
+    </script>
+
+
+{% endblock extra_js %}
